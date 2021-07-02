@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="heading">
+        <item>Заголовок заметки №1</item>
+        <item>Заголовок заметки №2</item>
+        <item>Заголовок заметки №3</item>
+    </string-array>
+
+    <string-array name="notes">
+        <item>Текст заметки №1</item>
+        <item>Текст заметки №2</item>
+        <item>Текст заметки №3</item>
+    </string-array>
+
+    <string name="init_head">
+        <item>Введите название заметки</item>
+    </string>
+
+</resources>
