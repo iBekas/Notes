@@ -24,7 +24,6 @@ public class HeadingFragment extends Fragment {
 
     public static final String KEY_HEADING = "keyHeading";
     private int position = 0;
-//    private Note position;
     private boolean isLand;
 
     @Override
@@ -56,22 +55,11 @@ public class HeadingFragment extends Fragment {
     }
 
     private void initList(LinearLayout liner){
-//        LinearLayout liner = (LinearLayout)view;
-
-//        DatePicker dateChange = new DatePicker(getContext());
-//        Calendar today = Calendar.getInstance();
         String[] heading = getResources().getStringArray(R.array.heading);
         for (int i = 0; i < heading.length; i++) {
             String head = heading[i];
             TextView tv = new TextView(getContext());
-//            AtomicReference<String> time = null;
-//            Log.d("myLog",head); осознал всю силу логов
             tv.setTextSize(25);
-//            dateChange.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
-//                    today.get(Calendar.DAY_OF_MONTH), (view, year, monthOfYear, dayOfMonth) -> {
-//                        time.set(" " + monthOfYear + "." + dayOfMonth + "." + year);
-//                    });
-//            tv.setText(head+ time.get());
             tv.setText(head);
             final int x = i;
             tv.setOnClickListener(v -> {
@@ -105,9 +93,13 @@ public class HeadingFragment extends Fragment {
     }
 
     private void showPortNote(int index){
-        Intent intent = new Intent();
-        intent.setClass(getActivity(), NoteActivity.class);
-        intent.putExtra(UserNoteFragment.NOTE_TEXT, index);
-        startActivity(intent);
+        UserNoteFragment detail = UserNoteFragment.newInstance(index);
+        FragmentManager fM = requireActivity().getSupportFragmentManager();
+        FragmentTransaction fT = fM.beginTransaction();
+        fT.replace(R.id.fragment_note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+//        Intent intent = new Intent();
+//        intent.setClass(getActivity(), NoteActivity.class);
+//        intent.putExtra(UserNoteFragment.NOTE_TEXT, index);
+//        startActivity(intent);
     }
 }
