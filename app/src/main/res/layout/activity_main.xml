@@ -6,18 +6,18 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/heading_liner"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"/>
-
+<!--    <fragment-->
+<!--        android:id="@+id/head"-->
+<!--        android:name="simple.clever.notes.HeadingFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
 
     <FrameLayout
-        android:id="@+id/fragment_note"
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?android:detailsElementBackground"/>
+        android:layout_weight="1"
+        android:background="@color/white"/>
 
 
 </LinearLayout>

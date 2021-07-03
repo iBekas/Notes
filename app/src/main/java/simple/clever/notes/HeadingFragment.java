@@ -96,10 +96,6 @@ public class HeadingFragment extends Fragment {
         UserNoteFragment detail = UserNoteFragment.newInstance(index);
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
-        fT.replace(R.id.fragment_note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
-//        Intent intent = new Intent();
-//        intent.setClass(getActivity(), NoteActivity.class);
-//        intent.putExtra(UserNoteFragment.NOTE_TEXT, index);
-//        startActivity(intent);
+        fT.add(R.id.note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 }

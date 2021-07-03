@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <LinearLayout
-        android:id="@+id/heading_liner"
+    <fragment
+        android:id="@+id/head"
+        android:name="simple.clever.notes.HeadingFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_weight="1"/>
 
     <FrameLayout
