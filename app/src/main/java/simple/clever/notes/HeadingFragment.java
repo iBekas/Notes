@@ -1,6 +1,5 @@
 package simple.clever.notes;
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
@@ -13,12 +12,9 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.Calendar;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class HeadingFragment extends Fragment {
 
@@ -29,15 +25,11 @@ public class HeadingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_heading, container, false);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
+        View view = inflater.inflate(R.layout.fragment_heading, container, false);
         initList((LinearLayout)view);
+        return view;
     }
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -49,6 +41,11 @@ public class HeadingFragment extends Fragment {
         }
 
         if(isLand){
+//            UserNoteFragment detail = UserNoteFragment.newInstance(index);
+//            FragmentManager fM = requireActivity().getSupportFragmentManager();
+//            FragmentTransaction fT = fM.beginTransaction();
+//            fT.remove(detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+            // Здесь мне нужно удалить из первого фрагмента основные заметки. которые поверх заголовков. Или это можно сделать в методе showLandNote, но я не понимаю как.
             showLandNote(position);
         }
 
@@ -96,6 +93,6 @@ public class HeadingFragment extends Fragment {
         UserNoteFragment detail = UserNoteFragment.newInstance(index);
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
-        fT.add(R.id.note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+        fT.add(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 }
