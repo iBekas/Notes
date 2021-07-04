@@ -2,10 +2,13 @@ package simple.clever.notes;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -23,6 +26,8 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.drawer_main);
         initList();
         Toolbar toolbar = initToolbar();
+        initDrawer(toolbar);
     }
 
 
@@ -70,7 +76,40 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDrawer(Toolbar toolbar){
+    final DrawerLayout drawerLayout = findViewById(R.id.drawer);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
 
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if(navigationFragment(id)){
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    return true;
+                }
+                return false;
+            }
+        });
+    }
+
+    private boolean navigationFragment(int id){
+        switch (id){
+            case R.id.birthday:
+                Toast.makeText(MainActivity.this, "Добавляем ДР", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.password:
+                Toast.makeText(MainActivity.this, "Записываем пароль", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.series:
+                Toast.makeText(MainActivity.this, "Запоминаем серию", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.gta:
+                Toast.makeText(MainActivity.this, "Возвращаемся в 2007", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+        return false;
     }
 
 
