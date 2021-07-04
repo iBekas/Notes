@@ -46,15 +46,11 @@ public class MainActivity extends AppCompatActivity {
             showLandNote(position);
         }
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.drawer_main);
         initList();
-        initToolbar();
+        Toolbar toolbar = initToolbar();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -67,11 +63,15 @@ public class MainActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    private void initToolbar() {
+    private Toolbar initToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        return toolbar;
     }
 
+    private void initDrawer(Toolbar toolbar){
+
+    }
 
 
     @Override
