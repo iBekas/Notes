@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/birthday"
+        android:orderInCategory="1"
+        android:title="@string/birthday" />
+    <item
+        android:id="@+id/password"
+        android:orderInCategory="1"
+        android:title="@string/password" />
+    <item
+        android:id="@+id/series"
+        android:orderInCategory="1"
+        android:title="@string/series" />
+    <item
+        android:id="@+id/gta"
+        android:orderInCategory="1"
+        android:title="@string/gta" />
+
+</menu>
