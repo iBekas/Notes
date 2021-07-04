@@ -3,6 +3,7 @@ package simple.clever.notes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -12,11 +13,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private int color = 0;
     private int position = 0;
     private boolean isLand;
+//    private boolean visible;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         initList();
+        initToolbar();
     }
 
     @Override
@@ -57,6 +63,40 @@ public class MainActivity extends AppCompatActivity {
             getFragmentManager().popBackStack();
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    private void initToolbar() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        switch (id){
+            case R.id.search:
+
+                return true;
+            case R.id.sort:
+                Toast.makeText(MainActivity.this, "Сортируем", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.settings:
+                Toast.makeText(MainActivity.this, "Нстраиваем", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.favorite:
+                Toast.makeText(MainActivity.this, "Держи избранное", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.context_menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
     }
 
     private void initList(){
@@ -96,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
         UserNoteFragment detail = UserNoteFragment.newInstance(index);
         FragmentManager fM = getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
+//        visible = true;
         fT.replace(R.id.note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 
