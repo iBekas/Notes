@@ -15,10 +15,6 @@ public class UserNoteFragment extends Fragment {
     private int text;
 
 
-    public UserNoteFragment() {
-        // Required empty public constructor
-    }
-
 
     public static UserNoteFragment newInstance(int text) {
         UserNoteFragment fragment = new UserNoteFragment();
