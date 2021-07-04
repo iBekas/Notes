@@ -3,6 +3,7 @@ package simple.clever.notes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
@@ -98,11 +99,13 @@ public class MainActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                Toast.makeText(MainActivity.this, query, Toast.LENGTH_SHORT).show();
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                Toast.makeText(MainActivity.this, newText, Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
@@ -121,6 +124,27 @@ public class MainActivity extends AppCompatActivity {
             tv.setOnClickListener(v -> {
                 position = x;
                 showNote(position);
+            });
+            tv.setOnLongClickListener(v -> {
+                PopupMenu popupMenu = new PopupMenu(MainActivity.this, v);
+                getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        int id = item.getItemId();
+                        switch (id) {
+                            case R.id.delete:
+                                Toast.makeText(MainActivity.this, "Удаляем", Toast.LENGTH_SHORT).show();
+                                return true;
+                            case R.id.share:
+                                Toast.makeText(MainActivity.this, "Делимся", Toast.LENGTH_SHORT).show();
+                                return true;
+                        }
+                        return true;
+                    }
+                });
+                popupMenu.show();
+                return false;
             });
             liner.addView(tv);
         }

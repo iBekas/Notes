@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="удалить"
+        android:id="@+id/delete"
+        android:orderInCategory="1"/>
+    <item
+        android:title="поделиться"
+        android:icon="@android:drawable/ic_menu_share"
+        android:id="@+id/share"
+        android:orderInCategory="2"/>
+</menu>

@@ -39,6 +39,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/popup.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" afterDir="false" />
     </list>
@@ -58,8 +59,8 @@
       <list>
         <option value="valueResourceFile" />
         <option value="Class" />
-        <option value="resourceFile" />
         <option value="layoutResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -81,6 +82,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@C:\Users\dmitr\.android\avd\Pixel_3a_API_30_x86.avd" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-07-01T10:22:54.167974500Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="android-custom-viewC:/Users/dmitr/AppData/Local/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Calculator" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -291,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625433921922</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Добавил отображение поиска.">
+      <created>1625434590432</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1625434590432</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,7 +334,8 @@
     <MESSAGE value="Попытка при переопределить кнопку назад, и несломать ее." />
     <MESSAGE value="Создал меню. Попытался сохранить цвет фона при перевороте экрана." />
     <MESSAGE value="Добавил отображение контекстного меню. Пока с тоастами вместо действий." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил отображение контекстного меню. Пока с тоастами вместо действий." />
+    <MESSAGE value="Добавил отображение поиска." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил отображение поиска." />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625228989739">
@@ -336,10 +346,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1625425765660" />
-    <state x="221" y="96" key="AndroidCreateResourceFileDialog" timestamp="1625431461119">
+    <state x="221" y="96" key="AndroidCreateResourceFileDialog" timestamp="1625435223755">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="221" y="96" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1625431461119" />
+    <state x="221" y="96" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1625435223755" />
     <state x="487" y="131" key="AndroidCreateXmlResourceDialog" timestamp="1625429398539">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -352,22 +362,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="121" key="GridCell.Tab.0.bottom" timestamp="1625427927277">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1625436435150">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="121" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625427927277" />
-    <state width="1237" height="121" key="GridCell.Tab.0.center" timestamp="1625427927277">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625436435150" />
+    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1625436435150">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="121" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1625427927277" />
-    <state width="1237" height="121" key="GridCell.Tab.0.left" timestamp="1625427927277">
+    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1625436435150" />
+    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1625436435150">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="121" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1625427927277" />
-    <state width="1237" height="121" key="GridCell.Tab.0.right" timestamp="1625427927277">
+    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1625436435150" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1625436435150">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="121" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1625427927277" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1625436435150" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -388,10 +398,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625433924663">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625434592808">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625433924663" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625434592808" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
