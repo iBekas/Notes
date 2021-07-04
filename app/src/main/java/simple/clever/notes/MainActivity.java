@@ -9,6 +9,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +41,16 @@ public class MainActivity extends AppCompatActivity {
         initList();
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        FrameLayout frameLayout = findViewById(R.id.main_fragment);
+        if(getFragmentManager() != null) {
+            Log.d("myLog", ("что-то"));
+            //ладно, тут мне явно нужна помощь.
+            getFragmentManager().popBackStack();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     private void initList(){
         LinearLayout liner = findViewById(R.id.main);
