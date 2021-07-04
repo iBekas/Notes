@@ -39,8 +39,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/context_menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,7 @@
         <option value="valueResourceFile" />
         <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -269,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625427247757</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Попытка при переопределить кнопку назад, и несломать ее.">
+      <created>1625427985049</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1625427985049</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,7 +311,8 @@
     <MESSAGE value="Вторая попытка перехода на одну активити." />
     <MESSAGE value="Еще одна попытка переделать все под одну главную активити" />
     <MESSAGE value="Изменил Linear на Relative, чтобы один layout мог быть поверх другого. Пришлось в коде после нажатия менять цвет на белый." />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменил Linear на Relative, чтобы один layout мог быть поверх другого. Пришлось в коде после нажатия менять цвет на белый." />
+    <MESSAGE value="Попытка при переопределить кнопку назад, и несломать ее." />
+    <option name="LAST_COMMIT_MESSAGE" value="Попытка при переопределить кнопку назад, и несломать ее." />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625228989739">
@@ -311,14 +323,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1625425765660" />
-    <state x="221" y="96" key="AndroidCreateResourceFileDialog" timestamp="1625222033773">
+    <state x="221" y="96" key="AndroidCreateResourceFileDialog" timestamp="1625429101167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="221" y="96" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1625222033773" />
-    <state x="487" y="131" key="AndroidCreateXmlResourceDialog" timestamp="1625134485127">
+    <state x="221" y="96" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1625429101167" />
+    <state x="487" y="131" key="AndroidCreateXmlResourceDialog" timestamp="1625429398539">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="487" y="131" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1625134485127" />
+    <state x="487" y="131" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1625429398539" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1625426820565">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -327,22 +339,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1625425906862">
+    <state width="1237" height="121" key="GridCell.Tab.0.bottom" timestamp="1625427927277">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625425906862" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1625425906862">
+    <state width="1237" height="121" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625427927277" />
+    <state width="1237" height="121" key="GridCell.Tab.0.center" timestamp="1625427927277">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1625425906862" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1625425906861">
+    <state width="1237" height="121" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1625427927277" />
+    <state width="1237" height="121" key="GridCell.Tab.0.left" timestamp="1625427927277">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1625425906861" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1625425906862">
+    <state width="1237" height="121" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1625427927277" />
+    <state width="1237" height="121" key="GridCell.Tab.0.right" timestamp="1625427927277">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1625425906862" />
+    <state width="1237" height="121" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1625427927277" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -363,10 +375,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625427251091">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625427988495">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625427251091" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625427988495" />
+    <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="452" y="119" key="chooseDestDirectoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1625428154520" />
     <state x="443" y="247" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1625133324288">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

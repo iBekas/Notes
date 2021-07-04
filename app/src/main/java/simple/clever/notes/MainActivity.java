@@ -21,6 +21,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     public static final String KEY_HEADING = "keyHeading";
+    public static final String KEY_COLOR = "keyColor";
+    private int color = 0;
     private int position = 0;
     private boolean isLand;
 
@@ -39,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         initList();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
     @Override
@@ -81,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         outState.putInt(KEY_HEADING, position);
+        outState.putInt(KEY_COLOR, color); //тут тоже нужна помощь, не доходит как сохранить цвет.
         super.onSaveInstanceState(outState);
     }
 
@@ -97,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fT = fM.beginTransaction();
         fT.replace(R.id.main_fragment, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
         FrameLayout frameLayout = findViewById(R.id.main_fragment);
-        frameLayout.setBackgroundColor(Color.parseColor("#ffffff"));
+        color = Color.parseColor("#ffffff");
+        frameLayout.setBackgroundColor(color);
     }
 
 
