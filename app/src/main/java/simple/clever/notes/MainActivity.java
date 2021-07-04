@@ -7,10 +7,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         if(isLand){
             showLandNote(position);
         }
-        
+
         setContentView(R.layout.activity_main);
         initList();
     }
@@ -81,7 +83,9 @@ public class MainActivity extends AppCompatActivity {
         UserNoteFragment detail = UserNoteFragment.newInstance(index);
         FragmentManager fM = getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
-        fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+        fT.replace(R.id.main_fragment, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+        FrameLayout frameLayout = findViewById(R.id.main_fragment);
+        frameLayout.setBackgroundColor(Color.parseColor("#ffffff"));
     }
 
 
