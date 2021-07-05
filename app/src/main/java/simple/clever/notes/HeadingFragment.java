@@ -23,6 +23,7 @@ import android.widget.Toast;
 public class HeadingFragment extends Fragment {
 
     public static final String KEY_HEADING = "keyHeading";
+    public static final String TAG_HEADING = "tagHeading";
     private int position = 0;
     private boolean isLand;
 

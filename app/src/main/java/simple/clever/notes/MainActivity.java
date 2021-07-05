@@ -42,6 +42,19 @@ public class MainActivity extends AppCompatActivity {
         initDrawer(toolbar);
     }
 
+    @Override
+    public void onBackPressed() {
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.heading_fragment);
+        Log.d("myLog",fragment.isVisible()+"" );
+        if(!fragment.isVisible()){
+            passFragment(new HeadingFragment());
+        } else super.onBackPressed();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return super.onKeyDown(keyCode, event);
+    }
 
     private void passFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
