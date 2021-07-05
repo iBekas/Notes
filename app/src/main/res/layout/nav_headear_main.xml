@@ -7,10 +7,16 @@
     android:background="@drawable/side_nav_bar"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <TextView
+    <ImageView
+        android:id="@+id/ava"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="заглушка"
+        android:src="@mipmap/ic_launcher_round"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mail"
         android:textSize="@dimen/nav_head_size"/>
 
 </LinearLayout>
