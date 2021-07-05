@@ -31,43 +31,24 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String KEY_HEADING = "keyHeading";
-    public static final String KEY_COLOR = "keyColor";
-    private int color = 0;
-    private int position = 0;
-    private boolean isLand;
-//    private boolean visible;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        isLand = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
-        if(savedInstanceState != null){
-            position = savedInstanceState.getInt(KEY_HEADING, 0);
-        }
-
-        if(isLand){
-            showLandNote(position);
-        }
-
         setContentView(R.layout.drawer_main);
-        initList();
+        passFragment();
         Toolbar toolbar = initToolbar();
         initDrawer(toolbar);
     }
 
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        FrameLayout frameLayout = findViewById(R.id.main_fragment);
-        if(getFragmentManager() != null) {
-            Log.d("myLog", ("что-то"));
-            //ладно, тут мне явно нужна помощь.
-            getFragmentManager().popBackStack();
-        }
-        return super.onKeyDown(keyCode, event);
+    private void passFragment(){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.main, new HeadingFragment()).commit();
     }
+
+
 
     private Toolbar initToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -152,77 +133,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    private void initList(){
-        LinearLayout liner = findViewById(R.id.main);
-        String[] heading = getResources().getStringArray(R.array.heading);
-        for (int i = 0; i < heading.length; i++) {
-            String head = heading[i];
-            TextView tv = new TextView(getBaseContext());
-            tv.setTextSize(25);
-            tv.setText(head);
-            final int x = i;
-            tv.setOnClickListener(v -> {
-                position = x;
-                showNote(position);
-            });
-            tv.setOnLongClickListener(v -> {
-                PopupMenu popupMenu = new PopupMenu(MainActivity.this, v);
-                getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        int id = item.getItemId();
-                        switch (id) {
-                            case R.id.delete:
-                                Toast.makeText(MainActivity.this, "Удаляем", Toast.LENGTH_SHORT).show();
-                                return true;
-                            case R.id.share:
-                                Toast.makeText(MainActivity.this, "Делимся", Toast.LENGTH_SHORT).show();
-                                return true;
-                        }
-                        return true;
-                    }
-                });
-                popupMenu.show();
-                return false;
-            });
-            liner.addView(tv);
-        }
-    }
 
 
-    private void showNote(int index) {
-        if(isLand){
-            showLandNote(index);
-        } else {
-            showPortNote(index);
-        }
-    }
 
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putInt(KEY_HEADING, position);
-        outState.putInt(KEY_COLOR, color); //тут тоже нужна помощь, не доходит как сохранить цвет.
-        super.onSaveInstanceState(outState);
-    }
 
-    private void showLandNote(int index) {
-        UserNoteFragment detail = UserNoteFragment.newInstance(index);
-        FragmentManager fM = getSupportFragmentManager();
-        FragmentTransaction fT = fM.beginTransaction();
-//        visible = true;
-        fT.replace(R.id.note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
-    }
-
-    private void showPortNote(int index){
-        UserNoteFragment detail = UserNoteFragment.newInstance(index);
-        FragmentManager fM = getSupportFragmentManager();
-        FragmentTransaction fT = fM.beginTransaction();
-        fT.replace(R.id.main_fragment, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
-        FrameLayout frameLayout = findViewById(R.id.main_fragment);
-        color = Color.parseColor("#ffffff");
-        frameLayout.setBackgroundColor(color);
-    }
 
 
 }
