@@ -111,6 +111,7 @@ public class HeadingFragment extends Fragment {
         UserNoteFragment detail = UserNoteFragment.newInstance(index);
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
+        detail.getArguments().getInt(UserNoteFragment.NOTE_TEXT); // не сохраняет данные при повороте, что я упустил?
         fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 }
