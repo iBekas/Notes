@@ -9,6 +9,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -36,16 +37,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.drawer_main);
-        passFragment();
+        passFragment(new HeadingFragment());
         Toolbar toolbar = initToolbar();
         initDrawer(toolbar);
     }
 
 
-    private void passFragment(){
+    private void passFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.main, new HeadingFragment()).commit();
+        fragmentTransaction.replace(R.id.main, fragment).commit();
     }
 
 
