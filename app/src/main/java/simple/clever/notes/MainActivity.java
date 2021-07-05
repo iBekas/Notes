@@ -45,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.main);
-        Log.d("myLog",fragment.isVisible()+"" );
-        if(!fragment.isVisible()){
+        if(fragment.isVisible()){
             passFragment(new HeadingFragment());
         } else super.onBackPressed();
     }
