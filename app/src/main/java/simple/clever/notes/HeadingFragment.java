@@ -104,15 +104,9 @@ public class HeadingFragment extends Fragment{
         HeadingAdapter adapter = new HeadingAdapter(arr);
         recyclerView.setAdapter(adapter);
 
-        adapter.SetOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                showNote(position);
-            }
+        adapter.SetOnItemClickListener((view, position) -> showNote(position));
 
-        });
-
-        adapter.SetOnItemClickListener(new OnItemClickListener() {
+        adapter.SetOnItemLongClickListener(new OnItemLongClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 PopupMenu popupMenu = new PopupMenu(requireActivity(), view);

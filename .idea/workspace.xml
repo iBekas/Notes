@@ -38,6 +38,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/OnItemLongClickListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingFragment.java" afterDir="false" />
@@ -426,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625692674581</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Обработчик кликов добавил, но работает только 1 из 2">
+      <created>1625694757532</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1625694757532</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -442,7 +450,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Сохранение данных в классе и ДатаПикер в другой раз." />
     <MESSAGE value="Вторая попытка перехода на одну активити." />
     <MESSAGE value="Еще одна попытка переделать все под одну главную активити" />
     <MESSAGE value="Изменил Linear на Relative, чтобы один layout мог быть поверх другого. Пришлось в коде после нажатия менять цвет на белый." />
@@ -467,7 +474,8 @@
     <MESSAGE value="С одни текствью запускается в штатном режиме." />
     <MESSAGE value="Добавил во фрагмент метод .newInstance()" />
     <MESSAGE value="+Интерфейс&#10;+Обработчик нажатий на ViewHolder" />
-    <option name="LAST_COMMIT_MESSAGE" value="+Интерфейс&#10;+Обработчик нажатий на ViewHolder" />
+    <MESSAGE value="Обработчик кликов добавил, но работает только 1 из 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обработчик кликов добавил, но работает только 1 из 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625692876297">
@@ -534,10 +542,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625692677318">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625694759284">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625692677318" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625694759284" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

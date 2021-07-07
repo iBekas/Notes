@@ -1,5 +1,6 @@
 package simple.clever.notes;
 
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHolder> {
     private OnItemClickListener itemClickListener;
+    private OnItemLongClickListener itemLongClickListener;
 
     private String[] noteHead;
 
@@ -37,6 +39,10 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
         this.itemClickListener = itemClickListener;
     }
 
+    public void SetOnItemLongClickListener(OnItemLongClickListener itemLongClickListener){
+        this.itemLongClickListener = itemLongClickListener;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textHead;
@@ -52,8 +58,9 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
                 });
 
             textHead.setOnLongClickListener(v -> {
-                if(itemClickListener != null) {
-                    itemClickListener.onItemClick(v,getAdapterPosition());
+                if(itemLongClickListener != null) {
+                    itemLongClickListener.onItemClick(v,getAdapterPosition());
+                    return true;
                 }
                 return false;
             });
