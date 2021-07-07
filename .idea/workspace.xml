@@ -37,11 +37,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -404,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625689129810</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="С одни текствью запускается в штатном режиме.">
+      <created>1625691901502</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1625691901502</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -420,7 +423,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавил cохранение данных при повороте. Не работает." />
     <MESSAGE value="Сохранение при смене ориентации работает." />
     <MESSAGE value="Изменение сохранения, добавил новый класс с парсеализацией." />
     <MESSAGE value="Сохранение данных в классе и ДатаПикер в другой раз." />
@@ -445,7 +447,8 @@
     <MESSAGE value="Создан макет для RecyclerView и макет item, который в него будем помещать." />
     <MESSAGE value="Добавил адаптер." />
     <MESSAGE value="Ошибка: в адаптер поступает null." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ошибка: в адаптер поступает null." />
+    <MESSAGE value="С одни текствью запускается в штатном режиме." />
+    <option name="LAST_COMMIT_MESSAGE" value="С одни текствью запускается в штатном режиме." />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625687097870">
@@ -512,10 +515,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625689131839">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625691918449">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625689131839" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625691918449" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

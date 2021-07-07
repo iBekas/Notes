@@ -28,6 +28,14 @@ public class HeadingFragment extends Fragment {
     private int position = 0;
     private boolean isLand;
 
+
+    public static HeadingFragment newInstance() {
+//        Bundle args = new Bundle();
+        HeadingFragment fragment = new HeadingFragment();
+//        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

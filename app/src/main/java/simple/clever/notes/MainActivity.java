@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.drawer_main);
-        passFragment(new HeadingFragment());
+        passFragment(HeadingFragment.newInstance());
         Toolbar toolbar = initToolbar();
         initDrawer(toolbar);
     }
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.main);
         if(fragment.isVisible()){
-            passFragment(new HeadingFragment());
+            passFragment(HeadingFragment.newInstance());
         } else super.onBackPressed();
     }
 
