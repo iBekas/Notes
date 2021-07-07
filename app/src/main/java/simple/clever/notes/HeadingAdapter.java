@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHolder> {
+    private OnItemClickListener itemClickListener;
 
     private String[] noteHead;
 
@@ -32,6 +33,10 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
         return noteHead.length;
     }
 
+    public void SetOnItemClickListener(OnItemClickListener itemClickListener){
+        this.itemClickListener = itemClickListener;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textHead;
@@ -41,6 +46,10 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
             super(itemView);
             textHead = itemView.findViewById(R.id.note_name);
             textTime = itemView.findViewById(R.id.time);
+
+            textHead.setOnClickListener(v -> {
+                if(itemClickListener != null) itemClickListener.onItemClick(v,getAdapterPosition());
+                });
         }
 
         public TextView getTextHead() {
