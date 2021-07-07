@@ -39,7 +39,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_heading.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_heading.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +56,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="valueResourceFile" />
         <option value="resourceFile" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -382,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625494358822</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Создан макет для RecyclerView и макет item, который в него будем помещать.">
+      <created>1625686035764</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1625686035764</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -398,7 +406,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавил макет для land." />
     <MESSAGE value="Добавил методы показа экране на основе ориентации." />
     <MESSAGE value="Добавил проверку на ориентацию, истартовое отображение." />
     <MESSAGE value="Добавил cохранение данных при повороте. Не работает." />
@@ -423,21 +430,22 @@
     <MESSAGE value="Добавил пользовательскую информацию. Осталось откуда-то считывать его gmail и на LongClick повесить смену аватарки" />
     <MESSAGE value="Еще одна бесупешная попытка настроить работу onBackPressed()" />
     <MESSAGE value="Добавил отображение всех меню для горизонтальной ориентации." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил отображение всех меню для горизонтальной ориентации." />
+    <MESSAGE value="Создан макет для RecyclerView и макет item, который в него будем помещать." />
+    <option name="LAST_COMMIT_MESSAGE" value="Создан макет для RecyclerView и макет item, который в него будем помещать." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625228989739">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625686269101">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1625228989739" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1625686269101" />
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625492784167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1625492784167" />
-    <state x="221" y="96" key="AndroidCreateResourceFileDialog" timestamp="1625492827646">
+    <state x="221" y="96" key="AndroidCreateResourceFileDialog" timestamp="1625685351814">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="221" y="96" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1625492827646" />
+    <state x="221" y="96" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1625685351814" />
     <state x="487" y="131" key="AndroidCreateXmlResourceDialog" timestamp="1625481232540">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -490,10 +498,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625494363025">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625686038410">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625494363025" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625686038410" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
