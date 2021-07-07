@@ -39,7 +39,7 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-//            textHead = (TextView) textHead;
+            textHead = (TextView) textHead;
         }
 
         public TextView getTextHead() {

@@ -10,6 +10,8 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -23,7 +25,6 @@ import android.widget.Toast;
 public class HeadingFragment extends Fragment {
 
     public static final String KEY_HEADING = "keyHeading";
-    public static final String TAG_HEADING = "tagHeading";
     private int position = 0;
     private boolean isLand;
 
@@ -52,37 +53,48 @@ public class HeadingFragment extends Fragment {
     }
 
     private void initList(LinearLayout liner){
+        RecyclerView recyclerView = liner.findViewById(R.id.recycler_note_view);
         String[] heading = getResources().getStringArray(R.array.heading);
-        for (int i = 0; i < heading.length; i++) {
-            String head = heading[i];
-            TextView tv = new TextView(getContext());
-            tv.setTextSize(25);
-            tv.setText(head);
-            final int x = i;
-            tv.setOnClickListener(v -> {
-                position = x;
-                showNote(position);
-            });
-            tv.setOnLongClickListener(v -> {
-                PopupMenu popupMenu = new PopupMenu(requireActivity(), v);
-                requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
-                popupMenu.setOnMenuItemClickListener(item -> {
-                    int id = item.getItemId();
-                    switch (id) {
-                        case R.id.delete:
-                            Toast.makeText(requireActivity(), "Удаляем", Toast.LENGTH_SHORT).show();
-                            return true;
-                        case R.id.share:
-                            Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
-                            return true;
-                    }
-                    return true;
-                });
-                popupMenu.show();
-                return false;
-            });
-            liner.addView(tv);
-        }
+        initRecyclerView(recyclerView, heading);
+//        for (int i = 0; i < heading.length; i++) {
+//            String head = heading[i];
+//            TextView tv = new TextView(getContext());
+//            tv.setTextSize(25);
+//            tv.setText(head);
+//            final int x = i;
+//            tv.setOnClickListener(v -> {
+//                position = x;
+//                showNote(position);
+//            });
+//            tv.setOnLongClickListener(v -> {
+//                PopupMenu popupMenu = new PopupMenu(requireActivity(), v);
+//                requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
+//                popupMenu.setOnMenuItemClickListener(item -> {
+//                    int id = item.getItemId();
+//                    switch (id) {
+//                        case R.id.delete:
+//                            Toast.makeText(requireActivity(), "Удаляем", Toast.LENGTH_SHORT).show();
+//                            return true;
+//                        case R.id.share:
+//                            Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
+//                            return true;
+//                    }
+//                    return true;
+//                });
+//                popupMenu.show();
+//                return false;
+//            });
+//            liner.addView(tv);
+//        }
+    }
+
+    private void initRecyclerView(RecyclerView recyclerView, String[] arr){
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        HeadingAdapter adapter = new HeadingAdapter(arr);
+        recyclerView.setAdapter(adapter);
     }
 
 
