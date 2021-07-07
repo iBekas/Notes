@@ -22,7 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class HeadingFragment extends Fragment {
+public class HeadingFragment extends Fragment{
 
     public static final String KEY_HEADING = "keyHeading";
     private int position = 0;
@@ -103,6 +103,35 @@ public class HeadingFragment extends Fragment {
 
         HeadingAdapter adapter = new HeadingAdapter(arr);
         recyclerView.setAdapter(adapter);
+
+        adapter.SetOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                showNote(position);
+            }
+
+        });
+
+        adapter.SetOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                PopupMenu popupMenu = new PopupMenu(requireActivity(), view);
+                requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
+                popupMenu.setOnMenuItemClickListener(item -> {
+                    int id = item.getItemId();
+                    switch (id) {
+                        case R.id.delete:
+                            Toast.makeText(requireActivity(), "Удаляем", Toast.LENGTH_SHORT).show();
+                            return true;
+                        case R.id.share:
+                            Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
+                            return true;
+                    }
+                    return true;
+                });
+                popupMenu.show();
+            }
+        });
     }
 
 
@@ -134,4 +163,5 @@ public class HeadingFragment extends Fragment {
         detail.getArguments().getInt(UserNoteFragment.NOTE_TEXT); // не сохраняет данные при повороте, что я упустил?
         fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
+
 }

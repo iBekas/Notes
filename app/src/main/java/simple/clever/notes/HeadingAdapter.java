@@ -50,6 +50,13 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
             textHead.setOnClickListener(v -> {
                 if(itemClickListener != null) itemClickListener.onItemClick(v,getAdapterPosition());
                 });
+
+            textHead.setOnLongClickListener(v -> {
+                if(itemClickListener != null) {
+                    itemClickListener.onItemClick(v,getAdapterPosition());
+                }
+                return false;
+            });
         }
 
         public TextView getTextHead() {
