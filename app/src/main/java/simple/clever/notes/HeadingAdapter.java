@@ -39,7 +39,8 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textHead = (TextView) textHead;
+            textHead = itemView.findViewById(R.id.note_name);
+            textTime = itemView.findViewById(R.id.time);
         }
 
         public TextView getTextHead() {

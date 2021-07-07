@@ -40,7 +40,6 @@
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -398,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625687338212</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Ошибка: в адаптер поступает null.">
+      <created>1625689129810</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1625689129810</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,7 +420,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавил проверку на ориентацию, истартовое отображение." />
     <MESSAGE value="Добавил cохранение данных при повороте. Не работает." />
     <MESSAGE value="Сохранение при смене ориентации работает." />
     <MESSAGE value="Изменение сохранения, добавил новый класс с парсеализацией." />
@@ -439,7 +444,8 @@
     <MESSAGE value="Добавил отображение всех меню для горизонтальной ориентации." />
     <MESSAGE value="Создан макет для RecyclerView и макет item, который в него будем помещать." />
     <MESSAGE value="Добавил адаптер." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил адаптер." />
+    <MESSAGE value="Ошибка: в адаптер поступает null." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ошибка: в адаптер поступает null." />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625687097870">
@@ -470,22 +476,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1625688761696">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1625690101778">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625688761696" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1625688761696">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625690101778" />
+    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1625690101778">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1625688761696" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1625688761696">
+    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1625690101778" />
+    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1625690101778">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1625688761696" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1625688761696">
+    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1625690101778" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1625690101778">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1625688761696" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1625690101778" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -506,10 +512,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625687342400">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625689131839">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625687342400" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625689131839" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
