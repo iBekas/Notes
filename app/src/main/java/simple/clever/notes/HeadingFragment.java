@@ -64,36 +64,6 @@ public class HeadingFragment extends Fragment{
         RecyclerView recyclerView = liner.findViewById(R.id.recycler_note_view);
         String[] heading = getResources().getStringArray(R.array.heading);
         initRecyclerView(recyclerView, heading);
-//        for (int i = 0; i < heading.length; i++) {
-//            String head = heading[i];
-//            TextView tv = new TextView(getContext());
-//            tv.setTextSize(25);
-//            tv.setText(head);
-//            final int x = i;
-//            tv.setOnClickListener(v -> {
-//                position = x;
-//                showNote(position);
-//            });
-//            tv.setOnLongClickListener(v -> {
-//                PopupMenu popupMenu = new PopupMenu(requireActivity(), v);
-//                requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
-//                popupMenu.setOnMenuItemClickListener(item -> {
-//                    int id = item.getItemId();
-//                    switch (id) {
-//                        case R.id.delete:
-//                            Toast.makeText(requireActivity(), "Удаляем", Toast.LENGTH_SHORT).show();
-//                            return true;
-//                        case R.id.share:
-//                            Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
-//                            return true;
-//                    }
-//                    return true;
-//                });
-//                popupMenu.show();
-//                return false;
-//            });
-//            liner.addView(tv);
-//        }
     }
 
     private void initRecyclerView(RecyclerView recyclerView, String[] arr){
@@ -106,25 +76,22 @@ public class HeadingFragment extends Fragment{
 
         adapter.SetOnItemClickListener((view, position) -> showNote(position));
 
-        adapter.SetOnItemLongClickListener(new OnItemLongClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                PopupMenu popupMenu = new PopupMenu(requireActivity(), view);
-                requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
-                popupMenu.setOnMenuItemClickListener(item -> {
-                    int id = item.getItemId();
-                    switch (id) {
-                        case R.id.delete:
-                            Toast.makeText(requireActivity(), "Удаляем", Toast.LENGTH_SHORT).show();
-                            return true;
-                        case R.id.share:
-                            Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
-                            return true;
-                    }
-                    return true;
-                });
-                popupMenu.show();
-            }
+        adapter.SetOnItemLongClickListener((view, position) -> {
+            PopupMenu popupMenu = new PopupMenu(requireActivity(), view);
+            requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
+            popupMenu.setOnMenuItemClickListener(item -> {
+                int id = item.getItemId();
+                switch (id) {
+                    case R.id.delete:
+                        Toast.makeText(requireActivity(), "Удаляем", Toast.LENGTH_SHORT).show();
+                        return true;
+                    case R.id.share:
+                        Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
+                        return true;
+                }
+                return true;
+            });
+            popupMenu.show();
         });
     }
 
