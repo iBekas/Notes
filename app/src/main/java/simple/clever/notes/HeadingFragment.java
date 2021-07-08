@@ -30,9 +30,7 @@ public class HeadingFragment extends Fragment{
 
 
     public static HeadingFragment newInstance() {
-//        Bundle args = new Bundle();
         HeadingFragment fragment = new HeadingFragment();
-//        fragment.setArguments(args);
         return fragment;
     }
 
@@ -62,7 +60,6 @@ public class HeadingFragment extends Fragment{
 
     private void initList(LinearLayout liner){
         RecyclerView recyclerView = liner.findViewById(R.id.recycler_note_view);
-//        String[] heading = getResources().getStringArray(R.array.heading);
         CardSource heading = new CardSourceImpl(getResources()).init();
         initRecyclerView(recyclerView, heading);
     }
@@ -88,6 +85,9 @@ public class HeadingFragment extends Fragment{
                         return true;
                     case R.id.share:
                         Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
+                        return true;
+                    case R.id.change:
+                        Toast.makeText(requireActivity(), "Меняем", Toast.LENGTH_SHORT).show();
                         return true;
                 }
                 return true;
