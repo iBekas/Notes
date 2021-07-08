@@ -43,6 +43,7 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
         this.itemLongClickListener = itemLongClickListener;
     }
 
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textHead;
