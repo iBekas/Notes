@@ -62,11 +62,12 @@ public class HeadingFragment extends Fragment{
 
     private void initList(LinearLayout liner){
         RecyclerView recyclerView = liner.findViewById(R.id.recycler_note_view);
-        String[] heading = getResources().getStringArray(R.array.heading);
+//        String[] heading = getResources().getStringArray(R.array.heading);
+        CardSource heading = new CardSourceImpl(getResources()).init();
         initRecyclerView(recyclerView, heading);
     }
 
-    private void initRecyclerView(RecyclerView recyclerView, String[] arr){
+    private void initRecyclerView(RecyclerView recyclerView, CardSource arr){
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);

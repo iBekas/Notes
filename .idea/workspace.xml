@@ -39,9 +39,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +58,9 @@
       <list>
         <option value="valueResourceFile" />
         <option value="resourceFile" />
-        <option value="Class" />
-        <option value="Interface" />
         <option value="layoutResourceFile" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -441,7 +440,28 @@
       <option name="project" value="LOCAL" />
       <updated>1625695872014</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Добвил CardView в item.">
+      <created>1625740965180</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1625740965180</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Добвил класс данных - содержимое заголовка заметки.">
+      <created>1625741224075</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1625741224075</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Класс получения данных из ресурсов.">
+      <created>1625742454583</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1625742454583</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,9 +477,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Еще одна попытка переделать все под одну главную активити" />
-    <MESSAGE value="Изменил Linear на Relative, чтобы один layout мог быть поверх другого. Пришлось в коде после нажатия менять цвет на белый." />
-    <MESSAGE value="Попытка при переопределить кнопку назад, и несломать ее." />
     <MESSAGE value="Создал меню. Попытался сохранить цвет фона при перевороте экрана." />
     <MESSAGE value="Добавил отображение контекстного меню. Пока с тоастами вместо действий." />
     <MESSAGE value="Добавил отображение поиска." />
@@ -482,13 +499,16 @@
     <MESSAGE value="+Интерфейс&#10;+Обработчик нажатий на ViewHolder" />
     <MESSAGE value="Обработчик кликов добавил, но работает только 1 из 2" />
     <MESSAGE value="Добавил обработку и короткого и длинного нажатия." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил обработку и короткого и длинного нажатия." />
+    <MESSAGE value="Добвил CardView в item." />
+    <MESSAGE value="Добвил класс данных - содержимое заголовка заметки." />
+    <MESSAGE value="Класс получения данных из ресурсов." />
+    <option name="LAST_COMMIT_MESSAGE" value="Класс получения данных из ресурсов." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625692876297">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625741781372">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1625692876297" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1625741781372" />
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625492784167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -497,10 +517,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="96" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1625739973479" />
-    <state x="771" y="141" key="AndroidCreateXmlResourceDialog" timestamp="1625740263734">
+    <state x="771" y="141" key="AndroidCreateXmlResourceDialog" timestamp="1625740706893">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="771" y="141" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1625740263733" />
+    <state x="771" y="141" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1625740706893" />
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1625688383560">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -549,10 +569,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625695874165">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625742459328">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625695874165" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625742459328" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -561,5 +581,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="443" y="247" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1625133324288" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1625742776672">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1625742776672" />
   </component>
 </project>

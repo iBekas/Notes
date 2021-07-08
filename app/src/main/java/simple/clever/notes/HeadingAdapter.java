@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import simple.clever.notes.CardData;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,9 +14,10 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
     private OnItemClickListener itemClickListener;
     private OnItemLongClickListener itemLongClickListener;
 
-    private String[] noteHead;
+    private final static String TAG = "HeadingAdapter";
+    private CardSource noteHead;
 
-    public HeadingAdapter(String[] noteHead) {
+    public HeadingAdapter(CardSource noteHead) {
         this.noteHead = noteHead;
     }
 
@@ -27,12 +29,12 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull HeadingAdapter.ViewHolder holder, int position) {
-    holder.getTextHead().setText(noteHead[position]);
+    holder.setData(noteHead.getCardData(position));
     }
 
     @Override
     public int getItemCount() {
-        return noteHead.length;
+        return noteHead.size();
     }
 
     public void SetOnItemClickListener(OnItemClickListener itemClickListener){
@@ -67,12 +69,9 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
             });
         }
 
-        public TextView getTextHead() {
-            return textHead;
-        }
-
-        public TextView getTextTime() {
-            return textTime;
+        public void setData(CardData cardData){
+            textHead.setText(cardData.getHead());
+            textTime.setText(cardData.getTimeOpen());
         }
     }
 }
