@@ -1,4 +1,4 @@
-package simple.clever.notes;
+package simple.clever.notes.data;
 
 public interface CardSource {
     CardData getCardData(int position);

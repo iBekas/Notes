@@ -1,4 +1,4 @@
-package simple.clever.notes;
+package simple.clever.notes.data;
 
 public class CardData {
     private String head;

@@ -1,14 +1,19 @@
-package simple.clever.notes;
+package simple.clever.notes.ui;
 
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import simple.clever.notes.CardData;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import simple.clever.notes.data.CardData;
+import simple.clever.notes.data.CardSource;
+import simple.clever.notes.data.OnItemClickListener;
+import simple.clever.notes.data.OnItemLongClickListener;
+import simple.clever.notes.R;
 
 public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHolder> {
     private OnItemClickListener itemClickListener;

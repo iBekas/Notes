@@ -1,9 +1,11 @@
-package simple.clever.notes;
+package simple.clever.notes.data;
 
 import android.content.res.Resources;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import simple.clever.notes.R;
 
 public class CardSourceImpl implements CardSource{
 
