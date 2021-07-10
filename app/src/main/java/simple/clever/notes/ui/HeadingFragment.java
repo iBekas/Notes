@@ -147,6 +147,11 @@ public class HeadingFragment extends Fragment{
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         heading.addCardData(new CardData("Заголовок заметки №"+(heading.size()+1)));
         adapter.notifyItemInserted(heading.size()-1);
+        recyclerView.smoothScrollToPosition(heading.size()-1);
         return super.onOptionsItemSelected(item);
+    }
+
+    public CardSource getHeading() {
+        return heading;
     }
 }

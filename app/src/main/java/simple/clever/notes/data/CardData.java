@@ -13,7 +13,7 @@ public class CardData {
     }
 
     public String getCurrentTimeStamp() {
-        SimpleDateFormat sdfDate = new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat sdfDate = new SimpleDateFormat("dd.MM.yyyy HH:mm");
         Date now = new Date();
         String strDate = sdfDate.format(now);
         return strDate;
