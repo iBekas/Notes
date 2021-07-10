@@ -43,8 +43,8 @@ public class UserNoteFragment extends Fragment {
         String[] noteText = getResources().getStringArray(R.array.notes);
         String headName = getResources().getString(R.string.init_head);
         headText.setText(headName);
-        noteUserText.setText(note.getUserNote());
-//        noteUserText.setText(noteText[text]);
+//        noteUserText.setText(note.getUserNote());
+        noteUserText.setText(noteText[note.getIndex()]);
         return view;
     }
 }

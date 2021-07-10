@@ -26,7 +26,6 @@ import simple.clever.notes.data.Note;
 public class HeadingFragment extends Fragment{
 
     public static final String KEY_HEADING = "keyHeading";
-//    private int position = 0;
     private Note currentNote;
     private boolean isLand;
 
@@ -53,7 +52,7 @@ public class HeadingFragment extends Fragment{
         if(savedInstanceState != null){
             currentNote = savedInstanceState.getParcelable(KEY_HEADING);
         } else {
-            currentNote = new Note(getResources().getStringArray(R.array.heading)[0], getResources().getStringArray(R.array.notes)[0]);
+            currentNote = new Note(getResources().getStringArray(R.array.heading)[0], getResources().getStringArray(R.array.notes)[0], 0);
         }
 
         if(isLand){
@@ -103,9 +102,9 @@ public class HeadingFragment extends Fragment{
 
     private void showNote(Note note) {
         if(isLand){
-            showLandNote(currentNote);
+            showLandNote(note);
         } else {
-            showPortNote(currentNote);
+            showPortNote(note);
         }
     }
 
@@ -115,18 +114,18 @@ public class HeadingFragment extends Fragment{
         super.onSaveInstanceState(outState);
     }
 
+
     private void showLandNote(Note note) {
-        UserNoteFragment detail = UserNoteFragment.newInstance(currentNote);
+        UserNoteFragment detail = UserNoteFragment.newInstance(note);
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
         fT.replace(R.id.note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 
     private void showPortNote(Note note){
-        UserNoteFragment detail = UserNoteFragment.newInstance(currentNote);
+        UserNoteFragment detail = UserNoteFragment.newInstance(note);
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
-//        detail.getArguments().getParcelable(UserNoteFragment.KEY_USER_NOTE, currentNote);
         fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 

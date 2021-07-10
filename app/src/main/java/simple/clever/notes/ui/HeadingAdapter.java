@@ -19,7 +19,6 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
     private OnItemClickListener itemClickListener;
     private OnItemLongClickListener itemLongClickListener;
 
-    private final static String TAG = "HeadingAdapter";
     private CardSource noteHead;
 
     public HeadingAdapter(CardSource noteHead) {
