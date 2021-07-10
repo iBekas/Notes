@@ -20,12 +20,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceImpl;
 import simple.clever.notes.R;
+import simple.clever.notes.data.Note;
 
 
 public class HeadingFragment extends Fragment{
 
     public static final String KEY_HEADING = "keyHeading";
-    private int position = 0;
+//    private int position = 0;
+    private Note currentNote;
     private boolean isLand;
 
 
@@ -49,11 +51,13 @@ public class HeadingFragment extends Fragment{
 
         isLand = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
         if(savedInstanceState != null){
-            position = savedInstanceState.getInt(KEY_HEADING, 0);
+            currentNote = savedInstanceState.getParcelable(KEY_HEADING);
+        } else {
+            currentNote = new Note(getResources().getStringArray(R.array.heading)[0], getResources().getStringArray(R.array.notes)[0]);
         }
 
         if(isLand){
-            showLandNote(position);
+            showLandNote(currentNote);
         }
 
     }
@@ -72,7 +76,7 @@ public class HeadingFragment extends Fragment{
         HeadingAdapter adapter = new HeadingAdapter(arr);
         recyclerView.setAdapter(adapter);
 
-        adapter.SetOnItemClickListener((view, position) -> showNote(position));
+        adapter.SetOnItemClickListener((view, position) -> showNote(currentNote));
 
         adapter.SetOnItemLongClickListener((view, position) -> {
             PopupMenu popupMenu = new PopupMenu(requireActivity(), view);
@@ -97,32 +101,32 @@ public class HeadingFragment extends Fragment{
     }
 
 
-    private void showNote(int index) {
+    private void showNote(Note note) {
         if(isLand){
-            showLandNote(index);
+            showLandNote(currentNote);
         } else {
-            showPortNote(index);
+            showPortNote(currentNote);
         }
     }
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putInt(KEY_HEADING, position);
+        outState.putParcelable(KEY_HEADING, currentNote);
         super.onSaveInstanceState(outState);
     }
 
-    private void showLandNote(int index) {
-        UserNoteFragment detail = UserNoteFragment.newInstance(index);
+    private void showLandNote(Note note) {
+        UserNoteFragment detail = UserNoteFragment.newInstance(currentNote);
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
         fT.replace(R.id.note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 
-    private void showPortNote(int index){
-        UserNoteFragment detail = UserNoteFragment.newInstance(index);
+    private void showPortNote(Note note){
+        UserNoteFragment detail = UserNoteFragment.newInstance(currentNote);
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
-        detail.getArguments().getInt(UserNoteFragment.NOTE_TEXT); // не сохраняет данные при повороте, что я упустил?
+//        detail.getArguments().getParcelable(UserNoteFragment.KEY_USER_NOTE, currentNote);
         fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 

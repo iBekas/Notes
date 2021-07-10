@@ -8,6 +8,12 @@ public class Note implements Parcelable {
     private String userNote;
 
 
+
+    public Note(String userHead, String userNote) {
+        this.userHead = userHead;
+        this.userNote = userNote;
+    }
+
     protected Note(Parcel in) {
         userHead = in.readString();
         userNote = in.readString();
@@ -34,5 +40,13 @@ public class Note implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(userHead);
         dest.writeString(userNote);
+    }
+
+    public String getUserHead() {
+        return userHead;
+    }
+
+    public String getUserNote() {
+        return userNote;
     }
 }

@@ -9,18 +9,19 @@ import android.widget.EditText;
 import androidx.fragment.app.Fragment;
 
 import simple.clever.notes.R;
+import simple.clever.notes.data.Note;
 
 public class UserNoteFragment extends Fragment {
 
-    public static final String NOTE_TEXT = "text";
-    private int text;
+    public static final String KEY_USER_NOTE = "UserNote";
+    private Note note;
 
 
 
-    public static UserNoteFragment newInstance(int text) {
+    public static UserNoteFragment newInstance(Note note) {
         UserNoteFragment fragment = new UserNoteFragment();
         Bundle args = new Bundle();
-        args.putInt(NOTE_TEXT, text);
+        args.putParcelable(KEY_USER_NOTE, note);
         fragment.setArguments(args);
         return fragment;
     }
@@ -29,7 +30,7 @@ public class UserNoteFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            text = getArguments().getInt(NOTE_TEXT);
+            note = getArguments().getParcelable(KEY_USER_NOTE);
         }
     }
 
@@ -42,7 +43,8 @@ public class UserNoteFragment extends Fragment {
         String[] noteText = getResources().getStringArray(R.array.notes);
         String headName = getResources().getString(R.string.init_head);
         headText.setText(headName);
-        noteUserText.setText(noteText[text]);
+        noteUserText.setText(note.getUserNote());
+//        noteUserText.setText(noteText[text]);
         return view;
     }
 }

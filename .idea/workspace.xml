@@ -38,12 +38,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/HeadingFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/UserNoteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/UserNoteFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/UserNoteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/UserNoteFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -485,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625747555434</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Добавил пакетов для понятной навигации. Убрал неиспользуемые импорты.">
+      <created>1625944855563</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1625944855563</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -501,7 +505,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавил popup на длинное нажатие по заголовку заметки." />
     <MESSAGE value="Меню для выезжающего меню." />
     <MESSAGE value="Добавил необходимые xml для реализации навигационного меню." />
     <MESSAGE value="Добавил навигационное меню, обработка нажатий пока toast. Куда-то потерялся сам тугл, только вытягивание работает." />
@@ -526,13 +529,14 @@
     <MESSAGE value="Изменил фрагмент заголовка и адаптер на принятие CardData." />
     <MESSAGE value="Добавил в попап графу - редактировать." />
     <MESSAGE value="Создал класс для парсеализации." />
-    <option name="LAST_COMMIT_MESSAGE" value="Создал класс для парсеализации." />
+    <MESSAGE value="Добавил пакетов для понятной навигации. Убрал неиспользуемые импорты." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил пакетов для понятной навигации. Убрал неиспользуемые импорты." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625745872835">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625945529718">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1625745872835" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1625945529718" />
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625492784167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -593,10 +597,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625747835756">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625944858223">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625747835756" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625944858223" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
