@@ -18,7 +18,7 @@ import simple.clever.notes.R;
 public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHolder> {
     private OnItemClickListener itemClickListener;
     private OnItemLongClickListener itemLongClickListener;
-
+    private int position;
     private CardSource noteHead;
 
     public HeadingAdapter(CardSource noteHead) {
@@ -49,6 +49,9 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
         this.itemLongClickListener = itemLongClickListener;
     }
 
+    public int getPosition() {
+        return position;
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -66,6 +69,7 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
 
             textHead.setOnLongClickListener(v -> {
                 if(itemLongClickListener != null) {
+                    position = getLayoutPosition();
                     itemLongClickListener.onItemClick(v,getAdapterPosition());
                     return true;
                 }

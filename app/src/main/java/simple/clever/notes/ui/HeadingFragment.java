@@ -90,9 +90,11 @@ public class HeadingFragment extends Fragment{
             requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
             popupMenu.setOnMenuItemClickListener(item -> {
                 int id = item.getItemId();
+                int adapterPosition = adapter.getPosition();
                 switch (id) {
                     case R.id.delete:
-                        Toast.makeText(requireActivity(), "Удаляем", Toast.LENGTH_SHORT).show();
+                        heading.deleteCardData(adapterPosition);
+                        adapter.notifyItemRemoved(adapterPosition);
                         return true;
                     case R.id.share:
                         Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
@@ -145,6 +147,7 @@ public class HeadingFragment extends Fragment{
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        adapter.notifyDataSetChanged(); если без этой строки сначала нажать удалить, а затем сразу добавить, тогда показывает некорректный номер заметки.
         heading.addCardData(new CardData("Заголовок заметки №"+(heading.size()+1)));
         adapter.notifyItemInserted(heading.size()-1);
         recyclerView.smoothScrollToPosition(heading.size()-1);
