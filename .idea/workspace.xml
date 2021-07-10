@@ -38,10 +38,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/heading_fragment_menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSourceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSourceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/heading_fragment_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/heading_fragment_menu.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +91,9 @@
   <component name="RecentsManager">
     <key name="android.template.-528354965">
       <recent name="simple.clever.notes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projets\Notes\app\src\main\res\drawable-v24" />
     </key>
   </component>
   <component name="RunManager">
@@ -167,13 +171,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Попытка коммита">
-      <created>1625142151309</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1625142151309</updated>
     </task>
     <task id="LOCAL-00002" summary="Добавил макет для заметок, добавил проверку на ландшафтную ориентрацию и на пустое значение.">
       <created>1625146877606</created>
@@ -511,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625949057530</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Методы и их переопределение для Data. Контекстное меню для фрагмента heading">
+      <created>1625950878360</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1625950878361</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -527,7 +531,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Тугл нашелся." />
     <MESSAGE value="Main Activity только для toolbar." />
     <MESSAGE value="Не большое изменение метода, в будущем пригодится." />
     <MESSAGE value="Попытка реализации onBackPressed()" />
@@ -552,7 +555,8 @@
     <MESSAGE value="Добавил парсеализацию, с ошибкой." />
     <MESSAGE value="Не понимаю, как сохранить\получить номер текущей позиции для парсеализации." />
     <MESSAGE value="Добавил комментарий" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил комментарий" />
+    <MESSAGE value="Методы и их переопределение для Data. Контекстное меню для фрагмента heading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Методы и их переопределение для Data. Контекстное меню для фрагмента heading" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625950298096">
@@ -619,10 +623,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625949060427">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625950881995">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625949060427" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625950881995" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -3,6 +3,9 @@ package simple.clever.notes.ui;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -17,6 +20,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import simple.clever.notes.data.CardData;
 import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceImpl;
 import simple.clever.notes.R;
@@ -28,6 +32,9 @@ public class HeadingFragment extends Fragment{
     public static final String KEY_HEADING = "keyHeading";
     private Note currentNote;
     private boolean isLand;
+    private RecyclerView recyclerView;
+    private HeadingAdapter adapter;
+    private CardSource heading;
 
 
     public static HeadingFragment newInstance() {
@@ -40,6 +47,7 @@ public class HeadingFragment extends Fragment{
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_heading, container, false);
         initList((LinearLayout) view);
+        setHasOptionsMenu(true);
         return view;
     }
 
@@ -62,8 +70,8 @@ public class HeadingFragment extends Fragment{
     }
 
     private void initList(LinearLayout liner){
-        RecyclerView recyclerView = liner.findViewById(R.id.recycler_note_view);
-        CardSource heading = new CardSourceImpl(getResources()).init();
+        recyclerView = liner.findViewById(R.id.recycler_note_view);
+        heading = new CardSourceImpl(getResources()).init();
         initRecyclerView(recyclerView, heading);
     }
 
@@ -72,7 +80,7 @@ public class HeadingFragment extends Fragment{
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        HeadingAdapter adapter = new HeadingAdapter(arr);
+        adapter = new HeadingAdapter(arr);
         recyclerView.setAdapter(adapter);
 
         adapter.SetOnItemClickListener((view, position) -> showNote(currentNote));
@@ -129,4 +137,16 @@ public class HeadingFragment extends Fragment{
         fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.heading_fragment_menu, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        heading.addCardData(new CardData("Заголовок заметки №"+(heading.size()+1)));
+        adapter.notifyItemInserted(heading.size()-1);
+        return super.onOptionsItemSelected(item);
+    }
 }

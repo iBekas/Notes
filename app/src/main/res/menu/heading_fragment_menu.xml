@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/favorite"
+        android:id="@+id/plus_note"
         android:icon="@drawable/plus_two"
         app:showAsAction="always"
         android:title="" />

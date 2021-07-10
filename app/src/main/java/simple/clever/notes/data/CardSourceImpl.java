@@ -19,9 +19,9 @@ public class CardSourceImpl implements CardSource{
 
     public CardSourceImpl init(){
         String[] heads = resources.getStringArray(R.array.heading);
-        String[] timesOpen = resources.getStringArray(R.array.time_open);
+//        String[] timesOpen = resources.getStringArray(R.array.time_open);
         for (int i = 0; i < heads.length; i++) {
-            dataSource.add(new CardData(heads[i], timesOpen[i]));
+            dataSource.add(new CardData(heads[i]));
         }
         return this;
     }
