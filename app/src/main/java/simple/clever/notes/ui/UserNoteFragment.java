@@ -44,7 +44,7 @@ public class UserNoteFragment extends Fragment {
         String headName = getResources().getString(R.string.init_head);
         headText.setText(headName);
 //        noteUserText.setText(note.getUserNote());
-        noteUserText.setText(noteText[note.getIndex()]);
+        noteUserText.setText(noteText[note.getIndex()]); // единственная позиция, которую я тут вижу, это позиция адаптера, но это не может быть правильным решением.
         return view;
     }
 }
