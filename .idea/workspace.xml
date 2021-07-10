@@ -38,8 +38,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_change_heading.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,13 +169,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Ошибка вывода на экран элементов фрагмента найдена.">
-      <created>1625221015396</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1625221015396</updated>
     </task>
     <task id="LOCAL-00005" summary="Добавил .commit (что б ему пусто было).">
       <created>1625221423470</created>
@@ -512,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625952857543</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Удаление заметки добавлено.">
+      <created>1625954435919</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1625954435919</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -528,7 +529,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Попытка реализации onBackPressed()" />
     <MESSAGE value="Добавил пользовательскую информацию. Осталось откуда-то считывать его gmail и на LongClick повесить смену аватарки" />
     <MESSAGE value="Еще одна бесупешная попытка настроить работу onBackPressed()" />
     <MESSAGE value="Добавил отображение всех меню для горизонтальной ориентации." />
@@ -553,13 +553,14 @@
     <MESSAGE value="Методы и их переопределение для Data. Контекстное меню для фрагмента heading" />
     <MESSAGE value="Добавление заметки - реализовано + добавил сохранение даты создания." />
     <MESSAGE value="Нет, парсеализация мне не дается..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Нет, парсеализация мне не дается..." />
+    <MESSAGE value="Удаление заметки добавлено." />
+    <option name="LAST_COMMIT_MESSAGE" value="Удаление заметки добавлено." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625953539323">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1625955620472">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1625953539323" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1625955620472" />
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625492784167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -584,22 +585,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1625695577907">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1625953962858">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625695577907" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1625695577907">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625953962858" />
+    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1625953962858">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1625695577907" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1625695577907">
+    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1625953962858" />
+    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1625953962857">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1625695577907" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1625695577907">
+    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1625953962857" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1625953962858">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1625695577907" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1625953962858" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -620,10 +621,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625952860418">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1625954437777">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625952860418" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1625954437777" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
