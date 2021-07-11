@@ -169,13 +169,6 @@
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
     </task>
-    <task id="LOCAL-00013" summary="Вторая попытка перехода на одну активити.">
-      <created>1625347040686</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1625347040686</updated>
-    </task>
     <task id="LOCAL-00014" summary="Еще одна попытка переделать все под одну главную активити">
       <created>1625426068978</created>
       <option name="number" value="00014" />
@@ -512,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626036075677</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="50 строка получает null, но логи говорят, что и строка и позиция есть.">
+      <created>1626036468983</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1626036468983</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -528,7 +528,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="+Интерфейс&#10;+Обработчик нажатий на ViewHolder" />
     <MESSAGE value="Обработчик кликов добавил, но работает только 1 из 2" />
     <MESSAGE value="Добавил обработку и короткого и длинного нажатия." />
     <MESSAGE value="Добвил CardView в item." />
@@ -553,7 +552,8 @@
     <MESSAGE value="Исправил ошибку добавления новой CardData" />
     <MESSAGE value="isVisible - говорил всегда false, getUserVisibleHint - работает корректно. Но, я понял, что забыл про потоки, использование которых кажется избыточным." />
     <MESSAGE value="Ошибка." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ошибка." />
+    <MESSAGE value="50 строка получает null, но логи говорят, что и строка и позиция есть." />
+    <option name="LAST_COMMIT_MESSAGE" value="50 строка получает null, но логи говорят, что и строка и позиция есть." />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626035590228">
@@ -584,22 +584,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626036130676">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626036611858">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626036130676" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626036130676">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626036611858" />
+    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626036611858">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626036130676" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626036130676">
+    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626036611858" />
+    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626036611857">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626036130676" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626036130676">
+    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626036611857" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626036611858">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626036130676" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626036611858" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -620,10 +620,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626036078008">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626036471527">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626036078008" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626036471527" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

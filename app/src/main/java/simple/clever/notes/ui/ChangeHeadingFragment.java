@@ -46,6 +46,7 @@ public class ChangeHeadingFragment extends Fragment {
             newHead = userHeadText.getText().toString().trim();
             HeadingFragment headingFragment = new HeadingFragment();
             Log.d("myLog", newHead +" "+ headingFragment.getAdapterPosition());
+            Log.d("myLog",headingFragment.getHeading().toString());
             headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
             headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());
             getActivity().onBackPressed();
