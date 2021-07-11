@@ -36,33 +36,28 @@ public class ChangeHeadingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_change_heading, container, false);
+        Log.d("myLog", "до инит");
         init(view);
+        saveUserText.setOnClickListener(v -> {
+            newHead = userHeadText.getText().toString().trim();
+
+            HeadingFragment headingFragment = HeadingFragment.newInstance();
+            FragmentManager fM = requireActivity().getSupportFragmentManager();
+            FragmentTransaction fT = fM.beginTransaction().add(R.id.main, headingFragment);
+            fT.commit();
+            Log.d("myLog", "после коммит");
+            headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
+            headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());
+            getActivity().onBackPressed();
+            Log.d("myLog", "после инит");
+        });
+
         return view;
     }
 
     private void init(View view) {
         userHeadText = view.findViewById(R.id.new_note_name);
         saveUserText = view.findViewById(R.id.save_button);
-
-        saveUserText.setOnClickListener(v -> {
-            newHead = userHeadText.getText().toString().trim();
-
-
-            HeadingFragment headingFragment = HeadingFragment.newInstance();
-            FragmentManager fM = requireActivity().getSupportFragmentManager();
-            FragmentTransaction fT = fM.beginTransaction().add(R.id.main, headingFragment);
-            headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
-            headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());
-            fT.commit();
-            getActivity().onBackPressed();
-
-
-//            Log.d("myLog", newHead +" "+ headingFragment.getAdapterPosition());
-//            Log.d("myLog",headingFragment.getHeading().toString());
-//            headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
-//            headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());
-//            getActivity().onBackPressed();
-        });
     }
 
     public String getNewHead() {
