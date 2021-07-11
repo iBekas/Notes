@@ -49,9 +49,9 @@ public class ChangeHeadingFragment extends Fragment {
             headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
             headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());
             getActivity().onBackPressed();
-            Log.d("myLog", "после инит");
+            Log.d("myLog", "после фрагмент");
         });
-
+        Log.d("myLog", "после инит");
         return view;
     }
 
