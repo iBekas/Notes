@@ -1,6 +1,7 @@
 package simple.clever.notes.ui;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import androidx.fragment.app.Fragment;
 
 import simple.clever.notes.R;
+import simple.clever.notes.data.CardData;
 
 public class ChangeHeadingFragment extends Fragment {
 
@@ -42,8 +44,9 @@ public class ChangeHeadingFragment extends Fragment {
 
         saveUserText.setOnClickListener(v -> {
             newHead = userHeadText.getText().toString().trim();
-//            Log.d("myLog",userHeadText.getText().toString().trim()); Кнопка работает, тескт сохраняется.
-//            getActivity().getFragmentManager().popBackStack();
+            HeadingFragment headingFragment = new HeadingFragment();
+            headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
+            headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());
             getActivity().onBackPressed();
         });
     }

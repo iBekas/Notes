@@ -2,7 +2,6 @@ package simple.clever.notes.ui;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -36,6 +35,7 @@ public class HeadingFragment extends Fragment{
     private RecyclerView recyclerView;
     private HeadingAdapter adapter;
     private CardSource heading;
+    private int adapterPosition;
 
 
     public static HeadingFragment newInstance() {
@@ -91,7 +91,7 @@ public class HeadingFragment extends Fragment{
             requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
             popupMenu.setOnMenuItemClickListener(item -> {
                 int id = item.getItemId();
-                int adapterPosition = adapter.getPosition();
+                adapterPosition = adapter.getPosition();
                 switch (id) {
                     case R.id.delete:
                         heading.deleteCardData(adapterPosition);
@@ -105,17 +105,9 @@ public class HeadingFragment extends Fragment{
                         FragmentManager fM = requireActivity().getSupportFragmentManager();
                         FragmentTransaction fT = fM.beginTransaction().add(R.id.main, detail);
                         fT.commit();
-                        Log.d("myLog", detail.getUserVisibleHint() +"1");
-                        if(detail.getUserVisibleHint()){
-                            try {
-                                Log.d("myLog", detail.getUserVisibleHint() +"");
-                                wait(50);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                        heading.updateCardData(new CardData(detail.getNewHead()), adapterPosition);
-                        adapter.notifyItemChanged(adapterPosition);
+
+//                        heading.updateCardData(new CardData(detail.getNewHead()), adapterPosition);
+//                        adapter.notifyItemChanged(adapterPosition);
                         return true;
                 }
                 return true;
@@ -175,5 +167,9 @@ public class HeadingFragment extends Fragment{
 
     public HeadingAdapter getAdapter() {
         return adapter;
+    }
+
+    public int getAdapterPosition() {
+        return adapterPosition;
     }
 }
