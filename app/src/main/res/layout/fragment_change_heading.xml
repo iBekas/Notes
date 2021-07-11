@@ -8,15 +8,28 @@
     tools:context=".ui.ChangeHeadingFragment">
 
     <EditText
-        android:id="@+id/note_name"
+        android:id="@+id/new_note_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:textSize="@dimen/nav_head_size"
+        android:textSize="@dimen/change_text_size"
+        android:hint="Введите новое название заместки"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_save"
+        android:textSize="@dimen/button_text_size"
+        android:backgroundTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/note_name"
+        app:layout_constraintStart_toStartOf="@+id/note_name"
+        app:layout_constraintTop_toBottomOf="@+id/note_name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -60,7 +60,7 @@ public class HeadingFragment extends Fragment{
         if(savedInstanceState != null){
             currentNote = savedInstanceState.getParcelable(KEY_HEADING);
         } else {
-            currentNote = new Note(getResources().getStringArray(R.array.heading)[0], getResources().getStringArray(R.array.notes)[0], 0);
+            currentNote = new Note(getResources().getStringArray(R.array.heading)[0], getResources().getStringArray(R.array.notes)[0]);
         }
 
         if(isLand){

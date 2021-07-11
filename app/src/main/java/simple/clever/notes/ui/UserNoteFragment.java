@@ -42,12 +42,10 @@ public class UserNoteFragment extends Fragment {
         EditText headText = view.findViewById(R.id.head_text);
         String[] noteText = getResources().getStringArray(R.array.notes);
         String headName = getResources().getString(R.string.init_head);
-        headText.setText(headName);
-        noteUserText.setText("Здесь могла бы быть ваша заметка"); //это, конечно же будет в ресурсах, позже
+        headText.setHint(headName);
+        noteUserText.setHint("Здесь могла бы быть ваша заметка");
 //        noteUserText.setText(note.getUserNote());
 //        noteUserText.setText(noteText[HeadingFragment.newInstance().getHeading().size()]);
-        //
-        // единственная позиция, которую я тут вижу, это позиция адаптера, но это не может быть правильным решением.
         return view;
     }
 }

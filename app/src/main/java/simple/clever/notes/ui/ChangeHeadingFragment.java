@@ -7,14 +7,17 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import simple.clever.notes.R;
 
 public class ChangeHeadingFragment extends Fragment {
 
-    private String userHeadText;
+    private EditText userHeadText;
+    private Button saveUserText;
 
-    public static ChangeHeadingFragment newInstance(String userHeadText) {
+    public static ChangeHeadingFragment newInstance() {
         ChangeHeadingFragment fragment = new ChangeHeadingFragment();
         return fragment;
     }
@@ -22,19 +25,19 @@ public class ChangeHeadingFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-//            mParam1 = getArguments().getString(ARG_PARAM1);
-//            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_change_heading, container, false);
+        View view = inflater.inflate(R.layout.fragment_change_heading, container, false);
+        init(view);
+        return view;
     }
 
-    public String getUserHeadText() {
-        return userHeadText;
+    private void init(View view) {
+        userHeadText = view.findViewById(R.id.new_note_name);
+        saveUserText = view.findViewById(R.id.save_button);
     }
+
 }

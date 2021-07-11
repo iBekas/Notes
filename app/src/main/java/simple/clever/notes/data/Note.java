@@ -6,20 +6,17 @@ import android.os.Parcelable;
 public class Note implements Parcelable {
     private String userHead;
     private String userNote;
-    private int index;
 
 
 
-    public Note(String userHead, String userNote, int index) {
+    public Note(String userHead, String userNote) {
         this.userHead = userHead;
         this.userNote = userNote;
-        this.index = index;
     }
 
     protected Note(Parcel in) {
         userHead = in.readString();
         userNote = in.readString();
-        index = in.readInt();
     }
 
     public static final Creator<Note> CREATOR = new Creator<Note>() {
@@ -43,14 +40,9 @@ public class Note implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(userHead);
         dest.writeString(userNote);
-        dest.writeInt(index);
     }
 
     public String getUserNote() {
         return userNote;
-    }
-
-    public int getIndex() {
-        return index;
     }
 }
