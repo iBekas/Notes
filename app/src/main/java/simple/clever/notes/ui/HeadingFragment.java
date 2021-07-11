@@ -2,6 +2,7 @@ package simple.clever.notes.ui;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -104,7 +105,17 @@ public class HeadingFragment extends Fragment{
                         FragmentManager fM = requireActivity().getSupportFragmentManager();
                         FragmentTransaction fT = fM.beginTransaction().add(R.id.main, detail);
                         fT.commit();
+                        Log.d("myLog", detail.isVisible() +"1");
+                        while (!detail.isVisible()){
+                            try {
+                                Log.d("myLog", detail.isVisible() +"");
+                                wait(1);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
                         heading.getCardData(adapterPosition).setHead(detail.getNewHead());
+                        adapter.notifyItemChanged(adapterPosition);
                         return true;
                 }
                 return true;

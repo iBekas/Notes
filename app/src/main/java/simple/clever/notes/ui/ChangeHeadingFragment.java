@@ -1,14 +1,13 @@
 package simple.clever.notes.ui;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.fragment.app.Fragment;
 
 import simple.clever.notes.R;
 
@@ -43,7 +42,9 @@ public class ChangeHeadingFragment extends Fragment {
 
         saveUserText.setOnClickListener(v -> {
             newHead = userHeadText.getText().toString().trim();
-            getActivity().getFragmentManager().popBackStack();
+//            Log.d("myLog",userHeadText.getText().toString().trim()); Кнопка работает, тескт сохраняется.
+//            getActivity().getFragmentManager().popBackStack();
+            getActivity().onBackPressed();
         });
     }
 
