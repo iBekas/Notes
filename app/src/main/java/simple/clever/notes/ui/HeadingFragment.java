@@ -21,10 +21,10 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import simple.clever.notes.R;
 import simple.clever.notes.data.CardData;
 import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceImpl;
-import simple.clever.notes.R;
 import simple.clever.notes.data.Note;
 
 
@@ -105,11 +105,11 @@ public class HeadingFragment extends Fragment{
                         FragmentManager fM = requireActivity().getSupportFragmentManager();
                         FragmentTransaction fT = fM.beginTransaction().add(R.id.main, detail);
                         fT.commit();
-                        Log.d("myLog", detail.isVisible() +"1");
-                        while (detail.isVisible()){
+                        Log.d("myLog", detail.getUserVisibleHint() +"1");
+                        if(detail.getUserVisibleHint()){
                             try {
-                                Log.d("myLog", detail.isVisible() +"");
-                                wait(1);
+                                Log.d("myLog", detail.getUserVisibleHint() +"");
+                                wait(50);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
