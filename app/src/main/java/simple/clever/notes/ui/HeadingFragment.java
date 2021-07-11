@@ -106,7 +106,7 @@ public class HeadingFragment extends Fragment{
                         FragmentTransaction fT = fM.beginTransaction().add(R.id.main, detail);
                         fT.commit();
                         Log.d("myLog", detail.isVisible() +"1");
-                        while (!detail.isVisible()){
+                        while (detail.isVisible()){
                             try {
                                 Log.d("myLog", detail.isVisible() +"");
                                 wait(1);
@@ -114,7 +114,7 @@ public class HeadingFragment extends Fragment{
                                 e.printStackTrace();
                             }
                         }
-                        heading.getCardData(adapterPosition).setHead(detail.getNewHead());
+                        heading.updateCardData(new CardData(detail.getNewHead()), adapterPosition);
                         adapter.notifyItemChanged(adapterPosition);
                         return true;
                 }
