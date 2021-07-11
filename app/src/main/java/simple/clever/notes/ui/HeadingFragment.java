@@ -100,7 +100,11 @@ public class HeadingFragment extends Fragment{
                         Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.change:
-                        Toast.makeText(requireActivity(), "Меняем", Toast.LENGTH_SHORT).show();
+                        ChangeHeadingFragment detail = ChangeHeadingFragment.newInstance();
+                        FragmentManager fM = requireActivity().getSupportFragmentManager();
+                        FragmentTransaction fT = fM.beginTransaction().add(R.id.main, detail);
+                        fT.commit();
+                        heading.getCardData(adapterPosition).setHead(detail.getNewHead());
                         return true;
                 }
                 return true;
@@ -156,5 +160,9 @@ public class HeadingFragment extends Fragment{
 
     public CardSource getHeading() {
         return heading;
+    }
+
+    public HeadingAdapter getAdapter() {
+        return adapter;
     }
 }

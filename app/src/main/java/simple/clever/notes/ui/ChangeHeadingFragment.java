@@ -16,6 +16,8 @@ public class ChangeHeadingFragment extends Fragment {
 
     private EditText userHeadText;
     private Button saveUserText;
+    private String newHead;
+
 
     public static ChangeHeadingFragment newInstance() {
         ChangeHeadingFragment fragment = new ChangeHeadingFragment();
@@ -38,6 +40,14 @@ public class ChangeHeadingFragment extends Fragment {
     private void init(View view) {
         userHeadText = view.findViewById(R.id.new_note_name);
         saveUserText = view.findViewById(R.id.save_button);
+
+        saveUserText.setOnClickListener(v -> {
+            newHead = userHeadText.getText().toString().trim();
+            getActivity().getFragmentManager().popBackStack();
+        });
     }
 
+    public String getNewHead() {
+        return newHead;
+    }
 }
