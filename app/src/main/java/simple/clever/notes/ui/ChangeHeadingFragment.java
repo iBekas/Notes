@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardData;
@@ -44,12 +46,22 @@ public class ChangeHeadingFragment extends Fragment {
 
         saveUserText.setOnClickListener(v -> {
             newHead = userHeadText.getText().toString().trim();
-            HeadingFragment headingFragment = new HeadingFragment();
-            Log.d("myLog", newHead +" "+ headingFragment.getAdapterPosition());
-            Log.d("myLog",headingFragment.getHeading().toString());
+
+
+            HeadingFragment headingFragment = HeadingFragment.newInstance();
+            FragmentManager fM = requireActivity().getSupportFragmentManager();
+            FragmentTransaction fT = fM.beginTransaction().add(R.id.main, headingFragment);
             headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
             headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());
+            fT.commit();
             getActivity().onBackPressed();
+
+
+//            Log.d("myLog", newHead +" "+ headingFragment.getAdapterPosition());
+//            Log.d("myLog",headingFragment.getHeading().toString());
+//            headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
+//            headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());
+//            getActivity().onBackPressed();
         });
     }
 

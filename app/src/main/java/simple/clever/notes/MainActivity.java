@@ -94,6 +94,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.gta:
                 Toast.makeText(MainActivity.this, "Возвращаемся в 2007", Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.calendar:
+
+                return true;
         }
         return false;
     }

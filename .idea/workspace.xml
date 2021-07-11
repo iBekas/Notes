@@ -39,7 +39,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/drawer_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/drawer_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,13 +172,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Еще одна попытка переделать все под одну главную активити">
-      <created>1625426068978</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1625426068978</updated>
     </task>
     <task id="LOCAL-00015" summary="Изменил Linear на Relative, чтобы один layout мог быть поверх другого. Пришлось в коде после нажатия менять цвет на белый.">
       <created>1625427247757</created>
@@ -512,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626036468983</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Ага, сам heading равен null, но вот почему...">
+      <created>1626036731805</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1626036731805</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -528,7 +532,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Обработчик кликов добавил, но работает только 1 из 2" />
     <MESSAGE value="Добавил обработку и короткого и длинного нажатия." />
     <MESSAGE value="Добвил CardView в item." />
     <MESSAGE value="Добвил класс данных - содержимое заголовка заметки." />
@@ -553,7 +556,8 @@
     <MESSAGE value="isVisible - говорил всегда false, getUserVisibleHint - работает корректно. Но, я понял, что забыл про потоки, использование которых кажется избыточным." />
     <MESSAGE value="Ошибка." />
     <MESSAGE value="50 строка получает null, но логи говорят, что и строка и позиция есть." />
-    <option name="LAST_COMMIT_MESSAGE" value="50 строка получает null, но логи говорят, что и строка и позиция есть." />
+    <MESSAGE value="Ага, сам heading равен null, но вот почему..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ага, сам heading равен null, но вот почему..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626035590228">
@@ -568,10 +572,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="96" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1625950489666" />
-    <state x="771" y="141" key="AndroidCreateXmlResourceDialog" timestamp="1626030025831">
+    <state x="771" y="141" key="AndroidCreateXmlResourceDialog" timestamp="1626037416426">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="771" y="141" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1626030025831" />
+    <state x="771" y="141" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1626037416426" />
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1625688383560">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -584,22 +588,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626036611858">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626037831376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626036611858" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626036611858">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626037831376" />
+    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626037831375">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626036611858" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626036611857">
+    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626037831375" />
+    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626037831375">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626036611857" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626036611858">
+    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626037831375" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626037831376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626036611858" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626037831376" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -620,10 +624,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626036471527">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626036734282">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626036471527" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626036734282" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
