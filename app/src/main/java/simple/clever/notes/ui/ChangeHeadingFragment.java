@@ -38,12 +38,13 @@ public class ChangeHeadingFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_change_heading, container, false);
 //        Log.d("myLog", "до инит");
         new Thread(()->{
-            HeadingFragment.lock.lock();
+//            HeadingFragment.lock.lock();
             Log.d("myLog", "после лок");
             init(view);
             saveUserText.setOnClickListener(v -> {
                 newHead = userHeadText.getText().toString().trim();
-                HeadingFragment.lock.unlock();
+                HeadingFragment.visible = false;
+//                HeadingFragment.lock.unlock();
                 getActivity().onBackPressed();
             });
         }).start();

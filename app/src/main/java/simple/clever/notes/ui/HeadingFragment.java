@@ -41,6 +41,7 @@ public class HeadingFragment extends Fragment{
     private CardSource heading;
     private int adapterPosition;
     public static Lock lock;
+    public static boolean visible;
 
 
     public static HeadingFragment newInstance() {
@@ -113,19 +114,21 @@ public class HeadingFragment extends Fragment{
 //                        Log.d("myLog", "до хеадинг");
                         lock = new ReentrantLock();
                         new Thread(()-> {
-                            while (detail.getUserVisibleHint()){
+                            visible = true;
+                            Log.d("myLog", "до isVisible" + detail.getUserVisibleHint());
+                            while (visible){
                                 try {
-                                    Thread.sleep(1000);
+                                    Thread.sleep(100);
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
                             }
 
-                            lock.tryLock();
-                            Log.d("myLog", "до хеадинг");
+//                            lock.tryLock();
+                            Log.d("myLog", "до хеадинг " + detail.getNewHead());
                             heading.updateCardData(new CardData(detail.getNewHead()), adapterPosition);
                             adapter.notifyItemChanged(adapterPosition);
-                            lock.unlock();
+//                            lock.unlock();
                         }).start();
 //                        heading.updateCardData(new CardData(detail.getNewHead()), adapterPosition);
 //                        adapter.notifyItemChanged(adapterPosition);
