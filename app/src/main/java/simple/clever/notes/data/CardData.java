@@ -27,7 +27,4 @@ public class CardData {
         return timeOpen;
     }
 
-    public void setHead(String head) {
-        this.head = head;
-    }
 }

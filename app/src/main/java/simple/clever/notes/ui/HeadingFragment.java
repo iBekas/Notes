@@ -2,6 +2,7 @@ package simple.clever.notes.ui;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,6 +21,9 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardData;
 import simple.clever.notes.data.CardSource;
@@ -36,6 +40,7 @@ public class HeadingFragment extends Fragment{
     private HeadingAdapter adapter;
     private CardSource heading;
     private int adapterPosition;
+    public static Lock lock;
 
 
     public static HeadingFragment newInstance() {
@@ -105,9 +110,26 @@ public class HeadingFragment extends Fragment{
                         FragmentManager fM = requireActivity().getSupportFragmentManager();
                         FragmentTransaction fT = fM.beginTransaction().add(R.id.main, detail);
                         fT.commit();
+//                        Log.d("myLog", "до хеадинг");
+                        lock = new ReentrantLock();
+                        new Thread(()-> {
+                            if(detail.getUserVisibleHint()){
+                                try {
+                                    Thread.sleep(1000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
 
+                            lock.tryLock();
+                            Log.d("myLog", "до хеадинг");
+                            heading.updateCardData(new CardData(detail.getNewHead()), adapterPosition);
+                            adapter.notifyItemChanged(adapterPosition);
+                            lock.unlock();
+                        }).start();
 //                        heading.updateCardData(new CardData(detail.getNewHead()), adapterPosition);
 //                        adapter.notifyItemChanged(adapterPosition);
+//                        Log.d("myLog", "после");
                         return true;
                 }
                 return true;

@@ -36,22 +36,32 @@ public class ChangeHeadingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_change_heading, container, false);
-        Log.d("myLog", "до инит");
-        init(view);
-        saveUserText.setOnClickListener(v -> {
-            newHead = userHeadText.getText().toString().trim();
-
-            HeadingFragment headingFragment = HeadingFragment.newInstance();
-            FragmentManager fM = requireActivity().getSupportFragmentManager();
-            FragmentTransaction fT = fM.beginTransaction().add(R.id.main, headingFragment);
-            fT.commitNow();
-            Log.d("myLog", "после коммит");
-            headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
-            headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());
-            getActivity().onBackPressed();
-            Log.d("myLog", "после фрагмент");
-        });
-        Log.d("myLog", "после инит");
+//        Log.d("myLog", "до инит");
+        new Thread(()->{
+            HeadingFragment.lock.lock();
+            Log.d("myLog", "после лок");
+            init(view);
+            saveUserText.setOnClickListener(v -> {
+                newHead = userHeadText.getText().toString().trim();
+                HeadingFragment.lock.unlock();
+                getActivity().onBackPressed();
+            });
+        }).start();
+//        init(view);
+//        saveUserText.setOnClickListener(v -> {
+//            newHead = userHeadText.getText().toString().trim();
+//            getActivity().onBackPressed();
+//            HeadingFragment headingFragment = HeadingFragment.newInstance();
+//            FragmentManager fM = requireActivity().getSupportFragmentManager();
+//            FragmentTransaction fT = fM.beginTransaction().add(R.id.main, headingFragment);
+//            fT.commitNow();
+//            Log.d("myLog", "после коммит");
+//            headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
+//            headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());
+//            getActivity().onBackPressed();
+//            Log.d("myLog", "после фрагмент");
+//        });
+//        Log.d("myLog", "после инит");
         return view;
     }
 
