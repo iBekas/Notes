@@ -44,7 +44,7 @@ public class ChangeHeadingFragment extends Fragment {
             HeadingFragment headingFragment = HeadingFragment.newInstance();
             FragmentManager fM = requireActivity().getSupportFragmentManager();
             FragmentTransaction fT = fM.beginTransaction().add(R.id.main, headingFragment);
-            fT.commit();
+            fT.commitNow();
             Log.d("myLog", "после коммит");
             headingFragment.getHeading().updateCardData(new CardData(newHead), headingFragment.getAdapterPosition());
             headingFragment.getAdapter().notifyItemChanged(headingFragment.getAdapterPosition());

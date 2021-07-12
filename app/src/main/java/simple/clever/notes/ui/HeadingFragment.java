@@ -154,7 +154,7 @@ public class HeadingFragment extends Fragment{
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        adapter.notifyDataSetChanged(); если без этой строки сначала нажать удалить, а затем сразу добавить, тогда показывает некорректный номер заметки.
+        adapter.notifyDataSetChanged(); //если без этой строки сначала нажать удалить, а затем сразу добавить, тогда показывает некорректный номер заметки.
         heading.addCardData(new CardData("Заголовок заметки №"+(heading.size()+1)));
         adapter.notifyItemInserted(heading.size()-1);
         recyclerView.smoothScrollToPosition(heading.size()-1);

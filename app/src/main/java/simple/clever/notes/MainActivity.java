@@ -1,5 +1,6 @@
 package simple.clever.notes;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -95,7 +96,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Возвращаемся в 2007", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.calendar:
-
+                DatePickerDialog datePickerDialog = new DatePickerDialog(
+                        this, null, 2021, 0, 01);
+                datePickerDialog.show();
                 return true;
         }
         return false;
