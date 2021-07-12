@@ -113,7 +113,7 @@ public class HeadingFragment extends Fragment{
 //                        Log.d("myLog", "до хеадинг");
                         lock = new ReentrantLock();
                         new Thread(()-> {
-                            if(detail.getUserVisibleHint()){
+                            while (detail.getUserVisibleHint()){
                                 try {
                                     Thread.sleep(1000);
                                 } catch (InterruptedException e) {
