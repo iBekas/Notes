@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,9 +20,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardData;
 import simple.clever.notes.data.CardSource;
@@ -31,7 +27,7 @@ import simple.clever.notes.data.CardSourceImpl;
 import simple.clever.notes.data.Note;
 
 
-public class HeadingFragment extends Fragment{
+public class HeadingFragment extends Fragment {
 
     public static final String KEY_HEADING = "keyHeading";
     private Note currentNote;
@@ -40,13 +36,19 @@ public class HeadingFragment extends Fragment{
     private HeadingAdapter adapter;
     private CardSource heading;
     private int adapterPosition;
-    public static Lock lock;
-    public static boolean visible;
+    private static String newNoteName;
 
 
     public static HeadingFragment newInstance() {
         HeadingFragment fragment = new HeadingFragment();
         return fragment;
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        newNoteName = ChangeHeadingFragment.getNewHead();
     }
 
     @Override
@@ -64,25 +66,25 @@ public class HeadingFragment extends Fragment{
         super.onActivityCreated(savedInstanceState);
 
         isLand = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
-        if(savedInstanceState != null){
+        if (savedInstanceState != null) {
             currentNote = savedInstanceState.getParcelable(KEY_HEADING);
         } else {
             currentNote = new Note(getResources().getStringArray(R.array.heading)[0], getResources().getStringArray(R.array.notes)[0]);
         }
 
-        if(isLand){
+        if (isLand) {
             showLandNote(currentNote);
         }
 
     }
 
-    private void initList(LinearLayout liner){
+    private void initList(LinearLayout liner) {
         recyclerView = liner.findViewById(R.id.recycler_note_view);
         heading = new CardSourceImpl(getResources()).init();
         initRecyclerView(recyclerView, heading);
     }
 
-    private void initRecyclerView(RecyclerView recyclerView, CardSource arr){
+    private void initRecyclerView(RecyclerView recyclerView, CardSource arr) {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -96,6 +98,7 @@ public class HeadingFragment extends Fragment{
             PopupMenu popupMenu = new PopupMenu(requireActivity(), view);
             requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
             popupMenu.setOnMenuItemClickListener(item -> {
+                ChangeHeadingFragment detail = ChangeHeadingFragment.newInstance();
                 int id = item.getItemId();
                 adapterPosition = adapter.getPosition();
                 switch (id) {
@@ -104,35 +107,18 @@ public class HeadingFragment extends Fragment{
                         adapter.notifyItemRemoved(adapterPosition);
                         return true;
                     case R.id.share:
-                        Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
+                        heading.updateCardData(new CardData("xnj-nj"), adapterPosition);
+                        adapter.notifyItemChanged(adapterPosition);
                         return true;
                     case R.id.change:
-                        ChangeHeadingFragment detail = ChangeHeadingFragment.newInstance();
                         FragmentManager fM = requireActivity().getSupportFragmentManager();
-                        FragmentTransaction fT = fM.beginTransaction().add(R.id.main, detail);
+                        FragmentTransaction fT = fM.beginTransaction().replace(R.id.main, detail);
                         fT.commit();
-//                        Log.d("myLog", "до хеадинг");
-                        lock = new ReentrantLock();
-                        new Thread(()-> {
-                            visible = true;
-                            Log.d("myLog", "до isVisible" + detail.getUserVisibleHint());
-                            while (visible){
-                                try {
-                                    Thread.sleep(100);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
 
-//                            lock.tryLock();
-                            Log.d("myLog", "до хеадинг " + detail.getNewHead());
-                            heading.updateCardData(new CardData(detail.getNewHead()), adapterPosition);
-                            adapter.notifyItemChanged(adapterPosition);
-//                            lock.unlock();
-                        }).start();
-//                        heading.updateCardData(new CardData(detail.getNewHead()), adapterPosition);
-//                        adapter.notifyItemChanged(adapterPosition);
-//                        Log.d("myLog", "после");
+                        heading.updateCardData(new CardData(newNoteName), adapterPosition);
+                        adapter.notifyItemChanged(adapterPosition);
+                        Log.d("myLog", "после" + newNoteName);
                         return true;
                 }
                 return true;
@@ -143,7 +129,7 @@ public class HeadingFragment extends Fragment{
 
 
     private void showNote(Note note) {
-        if(isLand){
+        if (isLand) {
             showLandNote(note);
         } else {
             showPortNote(note);
@@ -164,7 +150,7 @@ public class HeadingFragment extends Fragment{
         fT.replace(R.id.note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 
-    private void showPortNote(Note note){
+    private void showPortNote(Note note) {
         UserNoteFragment detail = UserNoteFragment.newInstance(note);
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
@@ -180,21 +166,14 @@ public class HeadingFragment extends Fragment{
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         adapter.notifyDataSetChanged(); //если без этой строки сначала нажать удалить, а затем сразу добавить, тогда показывает некорректный номер заметки.
-        heading.addCardData(new CardData("Заголовок заметки №"+(heading.size()+1)));
-        adapter.notifyItemInserted(heading.size()-1);
-        recyclerView.smoothScrollToPosition(heading.size()-1);
+        heading.addCardData(new CardData("Заголовок заметки №" + (heading.size() + 1)));
+        adapter.notifyItemInserted(heading.size() - 1);
+        recyclerView.smoothScrollToPosition(heading.size() - 1);
         return super.onOptionsItemSelected(item);
     }
 
-    public CardSource getHeading() {
-        return heading;
-    }
 
-    public HeadingAdapter getAdapter() {
-        return adapter;
-    }
-
-    public int getAdapterPosition() {
-        return adapterPosition;
+    public static void setNewNoteName(String newNoteName) {
+        HeadingFragment.newNoteName = newNoteName;
     }
 }

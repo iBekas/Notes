@@ -8,7 +8,7 @@
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CUSTOM_FILTER" value="myLog" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
@@ -170,13 +170,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Меню для выезжающего меню.">
-      <created>1625437265521</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1625437265521</updated>
     </task>
     <task id="LOCAL-00022" summary="Добавил необходимые xml для реализации навигационного меню.">
       <created>1625439538994</created>
@@ -514,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626092540308</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Попытка сделать без локов.">
+      <created>1626093693556</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1626093693556</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -530,7 +530,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Создал класс для парсеализации." />
     <MESSAGE value="Добавил пакетов для понятной навигации. Убрал неиспользуемые импорты." />
     <MESSAGE value="Добавил парсеализацию, с ошибкой." />
     <MESSAGE value="Не понимаю, как сохранить\получить номер текущей позиции для парсеализации." />
@@ -555,13 +554,14 @@
     <MESSAGE value="Добавил вызов календаря из drawer_menu" />
     <MESSAGE value="Еще попытка добавить редактирование." />
     <MESSAGE value="Что-то сломалось в HeadingFragment.lock.unlock();" />
-    <option name="LAST_COMMIT_MESSAGE" value="Что-то сломалось в HeadingFragment.lock.unlock();" />
+    <MESSAGE value="Попытка сделать без локов." />
+    <option name="LAST_COMMIT_MESSAGE" value="Попытка сделать без локов." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626035590228">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626165878151">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626035590228" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626165878151" />
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625492784167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -586,22 +586,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="436" key="GridCell.Tab.0.bottom" timestamp="1626093541944">
+    <state width="1237" height="436" key="GridCell.Tab.0.bottom" timestamp="1626165465860">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626093541944" />
-    <state width="1237" height="436" key="GridCell.Tab.0.center" timestamp="1626093541944">
+    <state width="1237" height="436" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626165465860" />
+    <state width="1237" height="436" key="GridCell.Tab.0.center" timestamp="1626165465860">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626093541944" />
-    <state width="1237" height="436" key="GridCell.Tab.0.left" timestamp="1626093541943">
+    <state width="1237" height="436" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626165465860" />
+    <state width="1237" height="436" key="GridCell.Tab.0.left" timestamp="1626165465860">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626093541943" />
-    <state width="1237" height="436" key="GridCell.Tab.0.right" timestamp="1626093541944">
+    <state width="1237" height="436" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626165465860" />
+    <state width="1237" height="436" key="GridCell.Tab.0.right" timestamp="1626165465860">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626093541944" />
+    <state width="1237" height="436" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626165465860" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -622,10 +622,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626092543003">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626093695304">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626092543003" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626093695304" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -634,6 +634,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="443" y="247" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1625133324288" />
+    <state x="484" y="98" key="refactoring.ChangeSignatureDialog" timestamp="1626164884842">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="484" y="98" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1626164884842" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1625742776672">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
