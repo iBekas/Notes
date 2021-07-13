@@ -1,6 +1,8 @@
 package simple.clever.notes.ui;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ public class UserNoteFragment extends Fragment {
 
     public static final String KEY_USER_NOTE = "UserNote";
     private Note note;
+    private String newBody;
 
 
 
@@ -43,7 +46,24 @@ public class UserNoteFragment extends Fragment {
         TextView headText = view.findViewById(R.id.head_text);
 
         headText.setText(note.getNoteName(getContext()));
-        noteUserText.setHint(note.getNoteBody(getContext()));
+        noteUserText.setText(note.getNoteBody(getContext()));
+
+        noteUserText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                newBody = noteUserText.getText().toString().trim();
+                note.setNoteBody(getContext(), newBody);
+//                Log.d("myLog",newBody);
+            }
+        });
         return view;
     }
 }
