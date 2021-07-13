@@ -20,6 +20,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import simple.clever.notes.MainActivity;
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardData;
 import simple.clever.notes.data.CardSource;
@@ -29,8 +30,6 @@ import simple.clever.notes.data.Note;
 
 public class HeadingFragment extends Fragment {
 
-    public static final String KEY_HEADING = "keyHeading";
-    private Note currentNote;
     private boolean isLand;
     private RecyclerView recyclerView;
     private HeadingAdapter adapter;
@@ -66,14 +65,8 @@ public class HeadingFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         isLand = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
-        if (savedInstanceState != null) {
-            currentNote = savedInstanceState.getParcelable(KEY_HEADING);
-        } else {
-            currentNote = new Note(getResources().getStringArray(R.array.heading)[0], getResources().getStringArray(R.array.notes)[0]);
-        }
-
         if (isLand) {
-            showLandNote(currentNote);
+            showLandNote(((MainActivity)getActivity()).currentNote);
         }
 
     }
@@ -92,7 +85,10 @@ public class HeadingFragment extends Fragment {
         adapter = new HeadingAdapter(arr);
         recyclerView.setAdapter(adapter);
 
-        adapter.SetOnItemClickListener((view, position) -> showNote(currentNote));
+        adapter.SetOnItemClickListener((view, position) -> {
+            ((MainActivity) getActivity()).currentNote = new Note(position);
+            showNote(((MainActivity) getActivity()).currentNote);
+        });
 
         adapter.SetOnItemLongClickListener((view, position) -> {
             PopupMenu popupMenu = new PopupMenu(requireActivity(), view);
@@ -136,11 +132,6 @@ public class HeadingFragment extends Fragment {
         }
     }
 
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putParcelable(KEY_HEADING, currentNote);
-        super.onSaveInstanceState(outState);
-    }
 
 
     private void showLandNote(Note note) {

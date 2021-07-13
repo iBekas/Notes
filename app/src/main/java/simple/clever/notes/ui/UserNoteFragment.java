@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
@@ -39,13 +40,10 @@ public class UserNoteFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user_note, container, false);
         EditText noteUserText = view.findViewById(R.id.user_text);
-        EditText headText = view.findViewById(R.id.head_text);
-        String[] noteText = getResources().getStringArray(R.array.notes);
-        String headName = getResources().getString(R.string.init_head);
-        headText.setHint(headName);
-        noteUserText.setHint("Здесь могла бы быть ваша заметка");
-//        noteUserText.setText(note.getUserNote());
-//        noteUserText.setText(noteText[HeadingFragment.newInstance().getHeading().size()]);
+        TextView headText = view.findViewById(R.id.head_text);
+
+        headText.setText(note.getNoteName(getContext()));
+        noteUserText.setHint(note.getNoteBody(getContext()));
         return view;
     }
 }

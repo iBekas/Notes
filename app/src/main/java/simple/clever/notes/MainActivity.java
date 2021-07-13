@@ -1,6 +1,7 @@
 package simple.clever.notes;
 
 import android.app.DatePickerDialog;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -20,15 +21,25 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
+import simple.clever.notes.data.Note;
 import simple.clever.notes.ui.HeadingFragment;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String CURRENT_NOTE = "CurrentNote";
+    public Note currentNote;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.drawer_main);
+
+        if (savedInstanceState != null) {
+            currentNote = savedInstanceState.getParcelable(CURRENT_NOTE);
+        } else {
+            currentNote = new Note(0);
+        }
+
         passFragment(HeadingFragment.newInstance());
         Toolbar toolbar = initToolbar();
         initDrawer(toolbar);
@@ -144,9 +155,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putParcelable(CURRENT_NOTE, currentNote);
+        super.onSaveInstanceState(outState);
+    }
 
 }
