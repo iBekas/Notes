@@ -49,22 +49,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.main);
-        if(fragment.isVisible()){
-            passFragment(HeadingFragment.newInstance());
-        } else super.onBackPressed();
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        return super.onKeyDown(keyCode, event);
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     private void passFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.main, fragment).commit();
+        fragmentTransaction.replace(R.id.main, fragment).addToBackStack(null).commit();
     }
 
 

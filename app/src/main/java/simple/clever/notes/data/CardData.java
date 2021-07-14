@@ -58,4 +58,8 @@ public class CardData implements Parcelable {
             return new CardData[size];
         }
     };
+
+    public void setHead(String head) {
+        this.head = head;
+    }
 }

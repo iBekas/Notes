@@ -41,6 +41,7 @@ public class HeadingFragment extends Fragment {
     private CardSource heading;
     private Navigation navigation;
     private Publisher publisher;
+    private CardData saveCardData = new CardData("");
 
     public static HeadingFragment newInstance() {
         HeadingFragment fragment = new HeadingFragment();
@@ -61,7 +62,7 @@ public class HeadingFragment extends Fragment {
         super.onAttach(context);
         MainActivity activity = (MainActivity)context;
         navigation = activity.getNavigation();
-        publisher = activity.getPublisher();
+        publisher = ((MainActivity)getActivity()).getPublisher();
     }
 
     @Override
@@ -119,8 +120,8 @@ public class HeadingFragment extends Fragment {
                     case R.id.change:
                         ChangeHeadingFragment detail = ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition));
                         FragmentManager fM = requireActivity().getSupportFragmentManager();
-                        FragmentTransaction fT = fM.beginTransaction().replace(R.id.main, detail).addToBackStack(null);
-                        fT.commit();
+                        FragmentTransaction fT = fM.beginTransaction().replace(R.id.main, detail);
+                        fT.addToBackStack(null).commit();
 
 //                        navigation.addFragment(ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition)), true);
                         publisher.subscribe(new Observer() {
@@ -154,14 +155,14 @@ public class HeadingFragment extends Fragment {
         UserNoteFragment detail = UserNoteFragment.newInstance(note);
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
-        fT.replace(R.id.note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+        fT.replace(R.id.note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
     }
 
     private void showPortNote(Note note) {
         UserNoteFragment detail = UserNoteFragment.newInstance(note);
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
-        fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+        fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
     }
 
     @Override
@@ -175,8 +176,8 @@ public class HeadingFragment extends Fragment {
         ChangeHeadingFragment detail = ChangeHeadingFragment.newInstance();
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction().replace(R.id.main, detail);
-        fT.commit();
-//        navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
+        fT.addToBackStack(null).commit();
+
         publisher.subscribe(new Observer() {
             @Override
             public void updateCardData(CardData cardData) {
