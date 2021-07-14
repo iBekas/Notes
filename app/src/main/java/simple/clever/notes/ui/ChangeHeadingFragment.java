@@ -2,7 +2,6 @@ package simple.clever.notes.ui;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +10,6 @@ import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-
-import java.util.Date;
 
 import simple.clever.notes.MainActivity;
 import simple.clever.notes.R;
@@ -53,7 +50,7 @@ public class ChangeHeadingFragment extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        MainActivity activity = (MainActivity)context;
+        MainActivity activity = (MainActivity) context;
         publisher = activity.getPublisher();
     }
 
@@ -91,9 +88,8 @@ public class ChangeHeadingFragment extends Fragment {
         publisher.notifySingle(cardData);
     }
 
-    private CardData collectCardData(){
+    private CardData collectCardData() {
         String head = this.userHeadText.getText().toString();
-        Log.d("myLog", head);
         return new CardData(head);
     }
 

@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_main);
-
+        navigation = new Navigation(getSupportFragmentManager());
         if (savedInstanceState != null) {
             currentNote = savedInstanceState.getParcelable(CURRENT_NOTE);
         } else {
             currentNote = new Note(0);
         }
 
-        passFragment(HeadingFragment.newInstance());
+        navigation.addFragment(HeadingFragment.newInstance(), true);
         Toolbar toolbar = initToolbar();
         initDrawer(toolbar);
     }
@@ -54,12 +54,11 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void passFragment(Fragment fragment){
+    private void passFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.main, fragment).addToBackStack(null).commit();
     }
-
 
 
     private Toolbar initToolbar() {
@@ -68,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
         return toolbar;
     }
 
-    private void initDrawer(Toolbar toolbar){
-    final DrawerLayout drawerLayout = findViewById(R.id.drawer);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+    private void initDrawer(Toolbar toolbar) {
+        final DrawerLayout drawerLayout = findViewById(R.id.drawer);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -79,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                if(navigationFragment(id)){
+                if (navigationFragment(id)) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
                 }
@@ -88,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private boolean navigationFragment(int id){
-        switch (id){
+    private boolean navigationFragment(int id) {
+        switch (id) {
             case R.id.birthday:
                 Toast.makeText(MainActivity.this, "Добавляем ДР", Toast.LENGTH_SHORT).show();
                 return true;
@@ -115,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        switch (id){
+        switch (id) {
             case R.id.sort:
                 Toast.makeText(MainActivity.this, "Сортируем", Toast.LENGTH_SHORT).show();
                 return true;
