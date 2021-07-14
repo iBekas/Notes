@@ -39,9 +39,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/Navigation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/observer/Publisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/UserNoteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/UserNoteFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/heading_array.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/heading_array.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,15 +88,21 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-07-10T19:52:04.873657600Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android-custom-viewC:/Users/dmitr/AppData/Local/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../6-7instruction" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/observer" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projets\Notes\app\src\main\res\drawable-v24" />
+    </key>
     <key name="android.template.-528354965">
       <recent name="simple.clever.notes" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projets\Notes\app\src\main\res\drawable-v24" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="simple.clever.notes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projets\Notes\app\src\main\java\simple\clever\notes\observer" />
     </key>
   </component>
   <component name="RunManager">
@@ -170,13 +180,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Тугл нашелся.">
-      <created>1625441306217</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1625441306217</updated>
     </task>
     <task id="LOCAL-00025" summary="Main Activity только для toolbar.">
       <created>1625478043658</created>
@@ -514,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626177007651</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Добавил сохранение введенной пользователем заметки.">
+      <created>1626182210254</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1626182210255</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -530,7 +540,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Не понимаю, как сохранить\получить номер текущей позиции для парсеализации." />
     <MESSAGE value="Добавил комментарий" />
     <MESSAGE value="Методы и их переопределение для Data. Контекстное меню для фрагмента heading" />
     <MESSAGE value="Добавление заметки - реализовано + добавил сохранение даты создания." />
@@ -555,13 +564,18 @@
     <MESSAGE value="Попытка сделать без локов." />
     <MESSAGE value="Ладно, с редактированием, принцип понятен, но чтобы увидеть изменения, сначала нужно сделать сохранение." />
     <MESSAGE value="Добавил сохранение состояния при повороте экрана." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил сохранение состояния при повороте экрана." />
+    <MESSAGE value="Добавил сохранение введенной пользователем заметки." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил сохранение введенной пользователем заметки." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626174926979">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626185522526">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626174926979" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626185522526" />
+    <state x="424" y="210" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626256104877">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="424" y="210" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1626256104877" />
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625492784167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -586,22 +600,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="436" key="GridCell.Tab.0.bottom" timestamp="1626181697243">
+    <state width="1237" height="436" key="GridCell.Tab.0.bottom" timestamp="1626182145736">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626181697243" />
-    <state width="1237" height="436" key="GridCell.Tab.0.center" timestamp="1626181697243">
+    <state width="1237" height="436" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626182145736" />
+    <state width="1237" height="436" key="GridCell.Tab.0.center" timestamp="1626182145736">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626181697243" />
-    <state width="1237" height="436" key="GridCell.Tab.0.left" timestamp="1626181697242">
+    <state width="1237" height="436" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626182145736" />
+    <state width="1237" height="436" key="GridCell.Tab.0.left" timestamp="1626182145735">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626181697242" />
-    <state width="1237" height="436" key="GridCell.Tab.0.right" timestamp="1626181697243">
+    <state width="1237" height="436" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626182145735" />
+    <state width="1237" height="436" key="GridCell.Tab.0.right" timestamp="1626182145736">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626181697243" />
+    <state width="1237" height="436" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626182145736" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -622,10 +636,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626177010347">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626182216149">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626177010347" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626182216149" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

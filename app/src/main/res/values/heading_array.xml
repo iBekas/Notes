@@ -16,4 +16,8 @@
         <item>Введите название заметки</item>
     </string>
 
+    <string name="init_note">
+        <item>Введите текст заметки</item>
+    </string>
+
 </resources>

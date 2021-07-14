@@ -27,7 +27,7 @@ public class Note implements Parcelable {
 
     public String getNoteBody(Context mContext) {
         SharedPreferences sp = mContext.getApplicationContext().getSharedPreferences(KEY_PREF, Context.MODE_PRIVATE);
-        return sp.getString(KEY_USER_NOTE+noteIndex, mContext.getResources().getStringArray(R.array.notes)[noteIndex]);
+        return sp.getString(KEY_USER_NOTE+noteIndex, mContext.getResources().getString(R.string.init_note));
 //        return mContext.getResources().getStringArray(R.array.notes)[noteIndex];
     }
 

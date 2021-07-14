@@ -22,12 +22,15 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.navigation.NavigationView;
 
 import simple.clever.notes.data.Note;
+import simple.clever.notes.observer.Publisher;
 import simple.clever.notes.ui.HeadingFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     public static final String CURRENT_NOTE = "CurrentNote";
     public Note currentNote;
+    private Navigation navigation;
+    private Publisher publisher = new Publisher();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,4 +164,11 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+    public Navigation getNavigation() {
+        return navigation;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
 }
