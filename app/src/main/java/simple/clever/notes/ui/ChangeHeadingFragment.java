@@ -2,6 +2,7 @@ package simple.clever.notes.ui;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,6 +93,7 @@ public class ChangeHeadingFragment extends Fragment {
 
     private CardData collectCardData(){
         String head = this.userHeadText.getText().toString();
+        Log.d("myLog", head);
         return new CardData(head);
     }
 

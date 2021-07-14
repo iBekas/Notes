@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -105,7 +106,6 @@ public class HeadingFragment extends Fragment {
             PopupMenu popupMenu = new PopupMenu(requireActivity(), view);
             requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
             popupMenu.setOnMenuItemClickListener(item -> {
-                ChangeHeadingFragment detail = ChangeHeadingFragment.newInstance();
                 int id = item.getItemId();
                 int adapterPosition = adapter.getPosition();
                 switch (id) {
@@ -114,17 +114,21 @@ public class HeadingFragment extends Fragment {
                         adapter.notifyItemRemoved(adapterPosition);
                         return true;
                     case R.id.share:
-                        //Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
-                        heading.updateCardData(new CardData("xnj-nj"), adapterPosition);
-                        adapter.notifyItemChanged(adapterPosition);
+                        Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.change:
-                        navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
+                        ChangeHeadingFragment detail = ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition));
+                        FragmentManager fM = requireActivity().getSupportFragmentManager();
+                        FragmentTransaction fT = fM.beginTransaction().replace(R.id.main, detail).addToBackStack(null);
+                        fT.commit();
+
+//                        navigation.addFragment(ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition)), true);
                         publisher.subscribe(new Observer() {
                             @Override
                             public void updateCardData(CardData cardData) {
-                                heading.updateCardData(cardData, position);
-                                adapter.notifyItemChanged(position);
+                                heading.updateCardData(cardData, adapterPosition);
+                                Log.d("myLog", cardData.getHead().toString() + "в update");
+                                adapter.notifyItemChanged(adapterPosition);
                             }
                         });
                         return true;
@@ -168,11 +172,16 @@ public class HeadingFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
+        ChangeHeadingFragment detail = ChangeHeadingFragment.newInstance();
+        FragmentManager fM = requireActivity().getSupportFragmentManager();
+        FragmentTransaction fT = fM.beginTransaction().replace(R.id.main, detail);
+        fT.commit();
+//        navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
         publisher.subscribe(new Observer() {
             @Override
             public void updateCardData(CardData cardData) {
                 heading.addCardData(cardData);
+                Log.d("myLog", cardData.getHead().toString() + "в add");
                 adapter.notifyItemInserted(heading.size() - 1);
                 recyclerView.smoothScrollToPosition(heading.size() - 1);
             }
