@@ -1,7 +1,6 @@
 package simple.clever.notes.ui;
 
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +22,16 @@ public class ChangeHeadingFragment extends Fragment {
     private Button saveUserText;
     private static String newHead;
 
-    public static ChangeHeadingFragment newInstance() {
+    public static ChangeHeadingFragment newInstance(CardData cardData) {
         ChangeHeadingFragment fragment = new ChangeHeadingFragment();
         Bundle args = new Bundle();
         args.putParcelable(SAVE_CARD_DATA, cardData);
         fragment.setArguments(args);
+        return fragment;
+    }
+
+    public static ChangeHeadingFragment newInstance() {
+        ChangeHeadingFragment fragment = new ChangeHeadingFragment();
         return fragment;
     }
 

@@ -19,8 +19,7 @@ public class CardData implements Parcelable {
     public String getCurrentTimeStamp() {
         SimpleDateFormat sdfDate = new SimpleDateFormat("dd.MM.yyyy HH:mm");
         Date now = new Date();
-        String strDate = sdfDate.format(now);
-        return strDate;
+        return sdfDate.format(now);
     }
 
     public String getHead() {
