@@ -1,5 +1,6 @@
 package simple.clever.notes.ui;
 
+import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,6 +28,7 @@ import simple.clever.notes.data.CardData;
 import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceImpl;
 import simple.clever.notes.data.Note;
+import simple.clever.notes.observer.Observer;
 import simple.clever.notes.observer.Publisher;
 
 
@@ -38,20 +40,10 @@ public class HeadingFragment extends Fragment {
     private CardSource heading;
     private Navigation navigation;
     private Publisher publisher;
-    private int adapterPosition;
-    private static String newNoteName;
-
 
     public static HeadingFragment newInstance() {
         HeadingFragment fragment = new HeadingFragment();
         return fragment;
-    }
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        newNoteName = ChangeHeadingFragment.getNewHead();
     }
 
     @Override
@@ -61,6 +53,21 @@ public class HeadingFragment extends Fragment {
         initList((LinearLayout) view);
         setHasOptionsMenu(true);
         return view;
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        MainActivity activity = (MainActivity)context;
+        navigation = activity.getNavigation();
+        publisher = activity.getPublisher();
+    }
+
+    @Override
+    public void onDetach() {
+        navigation = null;
+        publisher = null;
+        super.onDetach();
     }
 
 
@@ -100,7 +107,7 @@ public class HeadingFragment extends Fragment {
             popupMenu.setOnMenuItemClickListener(item -> {
                 ChangeHeadingFragment detail = ChangeHeadingFragment.newInstance();
                 int id = item.getItemId();
-                adapterPosition = adapter.getPosition();
+                int adapterPosition = adapter.getPosition();
                 switch (id) {
                     case R.id.delete:
                         heading.deleteCardData(adapterPosition);
@@ -112,13 +119,14 @@ public class HeadingFragment extends Fragment {
                         adapter.notifyItemChanged(adapterPosition);
                         return true;
                     case R.id.change:
-                        FragmentManager fM = requireActivity().getSupportFragmentManager();
-                        FragmentTransaction fT = fM.beginTransaction().replace(R.id.main, detail);
-                        fT.commit();
-
-                        heading.updateCardData(new CardData(newNoteName), adapterPosition);
-                        adapter.notifyItemChanged(adapterPosition);
-                        Log.d("myLog", "после" + newNoteName);
+                        navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
+                        publisher.subscribe(new Observer() {
+                            @Override
+                            public void updateCardData(CardData cardData) {
+                                heading.updateCardData(cardData, position);
+                                adapter.notifyItemChanged(position);
+                            }
+                        });
                         return true;
                 }
                 return true;
@@ -160,15 +168,16 @@ public class HeadingFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        adapter.notifyDataSetChanged(); //если без этой строки сначала нажать удалить, а затем сразу добавить, тогда показывает некорректный номер заметки.
-        heading.addCardData(new CardData("Заголовок заметки №" + (heading.size() + 1)));
-        adapter.notifyItemInserted(heading.size() - 1);
-        recyclerView.smoothScrollToPosition(heading.size() - 1);
+        navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
+        publisher.subscribe(new Observer() {
+            @Override
+            public void updateCardData(CardData cardData) {
+                heading.addCardData(cardData);
+                adapter.notifyItemInserted(heading.size() - 1);
+                recyclerView.smoothScrollToPosition(heading.size() - 1);
+            }
+        });
         return super.onOptionsItemSelected(item);
     }
 
-
-    public static void setNewNoteName(String newNoteName) {
-        HeadingFragment.newNoteName = newNoteName;
-    }
 }
