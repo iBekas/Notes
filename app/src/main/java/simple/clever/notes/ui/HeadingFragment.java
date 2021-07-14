@@ -66,7 +66,6 @@ public class HeadingFragment extends Fragment {
         super.onDetach();
     }
 
-
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -133,7 +132,6 @@ public class HeadingFragment extends Fragment {
         }
     }
 
-
     private void showLandNote(Note note) {
         navigation.addFragment(UserNoteFragment.newInstance(note), true);
     }
@@ -158,5 +156,4 @@ public class HeadingFragment extends Fragment {
         });
         return super.onOptionsItemSelected(item);
     }
-
 }

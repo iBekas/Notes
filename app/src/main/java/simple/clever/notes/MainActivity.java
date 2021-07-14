@@ -1,9 +1,7 @@
 package simple.clever.notes;
 
 import android.app.DatePickerDialog;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;

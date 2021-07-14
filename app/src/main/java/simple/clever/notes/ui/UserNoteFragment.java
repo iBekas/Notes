@@ -20,8 +20,6 @@ public class UserNoteFragment extends Fragment {
     private Note note;
     private String newBody;
 
-
-
     public static UserNoteFragment newInstance(Note note) {
         UserNoteFragment fragment = new UserNoteFragment();
         Bundle args = new Bundle();
@@ -61,7 +59,6 @@ public class UserNoteFragment extends Fragment {
             public void afterTextChanged(Editable s) {
                 newBody = noteUserText.getText().toString().trim();
                 note.setNoteBody(getContext(), newBody);
-//                Log.d("myLog",newBody);
             }
         });
         return view;

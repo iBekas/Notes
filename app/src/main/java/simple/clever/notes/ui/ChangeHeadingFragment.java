@@ -24,7 +24,6 @@ public class ChangeHeadingFragment extends Fragment {
     private EditText userHeadText;
     private Button saveUserText;
 
-
     public static ChangeHeadingFragment newInstance(CardData cardData) {
         ChangeHeadingFragment fragment = new ChangeHeadingFragment();
         Bundle args = new Bundle();
@@ -37,7 +36,6 @@ public class ChangeHeadingFragment extends Fragment {
         ChangeHeadingFragment fragment = new ChangeHeadingFragment();
         return fragment;
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -93,11 +91,9 @@ public class ChangeHeadingFragment extends Fragment {
         return new CardData(head);
     }
 
-
     private void populateView() {
         userHeadText.setHint(cardData.getHead());
     }
-
 
     private void init(View view) {
         userHeadText = view.findViewById(R.id.new_note_name);
