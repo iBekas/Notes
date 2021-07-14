@@ -21,11 +21,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import simple.clever.notes.MainActivity;
+import simple.clever.notes.Navigation;
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardData;
 import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceImpl;
 import simple.clever.notes.data.Note;
+import simple.clever.notes.observer.Publisher;
 
 
 public class HeadingFragment extends Fragment {
@@ -34,6 +36,8 @@ public class HeadingFragment extends Fragment {
     private RecyclerView recyclerView;
     private HeadingAdapter adapter;
     private CardSource heading;
+    private Navigation navigation;
+    private Publisher publisher;
     private int adapterPosition;
     private static String newNoteName;
 

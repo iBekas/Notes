@@ -6,11 +6,8 @@ import android.os.Parcelable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import simple.clever.notes.observer.Publisher;
-
 public class CardData implements Parcelable {
-    private CardData cardData;
-    private Publisher publisher;
+
     private String head;
     private String timeOpen;
 

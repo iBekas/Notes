@@ -39,13 +39,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/Navigation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/observer/Publisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/heading_array.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/heading_array.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Main Activity только для toolbar.">
-      <created>1625478043658</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1625478043658</updated>
     </task>
     <task id="LOCAL-00026" summary="Не большое изменение метода, в будущем пригодится.">
       <created>1625478197106</created>
@@ -524,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626182210255</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Приступил к внедрению паблишера\обсервера и парсеализации CardData">
+      <created>1626256684799</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1626256684800</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -540,7 +535,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавил комментарий" />
     <MESSAGE value="Методы и их переопределение для Data. Контекстное меню для фрагмента heading" />
     <MESSAGE value="Добавление заметки - реализовано + добавил сохранение даты создания." />
     <MESSAGE value="Нет, парсеализация мне не дается..." />
@@ -565,7 +559,8 @@
     <MESSAGE value="Ладно, с редактированием, принцип понятен, но чтобы увидеть изменения, сначала нужно сделать сохранение." />
     <MESSAGE value="Добавил сохранение состояния при повороте экрана." />
     <MESSAGE value="Добавил сохранение введенной пользователем заметки." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил сохранение введенной пользователем заметки." />
+    <MESSAGE value="Приступил к внедрению паблишера\обсервера и парсеализации CardData" />
+    <option name="LAST_COMMIT_MESSAGE" value="Приступил к внедрению паблишера\обсервера и парсеализации CardData" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626185522526">
@@ -636,10 +631,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626182216149">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626256687884">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626182216149" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626256687884" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
