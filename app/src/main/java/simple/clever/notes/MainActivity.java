@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             currentNote = new Note(0);
         }
 
-        navigation.addFragment(HeadingFragment.newInstance(), true);
+        navigation.addFragment(HeadingFragment.newInstance(), false);
         Toolbar toolbar = initToolbar();
         initDrawer(toolbar);
     }
@@ -52,16 +52,10 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void passFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.main, fragment).addToBackStack(null).commit();
-    }
-
-
     private Toolbar initToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         return toolbar;
     }
 

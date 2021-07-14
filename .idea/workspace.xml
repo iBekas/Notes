@@ -38,12 +38,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
-    </list>
+    <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,20 +172,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Создан макет для RecyclerView и макет item, который в него будем помещать.">
-      <created>1625686035764</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1625686035764</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Добавил адаптер.">
-      <created>1625687338212</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1625687338212</updated>
     </task>
     <task id="LOCAL-00034" summary="Ошибка: в адаптер поступает null.">
       <created>1625689129810</created>
@@ -521,7 +502,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626293353100</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Задействовал навигатор, убрал лишние импорты, логи, пробелы.">
+      <created>1626294075788</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1626294075788</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Еще немного мусора удалил.">
+      <created>1626294294836</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1626294294838</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,8 +532,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Первая попытка реализовать редактирование." />
-    <MESSAGE value="Поправил отображение фрагмента для редактирования." />
     <MESSAGE value="Использованный вариант пока не работает." />
     <MESSAGE value="Исправил ошибку добавления новой CardData" />
     <MESSAGE value="isVisible - говорил всегда false, getUserVisibleHint - работает корректно. Но, я понял, что забыл про потоки, использование которых кажется избыточным." />
@@ -562,7 +555,9 @@
     <MESSAGE value="Добавил возможность вызова фрагмента добавления\корректирования - пока не работает." />
     <MESSAGE value="Внес несколько правок, не помогло. Коммит с целью сохранить изменения." />
     <MESSAGE value="Изменил в мейн кнопку &quot;назад&quot;, добавил ко всем вызовам фрагментов addToBackStack(null), редактирование и добавление заработало." />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменил в мейн кнопку &quot;назад&quot;, добавил ко всем вызовам фрагментов addToBackStack(null), редактирование и добавление заработало." />
+    <MESSAGE value="Задействовал навигатор, убрал лишние импорты, логи, пробелы." />
+    <MESSAGE value="Еще немного мусора удалил." />
+    <option name="LAST_COMMIT_MESSAGE" value="Еще немного мусора удалил." />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626290820720">
@@ -633,10 +628,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626293355329">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626294297268">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626293355329" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626294297268" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
