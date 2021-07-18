@@ -38,7 +38,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="" />
+    <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,13 +174,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Ошибка: в адаптер поступает null.">
-      <created>1625689129810</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1625689129810</updated>
     </task>
     <task id="LOCAL-00035" summary="С одни текствью запускается в штатном режиме.">
       <created>1625691901502</created>
@@ -516,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626294294838</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Кнопка назад работает корректно, когда на экране главный фрагмент.">
+      <created>1626294664972</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1626294664973</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -532,7 +534,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Использованный вариант пока не работает." />
     <MESSAGE value="Исправил ошибку добавления новой CardData" />
     <MESSAGE value="isVisible - говорил всегда false, getUserVisibleHint - работает корректно. Но, я понял, что забыл про потоки, использование которых кажется избыточным." />
     <MESSAGE value="Ошибка." />
@@ -557,7 +558,8 @@
     <MESSAGE value="Изменил в мейн кнопку &quot;назад&quot;, добавил ко всем вызовам фрагментов addToBackStack(null), редактирование и добавление заработало." />
     <MESSAGE value="Задействовал навигатор, убрал лишние импорты, логи, пробелы." />
     <MESSAGE value="Еще немного мусора удалил." />
-    <option name="LAST_COMMIT_MESSAGE" value="Еще немного мусора удалил." />
+    <MESSAGE value="Кнопка назад работает корректно, когда на экране главный фрагмент." />
+    <option name="LAST_COMMIT_MESSAGE" value="Кнопка назад работает корректно, когда на экране главный фрагмент." />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626290820720">
@@ -580,10 +582,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="771" y="141" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1626037416426" />
-    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1626291389082">
+    <state x="93" y="93" width="1095" height="495" maximized="true" key="DiffContextDialog" timestamp="1626638463088">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1626291389082" />
+    <state x="93" y="93" width="1095" height="495" maximized="true" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1626638463088" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1626166652920">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -592,22 +594,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626293520142">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626638455231">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626293520142" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626293520142">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626638455231" />
+    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626638455231">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626293520142" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626293520142">
+    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626638455231" />
+    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626638455230">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626293520142" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626293520142">
+    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626638455230" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626638455231">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626293520142" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626638455231" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -628,14 +630,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625132340352" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626294297268">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626294666760">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626294297268" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626294666760" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="452" y="119" key="chooseDestDirectoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1625428154520" />
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626638130907">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1626638130907" />
     <state x="443" y="247" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1625133324288">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

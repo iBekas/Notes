@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -133,7 +135,10 @@ public class HeadingFragment extends Fragment {
     }
 
     private void showLandNote(Note note) {
-        navigation.addFragment(UserNoteFragment.newInstance(note), true);
+        UserNoteFragment detail = UserNoteFragment.newInstance(note);
+        FragmentManager fM = requireActivity().getSupportFragmentManager();
+        FragmentTransaction fT = fM.beginTransaction();
+        fT.replace(R.id.note, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
     }
 
     private void showPortNote(Note note) {
