@@ -41,6 +41,7 @@ public class CardSourceFireBaseImpl implements CardSource{
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Map<String, Object> doc = document.getData();
                                 String id = document.getId();
+                                Log.d("myLog", id);
                                 CardData cardData = CardDataMapping.toCardData(id, doc);
                                 cardsData.add(cardData);
                             }

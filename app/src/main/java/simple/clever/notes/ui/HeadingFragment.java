@@ -3,6 +3,7 @@ package simple.clever.notes.ui;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -164,6 +165,7 @@ public class HeadingFragment extends Fragment {
         navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
         publisher.subscribe(cardData -> {
             heading.addCardData(cardData);
+            Log.d("myLog", cardData.getId()+"");
             adapter.notifyItemInserted(heading.size() - 1);
 //            recyclerView.smoothScrollToPosition(heading.size() - 1);
         });
