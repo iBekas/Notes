@@ -21,8 +21,9 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
     private int position;
     private CardSource noteHead;
 
-    public HeadingAdapter(CardSource noteHead) {
+    public void setDataSource(CardSource noteHead){
         this.noteHead = noteHead;
+        notifyDataSetChanged();
     }
 
     @Override

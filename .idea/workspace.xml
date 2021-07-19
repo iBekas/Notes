@@ -39,10 +39,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardDataMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSourceFireBaseImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSourceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSourceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardDataMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardDataMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,11 +142,11 @@
     <property name="settings.editor.selected.configurable" value="experimental" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projets\Notes\app\src\main\res\drawable-v24" />
+    </key>
     <key name="android.template.-528354965">
       <recent name="simple.clever.notes" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Projets\Notes\app\src\main\java\simple\clever\notes\observer" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="simple.clever.notes" />
@@ -152,8 +154,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="simple.clever.notes.data" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projets\Notes\app\src\main\res\drawable-v24" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projets\Notes\app\src\main\java\simple\clever\notes\observer" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -255,13 +257,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Обработчик кликов добавил, но работает только 1 из 2">
-      <created>1625694757532</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1625694757532</updated>
     </task>
     <task id="LOCAL-00039" summary="Добавил обработку и короткого и длинного нажатия.">
       <created>1625695872013</created>
@@ -599,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626699520340</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="1) Добавил класс Mapping - класть и забирать данные;&#10;2) Добавил класс чтения списка заметок из firestore.">
+      <created>1626703236395</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1626703236395</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,7 +618,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="50 строка получает null, но логи говорят, что и строка и позиция есть." />
     <MESSAGE value="Ага, сам heading равен null, но вот почему..." />
     <MESSAGE value="Попытка передать изменения номер 4." />
     <MESSAGE value="Попытка передать изменения номер 5." />
@@ -641,21 +642,22 @@
     <MESSAGE value="Для Land ориентации поправил отображение." />
     <MESSAGE value="Подключил FireBase" />
     <MESSAGE value="1) Добавил поле в CardData - id;&#10;2) Новый метод в интерфейсе CardSource для инициализации данных;&#10;3) Новый интерфейс с методом обратного вызова." />
-    <option name="LAST_COMMIT_MESSAGE" value="1) Добавил поле в CardData - id;&#10;2) Новый метод в интерфейсе CardSource для инициализации данных;&#10;3) Новый интерфейс с методом обратного вызова." />
+    <MESSAGE value="1) Добавил класс Mapping - класть и забирать данные;&#10;2) Добавил класс чтения списка заметок из firestore." />
+    <option name="LAST_COMMIT_MESSAGE" value="1) Добавил класс Mapping - класть и забирать данные;&#10;2) Добавил класс чтения списка заметок из firestore." />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="158" y="87" key="#PSD/0.0.1280.680@0.0.1280.680" timestamp="1626639361462" />
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626700222072">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626723111861">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626700222072" />
-    <state x="424" y="210" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626256104877">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626723111861" />
+    <state x="424" y="210" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626723617051">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="424" y="210" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1626256104877" />
+    <state x="424" y="210" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1626723617051" />
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625492784167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -716,10 +718,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626699525329">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626703239154">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626699525329" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626703239154" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

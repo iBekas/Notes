@@ -67,4 +67,8 @@ public class CardData implements Parcelable {
     public void setId(String id) {
         this.id = id;
     }
+
+    public void setTimeOpen(String timeOpen) {
+        this.timeOpen = timeOpen;
+    }
 }

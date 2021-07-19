@@ -11,6 +11,9 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import simple.clever.notes.MainActivity;
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardData;
@@ -88,7 +91,14 @@ public class ChangeHeadingFragment extends Fragment {
 
     private CardData collectCardData() {
         String head = this.userHeadText.getText().toString();
+        cardData.setTimeOpen(getCurrentTimeStamp());
         return new CardData(head);
+    }
+
+    public String getCurrentTimeStamp() {
+        SimpleDateFormat sdfDate = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+        Date now = new Date();
+        return sdfDate.format(now);
     }
 
     private void populateView() {

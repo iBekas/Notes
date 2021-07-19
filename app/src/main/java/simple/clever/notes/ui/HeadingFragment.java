@@ -26,6 +26,7 @@ import simple.clever.notes.Navigation;
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceImpl;
+import simple.clever.notes.data.CardSourceResponse;
 import simple.clever.notes.data.Note;
 import simple.clever.notes.observer.Publisher;
 
@@ -80,16 +81,22 @@ public class HeadingFragment extends Fragment {
 
     private void initList(LinearLayout liner) {
         recyclerView = liner.findViewById(R.id.recycler_note_view);
-        heading = new CardSourceImpl(getResources()).init();
-        initRecyclerView(recyclerView, heading);
+        heading = new CardSourceImpl(getResources()).init(new CardSourceResponse() {
+            @Override
+            public void initialized(CardSource cardData) {
+                adapter.notifyDataSetChanged();
+            }
+        });
+        initRecyclerView(recyclerView);
+        adapter.setDataSource(heading);
     }
 
-    private void initRecyclerView(RecyclerView recyclerView, CardSource arr) {
+    private void initRecyclerView(RecyclerView recyclerView) {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        adapter = new HeadingAdapter(arr);
+        adapter = new HeadingAdapter();
         recyclerView.setAdapter(adapter);
 
         adapter.SetOnItemClickListener((view, position) -> {
