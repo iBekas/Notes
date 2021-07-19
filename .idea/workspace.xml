@@ -39,39 +39,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_annotations_4_1_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_annotations_16_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_19_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_20_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_components_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_18_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_firestore_23_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_protolite_well_known_types_18_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_28_1_android.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_javalite_3_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp_okhttp_2_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_android_1_28_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_api_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_context_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_core_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_okhttp_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_protobuf_lite_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_stub_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_perfmark_perfmark_api_0_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_compat_qual_2_5_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_18.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Notes.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Notes.app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardDataMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSourceFireBaseImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSourceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSourceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,9 +104,9 @@
       <list>
         <option value="valueResourceFile" />
         <option value="layoutResourceFile" />
+        <option value="resourceFile" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -169,17 +140,20 @@
     <property name="settings.editor.selected.configurable" value="experimental" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projets\Notes\app\src\main\res\drawable-v24" />
-    </key>
     <key name="android.template.-528354965">
-      <recent name="simple.clever.notes" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="simple.clever.notes" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projets\Notes\app\src\main\java\simple\clever\notes\observer" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="simple.clever.notes" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="simple.clever.notes.data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projets\Notes\app\src\main\res\drawable-v24" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -281,13 +255,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00037" summary="+Интерфейс&#10;+Обработчик нажатий на ViewHolder">
-      <created>1625692674581</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1625692674581</updated>
     </task>
     <task id="LOCAL-00038" summary="Обработчик кликов добавил, но работает только 1 из 2">
       <created>1625694757532</created>
@@ -625,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626640935707</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="1) Добавил поле в CardData - id;&#10;2) Новый метод в интерфейсе CardSource для инициализации данных;&#10;3) Новый интерфейс с методом обратного вызова.">
+      <created>1626699520340</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1626699520340</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -642,7 +616,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Ошибка." />
     <MESSAGE value="50 строка получает null, но логи говорят, что и строка и позиция есть." />
     <MESSAGE value="Ага, сам heading равен null, но вот почему..." />
     <MESSAGE value="Попытка передать изменения номер 4." />
@@ -667,17 +640,18 @@
     <MESSAGE value="Кнопка назад работает корректно, когда на экране главный фрагмент." />
     <MESSAGE value="Для Land ориентации поправил отображение." />
     <MESSAGE value="Подключил FireBase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Подключил FireBase" />
+    <MESSAGE value="1) Добавил поле в CardData - id;&#10;2) Новый метод в интерфейсе CardSource для инициализации данных;&#10;3) Новый интерфейс с методом обратного вызова." />
+    <option name="LAST_COMMIT_MESSAGE" value="1) Добавил поле в CardData - id;&#10;2) Новый метод в интерфейсе CardSource для инициализации данных;&#10;3) Новый интерфейс с методом обратного вызова." />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="158" y="87" key="#PSD/0.0.1280.680@0.0.1280.680" timestamp="1626639361462" />
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626290820720">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626700222072">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626290820720" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626700222072" />
     <state x="424" y="210" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626256104877">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -742,10 +716,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626640946199">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626699525329">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626640946199" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626699525329" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

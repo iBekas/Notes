@@ -17,10 +17,13 @@ public class CardSourceImpl implements CardSource{
         this.resources = resources;
     }
 
-    public CardSourceImpl init(){
+    public CardSource init(CardSourceResponse cardSourceResponse){
         String[] heads = resources.getStringArray(R.array.heading);
         for (int i = 0; i < heads.length; i++) {
             dataSource.add(new CardData(heads[i]));
+        }
+        if (cardSourceResponse != null){
+            cardSourceResponse.initialized(this);
         }
         return this;
     }
