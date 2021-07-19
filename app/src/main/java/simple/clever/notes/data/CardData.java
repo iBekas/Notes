@@ -8,6 +8,7 @@ import java.util.Date;
 
 public class CardData implements Parcelable {
 
+    private String id;
     private String head;
     private String timeOpen;
 
@@ -58,4 +59,12 @@ public class CardData implements Parcelable {
             return new CardData[size];
         }
     };
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }
