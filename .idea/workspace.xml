@@ -39,8 +39,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,13 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Добвил CardView в item.">
-      <created>1625740965180</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1625740965180</updated>
     </task>
     <task id="LOCAL-00041" summary="Добвил класс данных - содержимое заголовка заметки.">
       <created>1625741224075</created>
@@ -598,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626724326523</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Понял CardSourceImpl() на CardSourceFireBaseImpl()">
+      <created>1626724863221</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1626724863221</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,7 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Попытка передать изменения номер 4." />
     <MESSAGE value="Попытка передать изменения номер 5." />
     <MESSAGE value="Изменение логов" />
     <MESSAGE value="Добавил вызов календаря из drawer_menu" />
@@ -640,7 +637,8 @@
     <MESSAGE value="1) Добавил поле в CardData - id;&#10;2) Новый метод в интерфейсе CardSource для инициализации данных;&#10;3) Новый интерфейс с методом обратного вызова." />
     <MESSAGE value="1) Добавил класс Mapping - класть и забирать данные;&#10;2) Добавил класс чтения списка заметок из firestore." />
     <MESSAGE value="Забыл про коммиты - добавил все необходимое для приема данных с базы и отправки в нее. Пока не работает." />
-    <option name="LAST_COMMIT_MESSAGE" value="Забыл про коммиты - добавил все необходимое для приема данных с базы и отправки в нее. Пока не работает." />
+    <MESSAGE value="Понял CardSourceImpl() на CardSourceFireBaseImpl()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Понял CardSourceImpl() на CardSourceFireBaseImpl()" />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
@@ -679,22 +677,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626724515897">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626725030658">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626724515897" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626724515897">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626725030658" />
+    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626725030657">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626724515897" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626724515897">
+    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626725030657" />
+    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626725030657">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626724515897" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626724515897">
+    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626725030657" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626725030658">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626724515897" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626725030658" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -715,10 +713,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626724328703">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626724866167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626724328703" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626724866167" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

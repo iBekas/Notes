@@ -165,7 +165,7 @@ public class HeadingFragment extends Fragment {
         publisher.subscribe(cardData -> {
             heading.addCardData(cardData);
             adapter.notifyItemInserted(heading.size() - 1);
-            recyclerView.smoothScrollToPosition(heading.size() - 1);
+//            recyclerView.smoothScrollToPosition(heading.size() - 1);
         });
         return super.onOptionsItemSelected(item);
     }
