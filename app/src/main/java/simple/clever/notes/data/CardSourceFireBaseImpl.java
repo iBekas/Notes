@@ -43,6 +43,7 @@ public class CardSourceFireBaseImpl implements CardSource{
                                 String id = document.getId();
                                 Log.d("myLog", id);
                                 CardData cardData = CardDataMapping.toCardData(id, doc);
+                                Log.d("myLog", cardData.getId() + "в файр до помещения в лист");
                                 cardsData.add(cardData);
                             }
                             Log.d(TAG, "success " + cardsData.size() + " qnt");
@@ -83,6 +84,7 @@ public class CardSourceFireBaseImpl implements CardSource{
     @Override
     public void updateCardData(CardData cardData, int position) {
         String id = cardData.getId();
+        Log.d("myLog", id + " в апдейте в файр");
         collection.document(id).set(CardDataMapping.toDocument(cardData));
     }
 

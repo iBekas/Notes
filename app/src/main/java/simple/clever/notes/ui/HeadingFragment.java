@@ -123,8 +123,10 @@ public class HeadingFragment extends Fragment {
                     case R.id.change:
                         navigation.addFragment(ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition)), true);
                         publisher.subscribe(cardData -> {
+                            Log.d("myLog", cardData.getId()+" при изменении");
                             heading.updateCardData(cardData, adapterPosition);
                             adapter.notifyItemChanged(adapterPosition);
+                            recyclerView.smoothScrollToPosition(heading.size() - 1);
                         });
                         return true;
                 }
@@ -165,9 +167,8 @@ public class HeadingFragment extends Fragment {
         navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
         publisher.subscribe(cardData -> {
             heading.addCardData(cardData);
-            Log.d("myLog", cardData.getId()+"");
+            Log.d("myLog", cardData.getId()+" при создании");
             adapter.notifyItemInserted(heading.size() - 1);
-//            recyclerView.smoothScrollToPosition(heading.size() - 1);
         });
         return super.onOptionsItemSelected(item);
     }
