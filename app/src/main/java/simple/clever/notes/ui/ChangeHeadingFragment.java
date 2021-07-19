@@ -91,7 +91,7 @@ public class ChangeHeadingFragment extends Fragment {
 
     private CardData collectCardData() {
         String head = this.userHeadText.getText().toString();
-        cardData.setTimeOpen(getCurrentTimeStamp());
+//        cardData.setTimeOpen(getCurrentTimeStamp());
         return new CardData(head);
     }
 
