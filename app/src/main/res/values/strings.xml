@@ -16,4 +16,6 @@
     <string name="change">редактировать</string>
     <string name="button_save">Сохранить</string>
     <string name="calendar">Календарь</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
 </resources>

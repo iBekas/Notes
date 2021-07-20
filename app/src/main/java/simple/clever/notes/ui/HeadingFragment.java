@@ -145,14 +145,14 @@ public class HeadingFragment extends Fragment {
                 builder.setTitle("Внимание!")
                         .setMessage("Вы уверены, что хотите удалить?")
                         .setCancelable(false)
-                        .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 heading.deleteCardData(adapterPosition);
                                 adapter.notifyItemRemoved(adapterPosition);
                             }
                         })
-                        .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.cancel();
