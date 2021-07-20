@@ -2,6 +2,7 @@ package simple.clever.notes.ui;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +46,7 @@ public class ChangeHeadingFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             cardData = getArguments().getParcelable(SAVE_CARD_DATA);
+            Log.d("myLog", cardData.getId() + " во фрагменте редактирования в create");
         }
     }
 
@@ -81,6 +83,7 @@ public class ChangeHeadingFragment extends Fragment {
     public void onStop() {
         super.onStop();
         cardData = collectCardData();
+        Log.d("myLog", cardData.getId() + " во фрагменте редактирования в stop");
     }
 
     @Override

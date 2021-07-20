@@ -109,10 +109,6 @@ public class HeadingFragment extends Fragment {
             ((MainActivity) getActivity()).currentNote = new Note(position);
             showNote(((MainActivity) getActivity()).currentNote);
         });
-
-//        adapter.SetOnItemLongClickListener((view, position) -> {
-//
-//        });
     }
 
     @Override
