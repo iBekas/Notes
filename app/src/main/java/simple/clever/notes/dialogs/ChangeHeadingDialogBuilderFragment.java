@@ -5,15 +5,14 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,6 +21,7 @@ import simple.clever.notes.MainActivity;
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardData;
 import simple.clever.notes.observer.Publisher;
+import simple.clever.notes.ui.HeadingFragment;
 
 public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
 
@@ -29,7 +29,6 @@ public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
     private CardData cardData;
     private Publisher publisher;
     private EditText userHeadText;
-    private Button saveUserText;
 
     public static ChangeHeadingDialogBuilderFragment newInstance(CardData cardData) {
         ChangeHeadingDialogBuilderFragment fragment = new ChangeHeadingDialogBuilderFragment();
@@ -82,10 +81,21 @@ public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
                 .setPositiveButton(R.string.button_save, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        dismiss();
                     }
                 });
         return builder.create();
+    }
+
+    @Override
+    public void onDismiss(@NonNull DialogInterface dialog) {
+        super.onDismiss(dialog);
+        HeadingFragment detail = HeadingFragment.newInstance();
+        FragmentManager fM = requireActivity().getSupportFragmentManager();
+        FragmentTransaction fT = fM.beginTransaction();
+        fT.setCustomAnimations(R.anim.enter_fragment, R.anim.exit_fragment);
+
+        fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
     }
 
     @Override

@@ -140,16 +140,16 @@ public class HeadingFragment extends Fragment {
     }
 
     private boolean onItemSelected(int menuItemId) {
+        ChangeHeadingDialogBuilderFragment changeHeadingDialogBuilderFragment;
         int adapterPosition = adapter.getPosition();
         switch (menuItemId) {
             case R.id.delete:
                 DeleteDialogBuilderFragment deleteDialogBuilderFragment = new DeleteDialogBuilderFragment(adapter, heading, adapterPosition);
                 deleteDialogBuilderFragment.show(getChildFragmentManager(), "deleteAlert");
-
                 return true;
             case R.id.change:
-                ChangeHeadingDialogBuilderFragment changeHeadingDialogBuilderFragment = ChangeHeadingDialogBuilderFragment.newInstance(heading.getCardData(adapterPosition));
-                changeHeadingDialogBuilderFragment.show(getChildFragmentManager(),"changeHead");
+                changeHeadingDialogBuilderFragment = ChangeHeadingDialogBuilderFragment.newInstance(heading.getCardData(adapterPosition));
+                changeHeadingDialogBuilderFragment.show(getChildFragmentManager(), "changeHead");
                 publisher.subscribe(cardData -> {
                     heading.updateCardData(cardData, adapterPosition);
                     adapter.notifyItemChanged(adapterPosition);
@@ -157,10 +157,11 @@ public class HeadingFragment extends Fragment {
                 });
                 return true;
             case R.id.plus_note:
-                navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
+                changeHeadingDialogBuilderFragment = ChangeHeadingDialogBuilderFragment.newInstance();
+                changeHeadingDialogBuilderFragment.show(getChildFragmentManager(), "addHead");
                 publisher.subscribe(cardData -> {
                     heading.addCardData(cardData);
-                    adapter.notifyItemInserted(heading.size() - 1);
+//                    adapter.notifyItemInserted(heading.size() - 1);
                 });
                 return true;
         }

@@ -15,6 +15,7 @@ public class Navigation {
     public void addFragment(Fragment fragment, boolean useBackStack) {
         // Открыть транзакцию
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.enter_fragment, R.anim.exit_fragment);
         fragmentTransaction.replace(R.id.main, fragment);
         if (useBackStack) {
             fragmentTransaction.addToBackStack(null);
