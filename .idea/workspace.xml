@@ -38,7 +38,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="" />
+    <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -251,13 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Добавил пакетов для понятной навигации. Убрал неиспользуемые импорты.">
-      <created>1625944855563</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1625944855563</updated>
     </task>
     <task id="LOCAL-00047" summary="Добавил парсеализацию, с ошибкой.">
       <created>1625946882345</created>
@@ -595,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626779608426</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Выделил метод для обработки всех пунктов меню.">
+      <created>1626780395918</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1626780395918</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -612,7 +615,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Попытка сделать без локов." />
     <MESSAGE value="Ладно, с редактированием, принцип понятен, но чтобы увидеть изменения, сначала нужно сделать сохранение." />
     <MESSAGE value="Добавил сохранение состояния при повороте экрана." />
     <MESSAGE value="Добавил сохранение введенной пользователем заметки." />
@@ -637,7 +639,8 @@
     <MESSAGE value="В CardSourceFireBaseImpl при помещении в list, id у заметки есть. Ни одной мысли почему далее id = null" />
     <MESSAGE value="Создал контекстное меню для замены попап" />
     <MESSAGE value="Заменил во фрагменте и адаптере попап на контектное меню, все еще не успевает редактировать." />
-    <option name="LAST_COMMIT_MESSAGE" value="Заменил во фрагменте и адаптере попап на контектное меню, все еще не успевает редактировать." />
+    <MESSAGE value="Выделил метод для обработки всех пунктов меню." />
+    <option name="LAST_COMMIT_MESSAGE" value="Выделил метод для обработки всех пунктов меню." />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
@@ -712,10 +715,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626779610836">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626780397686">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626779610836" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626780397686" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

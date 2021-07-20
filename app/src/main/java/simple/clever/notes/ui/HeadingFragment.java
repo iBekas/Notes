@@ -20,6 +20,7 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,6 +31,7 @@ import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceFireBaseImpl;
 import simple.clever.notes.data.CardSourceResponse;
 import simple.clever.notes.data.Note;
+import simple.clever.notes.data.OnItemLongClickListener;
 import simple.clever.notes.observer.Publisher;
 
 
@@ -101,10 +103,25 @@ public class HeadingFragment extends Fragment {
         adapter = new HeadingAdapter(this);
         recyclerView.setAdapter(adapter);
 
+        DefaultItemAnimator animator = new DefaultItemAnimator();
+        animator.setAddDuration(500);
+        animator.setRemoveDuration(500);
+        recyclerView.setItemAnimator(animator);
+
         adapter.SetOnItemClickListener((view, position) -> {
             ((MainActivity) getActivity()).currentNote = new Note(position);
             showNote(((MainActivity) getActivity()).currentNote);
         });
+
+//        adapter.SetOnItemLongClickListener((view, position) -> {
+//
+//        });
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.heading_fragment_menu, menu);
     }
 
     @Override
@@ -170,11 +187,5 @@ public class HeadingFragment extends Fragment {
 
     private void showPortNote(Note note) {
         navigation.addFragment(UserNoteFragment.newInstance(note), true);
-    }
-
-    @Override
-    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.heading_fragment_menu, menu);
     }
 }

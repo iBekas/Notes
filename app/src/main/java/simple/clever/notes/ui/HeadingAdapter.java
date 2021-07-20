@@ -87,12 +87,9 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
 
         private void registerContextMenu(@NonNull View itemView) {
             if (fragment != null){
-                itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
-                        position = getLayoutPosition();
-                        return false;
-                    }
+                itemView.setOnLongClickListener(v -> {
+                    position = getLayoutPosition();
+                    return false;
                 });
                 fragment.registerForContextMenu(itemView);
             }
