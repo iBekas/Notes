@@ -18,4 +18,6 @@
     <string name="calendar">Календарь</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
+    <string name="attention">Внимание!</string>
+    <string name="confirm">Вы уверены, что хотите удалить?</string>
 </resources>

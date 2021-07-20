@@ -29,8 +29,8 @@ public class DeleteDialogBuilderFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
-        builder.setTitle("Внимание!")
-                .setMessage("Вы уверены, что хотите удалить?")
+        builder.setTitle(R.string.attention)
+                .setMessage(R.string.confirm)
                 .setCancelable(false)
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
