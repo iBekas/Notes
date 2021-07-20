@@ -31,6 +31,7 @@ import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceFireBaseImpl;
 import simple.clever.notes.data.CardSourceResponse;
 import simple.clever.notes.data.Note;
+import simple.clever.notes.dialogs.DeleteDialogBuilderFragment;
 import simple.clever.notes.observer.Publisher;
 
 
@@ -141,25 +142,9 @@ public class HeadingFragment extends Fragment {
         int adapterPosition = adapter.getPosition();
         switch (menuItemId) {
             case R.id.delete:
-                AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
-                builder.setTitle("Внимание!")
-                        .setMessage("Вы уверены, что хотите удалить?")
-                        .setCancelable(false)
-                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                heading.deleteCardData(adapterPosition);
-                                adapter.notifyItemRemoved(adapterPosition);
-                            }
-                        })
-                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-                AlertDialog alert = builder.create();
-                alert.show();
+                DeleteDialogBuilderFragment deleteDialogBuilderFragment = new DeleteDialogBuilderFragment(adapter, heading, adapterPosition);
+                deleteDialogBuilderFragment.show(getChildFragmentManager(), "deleteAlert");
+
                 return true;
             case R.id.change:
                 navigation.addFragment(ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition)), true);
