@@ -1,6 +1,8 @@
 package simple.clever.notes.ui;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -139,8 +141,25 @@ public class HeadingFragment extends Fragment {
         int adapterPosition = adapter.getPosition();
         switch (menuItemId) {
             case R.id.delete:
-                heading.deleteCardData(adapterPosition);
-                adapter.notifyItemRemoved(adapterPosition);
+                AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
+                builder.setTitle("Внимание!")
+                        .setMessage("Вы уверены, что хотите удалить?")
+                        .setCancelable(false)
+                        .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                heading.deleteCardData(adapterPosition);
+                                adapter.notifyItemRemoved(adapterPosition);
+                            }
+                        })
+                        .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                        AlertDialog alert = builder.create();
+                        alert.show();
                 return true;
             case R.id.change:
                 navigation.addFragment(ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition)), true);

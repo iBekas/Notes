@@ -2,7 +2,6 @@ package simple.clever.notes.ui;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +45,6 @@ public class ChangeHeadingFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             cardData = getArguments().getParcelable(SAVE_CARD_DATA);
-            Log.d("myLog", cardData.getId() + " во фрагменте редактирования в create");
         }
     }
 
@@ -72,7 +70,6 @@ public class ChangeHeadingFragment extends Fragment {
         if (cardData != null) {
             populateView();
         }
-        Log.d("myLog", cardData.getId() + " во фрагменте редактирования в create view");
         saveUserText.setOnClickListener(v -> {
             getActivity().onBackPressed(); // вот это явно нужно поправить
         });
@@ -82,10 +79,7 @@ public class ChangeHeadingFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-        Log.d("myLog", cardData.getId() + " во фрагменте редактирования в stop до =");
-        // последнее строка, где id еще не null
         cardData = collectCardData();
-        Log.d("myLog", cardData.getId() + " во фрагменте редактирования в stop");
     }
 
     @Override
@@ -96,7 +90,7 @@ public class ChangeHeadingFragment extends Fragment {
 
     private CardData collectCardData() {
         String head = this.userHeadText.getText().toString();
-        if(cardData != null){
+        if (cardData != null) {
             CardData answer;
             answer = new CardData(head);
             answer.setId(cardData.getId());
