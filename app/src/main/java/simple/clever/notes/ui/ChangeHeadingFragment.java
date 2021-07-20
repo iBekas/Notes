@@ -82,8 +82,11 @@ public class ChangeHeadingFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-        Log.d("myLog", cardData.getId() + " во фрагменте редактирования в stop до ="); // последнее строка, где id еще не null
-        cardData = collectCardData();
+        Log.d("myLog", cardData.getId() + " во фрагменте редактирования в stop до =");
+        // последнее строка, где id еще не null
+//        cardData = collectCardData();
+        String head = this.userHeadText.getText().toString();
+        cardData.setHead(head);
         Log.d("myLog", cardData.getId() + " во фрагменте редактирования в stop");
     }
 

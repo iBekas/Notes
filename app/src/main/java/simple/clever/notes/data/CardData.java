@@ -71,4 +71,8 @@ public class CardData implements Parcelable {
     public void setTimeOpen(String timeOpen) {
         this.timeOpen = timeOpen;
     }
+
+    public void setHead(String head) {
+        this.head = head;
+    }
 }

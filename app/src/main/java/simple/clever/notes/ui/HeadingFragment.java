@@ -148,7 +148,7 @@ public class HeadingFragment extends Fragment {
                     Log.d("myLog", cardData.getId() + " при изменении");
                     heading.updateCardData(cardData, adapterPosition);
                     adapter.notifyItemChanged(adapterPosition);
-                    recyclerView.smoothScrollToPosition(heading.size() - 1);
+//                    recyclerView.smoothScrollToPosition(heading.size() - 1);
                 });
                 return true;
             case R.id.plus_note:
