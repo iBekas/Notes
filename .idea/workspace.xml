@@ -39,9 +39,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,13 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Добавление заметки - реализовано + добавил сохранение даты создания.">
-      <created>1625952027984</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1625952027984</updated>
     </task>
     <task id="LOCAL-00052" summary="Нет, парсеализация мне не дается...">
       <created>1625952857542</created>
@@ -599,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626784820644</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Вариант, где я напрямую создаю сеттер для заголовка и передаю его в onStop - работает.">
+      <created>1626785085391</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1626785085391</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,7 +615,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Странная ошибка, говорит что cardata не парсеализована. Сделаю-ка инвалидейт" />
     <MESSAGE value="Осознал, поправил." />
     <MESSAGE value="Зкончил подготовку ChangeHeadingFragment" />
     <MESSAGE value="Добавил возможность вызова фрагмента добавления\корректирования - пока не работает." />
@@ -641,7 +639,8 @@
     <MESSAGE value="Клик регистрируется в заметке, удаление работает. Удалил интерфейс необходимый для попап - попапа больше нет, но мы будем его помнить." />
     <MESSAGE value="Еще немного логов. В onCreate в ChangeHeadingFragment id есть." />
     <MESSAGE value="Место потери id обнаружено - в onStop - cardData = collectCardData();" />
-    <option name="LAST_COMMIT_MESSAGE" value="Место потери id обнаружено - в onStop - cardData = collectCardData();" />
+    <MESSAGE value="Вариант, где я напрямую создаю сеттер для заголовка и передаю его в onStop - работает." />
+    <option name="LAST_COMMIT_MESSAGE" value="Вариант, где я напрямую создаю сеттер для заголовка и передаю его в onStop - работает." />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
@@ -716,10 +715,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626784822576">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626785087543">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626784822576" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626785087543" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

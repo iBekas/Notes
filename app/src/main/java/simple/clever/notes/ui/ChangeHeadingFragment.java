@@ -84,9 +84,7 @@ public class ChangeHeadingFragment extends Fragment {
         super.onStop();
         Log.d("myLog", cardData.getId() + " во фрагменте редактирования в stop до =");
         // последнее строка, где id еще не null
-//        cardData = collectCardData();
-        String head = this.userHeadText.getText().toString();
-        cardData.setHead(head);
+        cardData = collectCardData();
         Log.d("myLog", cardData.getId() + " во фрагменте редактирования в stop");
     }
 
@@ -98,6 +96,12 @@ public class ChangeHeadingFragment extends Fragment {
 
     private CardData collectCardData() {
         String head = this.userHeadText.getText().toString();
+        if(cardData != null){
+            CardData answer;
+            answer = new CardData(head);
+            answer.setId(cardData.getId());
+            return answer;
+        }
 //        cardData.setTimeOpen(getCurrentTimeStamp());
         return new CardData(head);
     }
