@@ -137,7 +137,7 @@ public class HeadingFragment extends Fragment {
         return onItemSelected(item.getItemId()) || super.onOptionsItemSelected(item);
     }
 
-    private boolean onItemSelected(int menuItemId){
+    private boolean onItemSelected(int menuItemId) {
         int adapterPosition = adapter.getPosition();
         switch (menuItemId) {
             case R.id.delete:
@@ -158,13 +158,12 @@ public class HeadingFragment extends Fragment {
                                 dialog.cancel();
                             }
                         });
-                        AlertDialog alert = builder.create();
-                        alert.show();
+                AlertDialog alert = builder.create();
+                alert.show();
                 return true;
             case R.id.change:
                 navigation.addFragment(ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition)), true);
                 publisher.subscribe(cardData -> {
-                    Log.d("myLog", cardData.getId() + " при изменении");
                     heading.updateCardData(cardData, adapterPosition);
                     adapter.notifyItemChanged(adapterPosition);
 //                    recyclerView.smoothScrollToPosition(heading.size() - 1);
@@ -174,7 +173,6 @@ public class HeadingFragment extends Fragment {
                 navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
                 publisher.subscribe(cardData -> {
                     heading.addCardData(cardData);
-                    Log.d("myLog", cardData.getId() + " при создании");
                     adapter.notifyItemInserted(heading.size() - 1);
                 });
                 return true;
