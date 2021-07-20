@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import simple.clever.notes.data.CardData;
@@ -18,8 +19,13 @@ import simple.clever.notes.R;
 public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHolder> {
     private OnItemClickListener itemClickListener;
     private OnItemLongClickListener itemLongClickListener;
+    private final Fragment fragment;
     private int position;
     private CardSource noteHead;
+
+    public HeadingAdapter(Fragment fragment) {
+        this.fragment = fragment;
+    }
 
     public void setDataSource(CardSource noteHead){
         this.noteHead = noteHead;
@@ -63,6 +69,7 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
             super(itemView);
             textHead = itemView.findViewById(R.id.note_name);
             textTime = itemView.findViewById(R.id.time);
+            registerContextMenu(itemView);
 
             textHead.setOnClickListener(v -> {
                 if(itemClickListener != null) itemClickListener.onItemClick(v,getAdapterPosition());
@@ -71,11 +78,24 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
             textHead.setOnLongClickListener(v -> {
                 if(itemLongClickListener != null) {
                     position = getLayoutPosition();
-                    itemLongClickListener.onItemClick(v,getAdapterPosition());
+                    itemView.showContextMenu(10, 10);
                     return true;
                 }
                 return false;
             });
+        }
+
+        private void registerContextMenu(@NonNull View itemView) {
+            if (fragment != null){
+                itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        position = getLayoutPosition();
+                        return false;
+                    }
+                });
+                fragment.registerForContextMenu(itemView);
+            }
         }
 
         public void setData(CardData cardData){

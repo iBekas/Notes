@@ -40,6 +40,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,18 +132,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android-custom-viewC:/Users/dmitr/AppData/Local/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SocialNetwork" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/menu" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="experimental" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projets\Notes\app\src\main\res\drawable-v24" />
-    </key>
     <key name="android.template.-528354965">
       <recent name="simple.clever.notes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projets\Notes\app\src\main\res\menu" />
+      <recent name="C:\Projets\Notes\app\src\main\java\simple\clever\notes\observer" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="simple.clever.notes" />
@@ -149,8 +152,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="simple.clever.notes.data" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Projets\Notes\app\src\main\java\simple\clever\notes\observer" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projets\Notes\app\src\main\res\drawable-v24" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -252,13 +255,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Добавил в попап графу - редактировать.">
-      <created>1625745744290</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1625745744290</updated>
     </task>
     <task id="LOCAL-00045" summary="Создал класс для парсеализации.">
       <created>1625747555434</created>
@@ -596,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626727012007</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Создал контекстное меню для замены попап">
+      <created>1626778102783</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1626778102783</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -613,7 +616,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Еще попытка добавить редактирование." />
     <MESSAGE value="Что-то сломалось в HeadingFragment.lock.unlock();" />
     <MESSAGE value="Попытка сделать без локов." />
     <MESSAGE value="Ладно, с редактированием, принцип понятен, но чтобы увидеть изменения, сначала нужно сделать сохранение." />
@@ -638,7 +640,8 @@
     <MESSAGE value="add работает, update не видит id" />
     <MESSAGE value="В CardSourceFireBaseImpl id есть, а при создании null" />
     <MESSAGE value="В CardSourceFireBaseImpl при помещении в list, id у заметки есть. Ни одной мысли почему далее id = null" />
-    <option name="LAST_COMMIT_MESSAGE" value="В CardSourceFireBaseImpl при помещении в list, id у заметки есть. Ни одной мысли почему далее id = null" />
+    <MESSAGE value="Создал контекстное меню для замены попап" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создал контекстное меню для замены попап" />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
@@ -713,10 +716,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626727014738">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626778105868">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626727014738" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626778105868" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -729,10 +732,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="443" y="247" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1625133324288" />
-    <state x="484" y="98" key="refactoring.ChangeSignatureDialog" timestamp="1626164884842">
+    <state x="484" y="98" key="refactoring.ChangeSignatureDialog" timestamp="1626778171077">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="484" y="98" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1626164884842" />
+    <state x="484" y="98" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1626778171077" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1625742776672">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

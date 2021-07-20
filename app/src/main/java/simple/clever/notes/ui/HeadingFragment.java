@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -27,7 +28,6 @@ import simple.clever.notes.Navigation;
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceFireBaseImpl;
-import simple.clever.notes.data.CardSourceImpl;
 import simple.clever.notes.data.CardSourceResponse;
 import simple.clever.notes.data.Note;
 import simple.clever.notes.observer.Publisher;
@@ -98,44 +98,44 @@ public class HeadingFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        adapter = new HeadingAdapter();
+        adapter = new HeadingAdapter(this);
         recyclerView.setAdapter(adapter);
 
         adapter.SetOnItemClickListener((view, position) -> {
             ((MainActivity) getActivity()).currentNote = new Note(position);
             showNote(((MainActivity) getActivity()).currentNote);
         });
-
-        adapter.SetOnItemLongClickListener((view, position) -> {
-            PopupMenu popupMenu = new PopupMenu(requireActivity(), view);
-            requireActivity().getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
-            popupMenu.setOnMenuItemClickListener(item -> {
-                int id = item.getItemId();
-                int adapterPosition = adapter.getPosition();
-                switch (id) {
-                    case R.id.delete:
-                        heading.deleteCardData(adapterPosition);
-                        adapter.notifyItemRemoved(adapterPosition);
-                        return true;
-                    case R.id.share:
-                        Toast.makeText(requireActivity(), "Делимся", Toast.LENGTH_SHORT).show();
-                        return true;
-                    case R.id.change:
-                        navigation.addFragment(ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition)), true);
-                        publisher.subscribe(cardData -> {
-                            Log.d("myLog", cardData.getId()+" при изменении");
-                            heading.updateCardData(cardData, adapterPosition);
-                            adapter.notifyItemChanged(adapterPosition);
-                            recyclerView.smoothScrollToPosition(heading.size() - 1);
-                        });
-                        return true;
-                }
-                return true;
-            });
-            popupMenu.show();
-        });
     }
 
+    @Override
+    public void onCreateContextMenu(@NonNull ContextMenu menu, @NonNull View v,
+                                    @Nullable ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = requireActivity().getMenuInflater();
+        inflater.inflate(R.menu.contex_menu_heading, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        int adapterPosition = adapter.getPosition();
+        switch (id) {
+            case R.id.delete:
+                heading.deleteCardData(adapterPosition);
+                adapter.notifyItemRemoved(adapterPosition);
+                return true;
+            case R.id.change:
+                navigation.addFragment(ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition)), true);
+                publisher.subscribe(cardData -> {
+                    Log.d("myLog", cardData.getId() + " при изменении");
+                    heading.updateCardData(cardData, adapterPosition);
+                    adapter.notifyItemChanged(adapterPosition);
+                    recyclerView.smoothScrollToPosition(heading.size() - 1);
+                });
+                return true;
+        }
+        return super.onContextItemSelected(item);
+    }
 
     private void showNote(Note note) {
         if (isLand) {
@@ -167,7 +167,7 @@ public class HeadingFragment extends Fragment {
         navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
         publisher.subscribe(cardData -> {
             heading.addCardData(cardData);
-            Log.d("myLog", cardData.getId()+" при создании");
+            Log.d("myLog", cardData.getId() + " при создании");
             adapter.notifyItemInserted(heading.size() - 1);
         });
         return super.onOptionsItemSelected(item);
