@@ -72,7 +72,7 @@ public class ChangeHeadingFragment extends Fragment {
         if (cardData != null) {
             populateView();
         }
-
+        Log.d("myLog", cardData.getId() + " во фрагменте редактирования в create view");
         saveUserText.setOnClickListener(v -> {
             getActivity().onBackPressed(); // вот это явно нужно поправить
         });
@@ -82,6 +82,7 @@ public class ChangeHeadingFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
+        Log.d("myLog", cardData.getId() + " во фрагменте редактирования в stop до ="); // последнее строка, где id еще не null
         cardData = collectCardData();
         Log.d("myLog", cardData.getId() + " во фрагменте редактирования в stop");
     }

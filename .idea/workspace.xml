@@ -41,7 +41,6 @@
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,13 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Добавил комментарий">
-      <created>1625949057530</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1625949057530</updated>
     </task>
     <task id="LOCAL-00050" summary="Методы и их переопределение для Data. Контекстное меню для фрагмента heading">
       <created>1625950878360</created>
@@ -599,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626782035394</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Еще немного логов. В onCreate в ChangeHeadingFragment id есть.">
+      <created>1626784005407</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1626784005407</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,7 +615,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Добавил сохранение введенной пользователем заметки." />
     <MESSAGE value="Приступил к внедрению паблишера\обсервера и парсеализации CardData" />
     <MESSAGE value="Странная ошибка, говорит что cardata не парсеализована. Сделаю-ка инвалидейт" />
     <MESSAGE value="Осознал, поправил." />
@@ -641,7 +639,8 @@
     <MESSAGE value="Выделил метод для обработки всех пунктов меню." />
     <MESSAGE value="Теперь не работает не только редактирование, но и удаление." />
     <MESSAGE value="Клик регистрируется в заметке, удаление работает. Удалил интерфейс необходимый для попап - попапа больше нет, но мы будем его помнить." />
-    <option name="LAST_COMMIT_MESSAGE" value="Клик регистрируется в заметке, удаление работает. Удалил интерфейс необходимый для попап - попапа больше нет, но мы будем его помнить." />
+    <MESSAGE value="Еще немного логов. В onCreate в ChangeHeadingFragment id есть." />
+    <option name="LAST_COMMIT_MESSAGE" value="Еще немного логов. В onCreate в ChangeHeadingFragment id есть." />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
@@ -680,22 +679,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626783730617">
+    <state width="1237" height="436" key="GridCell.Tab.0.bottom" timestamp="1626784481480">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626783730617" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626783730617">
+    <state width="1237" height="436" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626784481480" />
+    <state width="1237" height="436" key="GridCell.Tab.0.center" timestamp="1626784481480">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626783730617" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626783730616">
+    <state width="1237" height="436" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626784481480" />
+    <state width="1237" height="436" key="GridCell.Tab.0.left" timestamp="1626784481478">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626783730616" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626783730617">
+    <state width="1237" height="436" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626784481478" />
+    <state width="1237" height="436" key="GridCell.Tab.0.right" timestamp="1626784481480">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626783730617" />
+    <state width="1237" height="436" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626784481480" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -716,10 +715,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626782037361">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626784007853">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626782037361" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626784007853" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
