@@ -12,11 +12,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -31,7 +29,6 @@ import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceFireBaseImpl;
 import simple.clever.notes.data.CardSourceResponse;
 import simple.clever.notes.data.Note;
-import simple.clever.notes.data.OnItemLongClickListener;
 import simple.clever.notes.observer.Publisher;
 
 

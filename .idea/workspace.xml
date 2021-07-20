@@ -40,7 +40,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingAdapter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,13 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Добавил парсеализацию, с ошибкой.">
-      <created>1625946882345</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1625946882345</updated>
     </task>
     <task id="LOCAL-00048" summary="Не понимаю, как сохранить\получить номер текущей позиции для парсеализации.">
       <created>1625948950841</created>
@@ -598,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626780395918</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Теперь не работает не только редактирование, но и удаление.">
+      <created>1626781508892</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1626781508892</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,7 +615,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Ладно, с редактированием, принцип понятен, но чтобы увидеть изменения, сначала нужно сделать сохранение." />
     <MESSAGE value="Добавил сохранение состояния при повороте экрана." />
     <MESSAGE value="Добавил сохранение введенной пользователем заметки." />
     <MESSAGE value="Приступил к внедрению паблишера\обсервера и парсеализации CardData" />
@@ -640,7 +639,8 @@
     <MESSAGE value="Создал контекстное меню для замены попап" />
     <MESSAGE value="Заменил во фрагменте и адаптере попап на контектное меню, все еще не успевает редактировать." />
     <MESSAGE value="Выделил метод для обработки всех пунктов меню." />
-    <option name="LAST_COMMIT_MESSAGE" value="Выделил метод для обработки всех пунктов меню." />
+    <MESSAGE value="Теперь не работает не только редактирование, но и удаление." />
+    <option name="LAST_COMMIT_MESSAGE" value="Теперь не работает не только редактирование, но и удаление." />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
@@ -667,10 +667,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="771" y="141" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1626037416426" />
-    <state x="93" y="93" width="1095" height="495" maximized="true" key="DiffContextDialog" timestamp="1626638463088">
+    <state x="93" y="93" width="1095" height="495" maximized="true" key="DiffContextDialog" timestamp="1626781526399">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1095" height="495" maximized="true" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1626638463088" />
+    <state x="93" y="93" width="1095" height="495" maximized="true" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1626781526399" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1626641617841">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -679,22 +679,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="436" key="GridCell.Tab.0.bottom" timestamp="1626779442514">
+    <state width="1237" height="436" key="GridCell.Tab.0.bottom" timestamp="1626781082826">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626779442514" />
-    <state width="1237" height="436" key="GridCell.Tab.0.center" timestamp="1626779442514">
+    <state width="1237" height="436" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626781082826" />
+    <state width="1237" height="436" key="GridCell.Tab.0.center" timestamp="1626781082826">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626779442514" />
-    <state width="1237" height="436" key="GridCell.Tab.0.left" timestamp="1626779442513">
+    <state width="1237" height="436" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626781082826" />
+    <state width="1237" height="436" key="GridCell.Tab.0.left" timestamp="1626781082826">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626779442513" />
-    <state width="1237" height="436" key="GridCell.Tab.0.right" timestamp="1626779442514">
+    <state width="1237" height="436" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626781082826" />
+    <state width="1237" height="436" key="GridCell.Tab.0.right" timestamp="1626781082826">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="436" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626779442514" />
+    <state width="1237" height="436" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626781082826" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -715,10 +715,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626780397686">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626781510263">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626780397686" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626781510263" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
