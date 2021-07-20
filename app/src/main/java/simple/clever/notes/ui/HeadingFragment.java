@@ -117,9 +117,17 @@ public class HeadingFragment extends Fragment {
 
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
+        return onItemSelected(item.getItemId()) || super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        return onItemSelected(item.getItemId()) || super.onOptionsItemSelected(item);
+    }
+
+    private boolean onItemSelected(int menuItemId){
         int adapterPosition = adapter.getPosition();
-        switch (id) {
+        switch (menuItemId) {
             case R.id.delete:
                 heading.deleteCardData(adapterPosition);
                 adapter.notifyItemRemoved(adapterPosition);
@@ -133,8 +141,16 @@ public class HeadingFragment extends Fragment {
                     recyclerView.smoothScrollToPosition(heading.size() - 1);
                 });
                 return true;
+            case R.id.plus_note:
+                navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
+                publisher.subscribe(cardData -> {
+                    heading.addCardData(cardData);
+                    Log.d("myLog", cardData.getId() + " при создании");
+                    adapter.notifyItemInserted(heading.size() - 1);
+                });
+                return true;
         }
-        return super.onContextItemSelected(item);
+        return false;
     }
 
     private void showNote(Note note) {
@@ -160,16 +176,5 @@ public class HeadingFragment extends Fragment {
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.heading_fragment_menu, menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        navigation.addFragment(ChangeHeadingFragment.newInstance(), true);
-        publisher.subscribe(cardData -> {
-            heading.addCardData(cardData);
-            Log.d("myLog", cardData.getId() + " при создании");
-            adapter.notifyItemInserted(heading.size() - 1);
-        });
-        return super.onOptionsItemSelected(item);
     }
 }
