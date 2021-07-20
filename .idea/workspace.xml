@@ -39,9 +39,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/dialogs/DeleteDialogBuilderFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/dialogs/ChangeHeadingDialogBuilderFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_change_heading.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,10 +103,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
-        <option value="layoutResourceFile" />
         <option value="resourceFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -255,20 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Первая попытка реализовать редактирование.">
-      <created>1626032630056</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1626032630056</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Поправил отображение фрагмента для редактирования.">
-      <created>1626032841110</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1626032841110</updated>
     </task>
     <task id="LOCAL-00058" summary="Использованный вариант пока не работает.">
       <created>1626033872840</created>
@@ -599,7 +586,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626801236462</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Вынес AlertDialog в DialogFragment">
+      <created>1626809415840</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1626809415841</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Вынес строки в ресурсы">
+      <created>1626809565738</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1626809565738</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,8 +617,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Внес несколько правок, не помогло. Коммит с целью сохранить изменения." />
-    <MESSAGE value="Изменил в мейн кнопку &quot;назад&quot;, добавил ко всем вызовам фрагментов addToBackStack(null), редактирование и добавление заработало." />
     <MESSAGE value="Задействовал навигатор, убрал лишние импорты, логи, пробелы." />
     <MESSAGE value="Еще немного мусора удалил." />
     <MESSAGE value="Кнопка назад работает корректно, когда на экране главный фрагмент." />
@@ -641,7 +640,9 @@
     <MESSAGE value="Проблема решена, id присваивается при создании нового экземпляра земетки." />
     <MESSAGE value="Прошлый коммит ушел с неверным описанием.&#10;1) Добавил диалоговое окно с предупреждением перед удалением;&#10;2) Убрал лишние логи" />
     <MESSAGE value="Вынес string в ресурсы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вынес string в ресурсы" />
+    <MESSAGE value="Вынес AlertDialog в DialogFragment" />
+    <MESSAGE value="Вынес строки в ресурсы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вынес строки в ресурсы" />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
@@ -660,10 +661,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1625492784167" />
-    <state x="221" y="96" key="AndroidCreateResourceFileDialog" timestamp="1625950489666">
+    <state x="221" y="96" key="AndroidCreateResourceFileDialog" timestamp="1626810322323">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="221" y="96" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1625950489666" />
+    <state x="221" y="96" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1626810322323" />
     <state x="771" y="141" key="AndroidCreateXmlResourceDialog" timestamp="1626037416426">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -716,10 +717,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626801238691">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626809567204">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626801238691" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626809567204" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -732,10 +733,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="443" y="247" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1625133324288" />
-    <state x="484" y="98" key="refactoring.ChangeSignatureDialog" timestamp="1626778171077">
+    <state x="484" y="98" key="refactoring.ChangeSignatureDialog" timestamp="1626810869548">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="484" y="98" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1626778171077" />
+    <state x="484" y="98" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1626810869548" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1625742776672">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -20,4 +20,5 @@
     <string name="no">Нет</string>
     <string name="attention">Внимание!</string>
     <string name="confirm">Вы уверены, что хотите удалить?</string>
+    <string name="change_head">Введите новое название заметки:</string>
 </resources>

@@ -31,6 +31,7 @@ import simple.clever.notes.data.CardSource;
 import simple.clever.notes.data.CardSourceFireBaseImpl;
 import simple.clever.notes.data.CardSourceResponse;
 import simple.clever.notes.data.Note;
+import simple.clever.notes.dialogs.ChangeHeadingDialogBuilderFragment;
 import simple.clever.notes.dialogs.DeleteDialogBuilderFragment;
 import simple.clever.notes.observer.Publisher;
 
@@ -147,7 +148,8 @@ public class HeadingFragment extends Fragment {
 
                 return true;
             case R.id.change:
-                navigation.addFragment(ChangeHeadingFragment.newInstance(heading.getCardData(adapterPosition)), true);
+                ChangeHeadingDialogBuilderFragment changeHeadingDialogBuilderFragment = ChangeHeadingDialogBuilderFragment.newInstance(heading.getCardData(adapterPosition));
+                changeHeadingDialogBuilderFragment.show(getChildFragmentManager(),"changeHead");
                 publisher.subscribe(cardData -> {
                     heading.updateCardData(cardData, adapterPosition);
                     adapter.notifyItemChanged(adapterPosition);
