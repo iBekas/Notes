@@ -10,12 +10,15 @@
         android:id="@+id/head_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:textSize="@dimen/nav_head_size"
         android:layout_weight="7"/>
 
     <EditText
         android:id="@+id/user_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="start|top"
         android:layout_weight="1"/>
 
 </LinearLayout>

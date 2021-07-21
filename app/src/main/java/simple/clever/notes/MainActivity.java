@@ -2,6 +2,7 @@ package simple.clever.notes;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -31,14 +32,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_main);
+        HeadingFragment fragment = HeadingFragment.newInstance();
         navigation = new Navigation(getSupportFragmentManager());
         if (savedInstanceState != null) {
             currentNote = savedInstanceState.getParcelable(CURRENT_NOTE);
         } else {
-            currentNote = new Note(0);
+            currentNote = new Note(0, fragment.getHeading());
         }
 
-        navigation.addFragment(HeadingFragment.newInstance(), false);
+        navigation.addFragment(fragment, false);
         Toolbar toolbar = initToolbar();
         initDrawer(toolbar);
     }

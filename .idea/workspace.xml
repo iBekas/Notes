@@ -40,10 +40,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/GoogleFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_google.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_note.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,12 +63,20 @@
         <task path="$PROJECT_DIR$/app">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Notes" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Notes" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -158,7 +167,7 @@
       <recent name="C:\Projets\Notes\app\src\main\res\drawable-v24" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Notes:app [signingReport]">
+  <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -257,13 +266,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Ошибка.">
-      <created>1626036075677</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1626036075677</updated>
     </task>
     <task id="LOCAL-00062" summary="50 строка получает null, но логи говорят, что и строка и позиция есть.">
       <created>1626036468983</created>
@@ -601,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626869556568</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Гугл аутентификация с наскока не далась. В следующий раз.">
+      <created>1626871094825</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1626871094825</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -630,7 +639,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Для Land ориентации поправил отображение." />
     <MESSAGE value="Подключил FireBase" />
     <MESSAGE value="1) Добавил поле в CardData - id;&#10;2) Новый метод в интерфейсе CardSource для инициализации данных;&#10;3) Новый интерфейс с методом обратного вызова." />
     <MESSAGE value="1) Добавил класс Mapping - класть и забирать данные;&#10;2) Добавил класс чтения списка заметок из firestore." />
@@ -655,17 +663,18 @@
     <MESSAGE value="Создал диалог для добавления/редактирования заметок.&#10;Тест на редактировании - без перезагрузки фрагмента, изменения не отображаются." />
     <MESSAGE value="Корректное сохранение даты в заметках." />
     <MESSAGE value="Добавил CheckBox в item и во все необходимые классы\фрагменты. Не сохраняет состояние..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил CheckBox в item и во все необходимые классы\фрагменты. Не сохраняет состояние..." />
+    <MESSAGE value="Гугл аутентификация с наскока не далась. В следующий раз." />
+    <option name="LAST_COMMIT_MESSAGE" value="Гугл аутентификация с наскока не далась. В следующий раз." />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="158" y="87" key="#PSD/0.0.1280.680@0.0.1280.680" timestamp="1626639361462" />
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626862912781">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626876217298">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626862912781" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626876217298" />
     <state x="424" y="210" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626723617051">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -694,22 +703,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626864731403">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626876511125">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626864731403" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626864731403">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626876511125" />
+    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626876511125">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626864731403" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626864731403">
+    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626876511125" />
+    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626876511125">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626864731403" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626864731403">
+    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626876511125" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626876511125">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626864731403" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626876511125" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -730,10 +739,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626869561865">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626871096932">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626869561865" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626871096932" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

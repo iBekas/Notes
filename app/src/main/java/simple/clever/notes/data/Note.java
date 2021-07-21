@@ -10,15 +10,18 @@ import simple.clever.notes.R;
 public class Note implements Parcelable {
 
     private int noteIndex;
+    private CardSource heading;
     private static final String KEY_USER_NOTE= "save_note";
     private static final String KEY_PREF= "note_pref";
 
-    public Note(int contentIndex){
+    public Note(int contentIndex, CardSource heading){
         this.noteIndex = contentIndex;
+        this.heading = heading;
     }
 
     public String getNoteName(Context mContext) {
-        return mContext.getResources().getString(R.string.init_head);
+        return this.heading.getCardData(this.noteIndex).getHead();
+//        return mContext.getResources().getString(R.string.init_head);
     }
 
     public String getNoteBody(Context mContext) {
