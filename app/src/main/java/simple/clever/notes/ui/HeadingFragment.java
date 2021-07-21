@@ -107,7 +107,7 @@ public class HeadingFragment extends Fragment {
         recyclerView.setItemAnimator(animator);
 
         adapter.SetOnItemClickListener((view, position) -> {
-            ((MainActivity) getActivity()).currentNote = new Note(position, heading);
+            ((MainActivity) getActivity()).currentNote = new Note(position, heading.getCardData(position).getHead());
             showNote(((MainActivity) getActivity()).currentNote);
         });
     }

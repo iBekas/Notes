@@ -45,6 +45,7 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_note.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,13 +267,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00062" summary="50 строка получает null, но логи говорят, что и строка и позиция есть.">
-      <created>1626036468983</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1626036468983</updated>
     </task>
     <task id="LOCAL-00063" summary="Ага, сам heading равен null, но вот почему...">
       <created>1626036731805</created>
@@ -610,7 +604,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626871094825</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Приоткрытии текста заметки, теперь сверху отображается название заметки.&#10;Приложение падает, если при открытии приложения не открывая текст заметки, повернуть экран.">
+      <created>1626876738986</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1626876738987</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -639,7 +640,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Подключил FireBase" />
     <MESSAGE value="1) Добавил поле в CardData - id;&#10;2) Новый метод в интерфейсе CardSource для инициализации данных;&#10;3) Новый интерфейс с методом обратного вызова." />
     <MESSAGE value="1) Добавил класс Mapping - класть и забирать данные;&#10;2) Добавил класс чтения списка заметок из firestore." />
     <MESSAGE value="Забыл про коммиты - добавил все необходимое для приема данных с базы и отправки в нее. Пока не работает." />
@@ -664,7 +664,8 @@
     <MESSAGE value="Корректное сохранение даты в заметках." />
     <MESSAGE value="Добавил CheckBox в item и во все необходимые классы\фрагменты. Не сохраняет состояние..." />
     <MESSAGE value="Гугл аутентификация с наскока не далась. В следующий раз." />
-    <option name="LAST_COMMIT_MESSAGE" value="Гугл аутентификация с наскока не далась. В следующий раз." />
+    <MESSAGE value="Приоткрытии текста заметки, теперь сверху отображается название заметки.&#10;Приложение падает, если при открытии приложения не открывая текст заметки, повернуть экран." />
+    <option name="LAST_COMMIT_MESSAGE" value="Приоткрытии текста заметки, теперь сверху отображается название заметки.&#10;Приложение падает, если при открытии приложения не открывая текст заметки, повернуть экран." />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
@@ -703,22 +704,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626876511125">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626876606101">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626876511125" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626876511125">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626876606101" />
+    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626876606101">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626876511125" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626876511125">
+    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626876606101" />
+    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626876606101">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626876511125" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626876511125">
+    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626876606101" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626876606101">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626876511125" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626876606101" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -739,10 +740,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626871096932">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626876750226">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626871096932" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626876750226" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

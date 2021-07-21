@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             currentNote = savedInstanceState.getParcelable(CURRENT_NOTE);
         } else {
-            currentNote = new Note(0, fragment.getHeading());
+            currentNote = new Note(0, this.getResources().getString(R.string.best_note_head));
         }
 
         navigation.addFragment(fragment, false);
