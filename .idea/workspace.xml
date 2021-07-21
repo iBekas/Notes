@@ -44,13 +44,10 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardDataMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardDataMapping.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSourceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSourceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/dialogs/ChangeHeadingDialogBuilderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/dialogs/ChangeHeadingDialogBuilderFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/dialogs/DeleteDialogBuilderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/dialogs/DeleteDialogBuilderFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/ChangeHeadingFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/UserNoteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/UserNoteFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,13 +261,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Исправил ошибку добавления новой CardData">
-      <created>1626034328732</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1626034328732</updated>
     </task>
     <task id="LOCAL-00060" summary="isVisible - говорил всегда false, getUserVisibleHint - работает корректно. Но, я понял, что забыл про потоки, использование которых кажется избыточным.">
       <created>1626034854928</created>
@@ -608,7 +598,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626811489897</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="Корректное сохранение даты в заметках.">
+      <created>1626859288589</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1626859288591</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -637,7 +634,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Еще немного мусора удалил." />
     <MESSAGE value="Кнопка назад работает корректно, когда на экране главный фрагмент." />
     <MESSAGE value="Для Land ориентации поправил отображение." />
     <MESSAGE value="Подключил FireBase" />
@@ -662,17 +658,18 @@
     <MESSAGE value="Вынес AlertDialog в DialogFragment" />
     <MESSAGE value="Вынес строки в ресурсы" />
     <MESSAGE value="Создал диалог для добавления/редактирования заметок.&#10;Тест на редактировании - без перезагрузки фрагмента, изменения не отображаются." />
-    <option name="LAST_COMMIT_MESSAGE" value="Создал диалог для добавления/редактирования заметок.&#10;Тест на редактировании - без перезагрузки фрагмента, изменения не отображаются." />
+    <MESSAGE value="Корректное сохранение даты в заметках." />
+    <option name="LAST_COMMIT_MESSAGE" value="Корректное сохранение даты в заметках." />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="158" y="87" key="#PSD/0.0.1280.680@0.0.1280.680" timestamp="1626639361462" />
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626855436996">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1626862912781">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626855436996" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626862912781" />
     <state x="424" y="210" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626723617051">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -701,22 +698,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1625132826652" />
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626858935683">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom" timestamp="1626864731403">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626858935683" />
-    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626858935683">
+    <state width="1237" height="390" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626864731403" />
+    <state width="1237" height="390" key="GridCell.Tab.0.center" timestamp="1626864731403">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626858935683" />
-    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626858935683">
+    <state width="1237" height="390" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626864731403" />
+    <state width="1237" height="390" key="GridCell.Tab.0.left" timestamp="1626864731403">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626858935683" />
-    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626858935683">
+    <state width="1237" height="390" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626864731403" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right" timestamp="1626864731403">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626858935683" />
+    <state width="1237" height="390" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626864731403" />
     <state width="1237" height="163" key="GridCell.Tab.1.bottom" timestamp="1625148387348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -737,10 +734,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626811492043">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626859357378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626811492043" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626859357378" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

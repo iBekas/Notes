@@ -11,10 +11,12 @@ public class CardData implements Parcelable {
     private String id;
     private String head;
     private Date timeOpen;
+    private boolean favorite;
 
-    public CardData(String head, Date timeOpen) {
+    public CardData(String head, Date timeOpen, boolean favorite) {
         this.head = head;
         this.timeOpen = timeOpen;
+        this.favorite = favorite;
     }
 
 //    public String getCurrentTimeStamp() {
@@ -31,6 +33,9 @@ public class CardData implements Parcelable {
         return timeOpen;
     }
 
+    public boolean isFavorite() {
+        return favorite;
+    }
 
     @Override
     public int describeContents() {
@@ -40,11 +45,13 @@ public class CardData implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(head);
+        dest.writeByte((byte) (favorite ? 1 : 0));
         dest.writeLong(timeOpen.getTime());
     }
 
     protected CardData(Parcel in) {
         head = in.readString();
+        favorite = in.readByte() != 0;
         timeOpen = new Date(in.readLong());
     }
 

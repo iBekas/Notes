@@ -93,12 +93,10 @@ public class ChangeHeadingFragment extends Fragment {
         Date date = getCurrentTimeStamp();
         if (cardData != null) {
             CardData answer;
-            answer = new CardData(head, date);
+            answer = new CardData(head, date, cardData.isFavorite());
             answer.setId(cardData.getId());
             return answer;
-        }
-//        cardData.setTimeOpen(getCurrentTimeStamp());
-        return new CardData(head, date);
+        } else return new CardData(head, date, false);
     }
 
     public Date getCurrentTimeStamp() {

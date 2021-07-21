@@ -4,6 +4,7 @@ package simple.clever.notes.ui;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -60,11 +61,13 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
 
         private TextView textHead;
         private TextView textTime;
+        private CheckBox favorite;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textHead = itemView.findViewById(R.id.note_name);
             textTime = itemView.findViewById(R.id.time);
+            favorite = itemView.findViewById(R.id.user_favorite);
             registerContextMenu(itemView);
 
             textHead.setOnClickListener(v -> {
@@ -90,6 +93,7 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
 
         public void setData(CardData cardData){
             textHead.setText(cardData.getHead());
+            favorite.setChecked(cardData.isFavorite());
             textTime.setText(new SimpleDateFormat("dd.MM.yyyy HH:mm").format(cardData.getTimeOpen()));;
         }
     }

@@ -94,8 +94,7 @@ public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
         FragmentManager fM = requireActivity().getSupportFragmentManager();
         FragmentTransaction fT = fM.beginTransaction();
         fT.setCustomAnimations(R.anim.enter_fragment, R.anim.exit_fragment);
-
-        fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
+        fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 
     @Override
@@ -115,12 +114,10 @@ public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
         Date date = getCurrentTimeStamp();
         if (cardData != null) {
             CardData answer;
-            answer = new CardData(head, date);
+            answer = new CardData(head, date, cardData.isFavorite());
             answer.setId(cardData.getId());
             return answer;
-        }
-//        cardData.setTimeOpen(getCurrentTimeStamp());
-        return new CardData(head, date);
+        } else return new CardData(head, date, false);
     }
 
     public Date getCurrentTimeStamp() {

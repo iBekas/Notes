@@ -21,7 +21,7 @@ public class CardSourceImpl implements CardSource{
     public CardSource init(CardSourceResponse cardSourceResponse){
         String[] heads = resources.getStringArray(R.array.heading);
         for (int i = 0; i < heads.length; i++) {
-            dataSource.add(new CardData(heads[i], Calendar.getInstance().getTime()));
+            dataSource.add(new CardData(heads[i], Calendar.getInstance().getTime(), false));
         }
         if (cardSourceResponse != null){
             cardSourceResponse.initialized(this);
