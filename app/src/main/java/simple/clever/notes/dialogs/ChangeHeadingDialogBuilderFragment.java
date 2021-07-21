@@ -112,20 +112,21 @@ public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
 
     private CardData collectCardData() {
         String head = this.userHeadText.getText().toString();
+        Date date = getCurrentTimeStamp();
         if (cardData != null) {
             CardData answer;
-            answer = new CardData(head);
+            answer = new CardData(head, date);
             answer.setId(cardData.getId());
             return answer;
         }
 //        cardData.setTimeOpen(getCurrentTimeStamp());
-        return new CardData(head);
+        return new CardData(head, date);
     }
 
-    public String getCurrentTimeStamp() {
-        SimpleDateFormat sdfDate = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+    public Date getCurrentTimeStamp() {
+//        SimpleDateFormat sdfDate = new SimpleDateFormat("dd.MM.yyyy HH:mm");
         Date now = new Date();
-        return sdfDate.format(now);
+        return now;
     }
 
     private void populateView() {

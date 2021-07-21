@@ -10,24 +10,24 @@ public class CardData implements Parcelable {
 
     private String id;
     private String head;
-    private String timeOpen;
+    private Date timeOpen;
 
-    public CardData(String head) {
+    public CardData(String head, Date timeOpen) {
         this.head = head;
-        this.timeOpen = getCurrentTimeStamp();
+        this.timeOpen = timeOpen;
     }
 
-    public String getCurrentTimeStamp() {
-        SimpleDateFormat sdfDate = new SimpleDateFormat("dd.MM.yyyy HH:mm");
-        Date now = new Date();
-        return sdfDate.format(now);
-    }
+//    public String getCurrentTimeStamp() {
+//        SimpleDateFormat sdfDate = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+//        Date now = new Date();
+//        return sdfDate.format(now);
+//    }
 
     public String getHead() {
         return head;
     }
 
-    public String getTimeOpen() {
+    public Date getTimeOpen() {
         return timeOpen;
     }
 
@@ -40,12 +40,12 @@ public class CardData implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(head);
-        dest.writeString(timeOpen);
+        dest.writeLong(timeOpen.getTime());
     }
 
     protected CardData(Parcel in) {
         head = in.readString();
-        timeOpen = in.readString();
+        timeOpen = new Date(in.readLong());
     }
 
     public static final Creator<CardData> CREATOR = new Creator<CardData>() {
@@ -66,13 +66,5 @@ public class CardData implements Parcelable {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public void setTimeOpen(String timeOpen) {
-        this.timeOpen = timeOpen;
-    }
-
-    public void setHead(String head) {
-        this.head = head;
     }
 }

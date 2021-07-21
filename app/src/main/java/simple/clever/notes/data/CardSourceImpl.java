@@ -3,6 +3,7 @@ package simple.clever.notes.data;
 import android.content.res.Resources;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import simple.clever.notes.R;
@@ -20,7 +21,7 @@ public class CardSourceImpl implements CardSource{
     public CardSource init(CardSourceResponse cardSourceResponse){
         String[] heads = resources.getStringArray(R.array.heading);
         for (int i = 0; i < heads.length; i++) {
-            dataSource.add(new CardData(heads[i]));
+            dataSource.add(new CardData(heads[i], Calendar.getInstance().getTime()));
         }
         if (cardSourceResponse != null){
             cardSourceResponse.initialized(this);

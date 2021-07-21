@@ -19,6 +19,7 @@ public class DeleteDialogBuilderFragment extends DialogFragment {
     private CardSource heading;
     private int adapterPosition;
 
+
     public DeleteDialogBuilderFragment(HeadingAdapter adapter, CardSource heading, int adapterPosition) {
         this.adapter = adapter;
         this.heading = heading;

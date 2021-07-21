@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.SimpleDateFormat;
+
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardData;
 import simple.clever.notes.data.CardSource;
@@ -88,7 +90,7 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
 
         public void setData(CardData cardData){
             textHead.setText(cardData.getHead());
-            textTime.setText(cardData.getTimeOpen());
+            textTime.setText(new SimpleDateFormat("dd.MM.yyyy HH:mm").format(cardData.getTimeOpen()));;
         }
     }
 }

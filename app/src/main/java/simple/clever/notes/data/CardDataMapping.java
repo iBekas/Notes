@@ -13,8 +13,8 @@ public class CardDataMapping {
     }
 
     public static CardData toCardData(String id, Map<String, Object> doc) {
-//        Timestamp timeStamp = (Timestamp)doc.get(Fields.DATE);
-        CardData answer = new CardData((String) doc.get(Fields.HEAD)); //напоминание для себя, нормально добавить дату
+        Timestamp timeStamp = (Timestamp)doc.get(Fields.DATE);
+        CardData answer = new CardData((String) doc.get(Fields.HEAD), timeStamp.toDate());
         answer.setId(id);
         return answer;
     }

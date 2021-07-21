@@ -17,10 +17,6 @@ public class Note implements Parcelable {
         this.noteIndex = contentIndex;
     }
 
-    public int getNoteIndex() {
-        return noteIndex;
-    }
-
     public String getNoteName(Context mContext) {
         return mContext.getResources().getString(R.string.init_head);
     }
@@ -37,7 +33,6 @@ public class Note implements Parcelable {
         editor.putString(KEY_USER_NOTE+noteIndex, userText);
         editor.apply();
     }
-
 
     @Override
     public int describeContents() {
