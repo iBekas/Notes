@@ -21,4 +21,6 @@
     <string name="attention">Внимание!</string>
     <string name="confirm">Вы уверены, что хотите удалить?</string>
     <string name="change_head">Введите новое название заметки:</string>
+    <string name="sign_out">Выйти</string>
+    <string name="continue_">Продолжить</string>
 </resources>
