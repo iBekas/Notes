@@ -14,7 +14,6 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import simple.clever.notes.MainActivity;
@@ -81,20 +80,15 @@ public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
                 .setPositiveButton(R.string.button_save, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        HeadingFragment detail = HeadingFragment.newInstance();
+                        FragmentManager fM = requireActivity().getSupportFragmentManager();
+                        FragmentTransaction fT = fM.beginTransaction();
+                        fT.setCustomAnimations(R.anim.enter_fragment, R.anim.exit_fragment);
+                        fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
                         dismiss();
                     }
                 });
         return builder.create();
-    }
-
-    @Override
-    public void onDismiss(@NonNull DialogInterface dialog) {
-        super.onDismiss(dialog);
-        HeadingFragment detail = HeadingFragment.newInstance();
-        FragmentManager fM = requireActivity().getSupportFragmentManager();
-        FragmentTransaction fT = fM.beginTransaction();
-        fT.setCustomAnimations(R.anim.enter_fragment, R.anim.exit_fragment);
-        fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 
     @Override
@@ -110,7 +104,7 @@ public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
     }
 
     private CardData collectCardData() {
-        String head = this.userHeadText.getText().toString();
+        String head = this.userHeadText.getText().toString().trim();
         Date date = getCurrentTimeStamp();
         if (cardData != null) {
             CardData answer;

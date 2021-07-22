@@ -142,11 +142,11 @@ public class HeadingFragment extends Fragment {
         switch (menuItemId) {
             case R.id.delete:
                 DeleteDialogBuilderFragment deleteDialogBuilderFragment = new DeleteDialogBuilderFragment(adapter, heading, adapterPosition);
-                deleteDialogBuilderFragment.show(getChildFragmentManager(), "deleteAlert");
+                deleteDialogBuilderFragment.show(requireActivity().getSupportFragmentManager(), "deleteAlert");
                 return true;
             case R.id.change:
                 changeHeadingDialogBuilderFragment = ChangeHeadingDialogBuilderFragment.newInstance(heading.getCardData(adapterPosition));
-                changeHeadingDialogBuilderFragment.show(getChildFragmentManager(), "changeHead");
+                changeHeadingDialogBuilderFragment.show(requireActivity().getSupportFragmentManager(), "changeHead");
                 publisher.subscribe(cardData -> {
                     heading.updateCardData(cardData, adapterPosition);
                     adapter.notifyItemChanged(adapterPosition);
@@ -155,7 +155,7 @@ public class HeadingFragment extends Fragment {
                 return true;
             case R.id.plus_note:
                 changeHeadingDialogBuilderFragment = ChangeHeadingDialogBuilderFragment.newInstance();
-                changeHeadingDialogBuilderFragment.show(getChildFragmentManager(), "addHead");
+                changeHeadingDialogBuilderFragment.show(requireActivity().getSupportFragmentManager(), "addHead");
                 publisher.subscribe(cardData -> {
                     heading.addCardData(cardData);
 //                    adapter.notifyItemInserted(heading.size() - 1);
