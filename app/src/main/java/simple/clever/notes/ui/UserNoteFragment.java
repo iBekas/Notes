@@ -12,7 +12,6 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import simple.clever.notes.R;
-import simple.clever.notes.data.CardData;
 import simple.clever.notes.data.Note;
 
 public class UserNoteFragment extends Fragment {

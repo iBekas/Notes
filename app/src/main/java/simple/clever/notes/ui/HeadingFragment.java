@@ -183,8 +183,4 @@ public class HeadingFragment extends Fragment {
     private void showPortNote(Note note) {
         navigation.addFragment(UserNoteFragment.newInstance(note), true);
     }
-
-    public CardSource getHeading() {
-        return heading;
-    }
 }

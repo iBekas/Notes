@@ -3,7 +3,6 @@ package simple.clever.notes.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CardData implements Parcelable {
@@ -18,12 +17,6 @@ public class CardData implements Parcelable {
         this.timeOpen = timeOpen;
         this.favorite = favorite;
     }
-
-//    public String getCurrentTimeStamp() {
-//        SimpleDateFormat sdfDate = new SimpleDateFormat("dd.MM.yyyy HH:mm");
-//        Date now = new Date();
-//        return sdfDate.format(now);
-//    }
 
     public String getHead() {
         return head;

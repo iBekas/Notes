@@ -39,11 +39,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/dialogs/ChangeHeadingDialogBuilderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/dialogs/ChangeHeadingDialogBuilderFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/HeadingFragment.java" afterDir="false" />
-    </list>
+    <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -264,13 +260,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Попытка передать изменения номер 4.">
-      <created>1626038904711</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1626038904711</updated>
     </task>
     <task id="LOCAL-00065" summary="Попытка передать изменения номер 5.">
       <created>1626040080913</created>
@@ -608,7 +597,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626877433238</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="Диалог сохраняется при повороте экрана">
+      <created>1626950957519</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1626950957523</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -637,7 +633,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="1) Добавил класс Mapping - класть и забирать данные;&#10;2) Добавил класс чтения списка заметок из firestore." />
     <MESSAGE value="Забыл про коммиты - добавил все необходимое для приема данных с базы и отправки в нее. Пока не работает." />
     <MESSAGE value="Понял CardSourceImpl() на CardSourceFireBaseImpl()" />
     <MESSAGE value="add работает, update не видит id" />
@@ -662,7 +657,8 @@
     <MESSAGE value="Гугл аутентификация с наскока не далась. В следующий раз." />
     <MESSAGE value="Приоткрытии текста заметки, теперь сверху отображается название заметки.&#10;Приложение падает, если при открытии приложения не открывая текст заметки, повернуть экран." />
     <MESSAGE value="Изменил атрибуты для конструктора Note - теперь не падает. Осталось при развернутом экране, название заметки переносить на две строки, в одну не помещается." />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменил атрибуты для конструктора Note - теперь не падает. Осталось при развернутом экране, название заметки переносить на две строки, в одну не помещается." />
+    <MESSAGE value="Диалог сохраняется при повороте экрана" />
+    <option name="LAST_COMMIT_MESSAGE" value="Диалог сохраняется при повороте экрана" />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
@@ -737,10 +733,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626877435144">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1626950960627">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626877435144" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626950960627" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
