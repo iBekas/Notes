@@ -16,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+import simple.clever.notes.data.CardData;
 import simple.clever.notes.data.Note;
 import simple.clever.notes.observer.Publisher;
 import simple.clever.notes.ui.HeadingFragment;
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_main);
-        HeadingFragment fragment = HeadingFragment.newInstance();
         navigation = new Navigation(getSupportFragmentManager());
         if (savedInstanceState != null) {
             currentNote = savedInstanceState.getParcelable(CURRENT_NOTE);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             currentNote = new Note(0, this.getResources().getString(R.string.best_note_head));
         }
 
-        navigation.addFragment(fragment, false);
+        navigation.addFragment(HeadingFragment.newInstance(), false);
         Toolbar toolbar = initToolbar();
         initDrawer(toolbar);
     }
@@ -152,5 +152,10 @@ public class MainActivity extends AppCompatActivity {
 
     public Publisher getPublisher() {
         return publisher;
+    }
+
+    public void updateHeadingFragment(CardData cardData){
+        publisher.notifySingle(cardData);
+        navigation.addFragment(HeadingFragment.newInstance(), false);
     }
 }

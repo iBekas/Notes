@@ -2,7 +2,6 @@ package simple.clever.notes.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
@@ -11,8 +10,6 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import java.util.Date;
 
@@ -20,13 +17,11 @@ import simple.clever.notes.MainActivity;
 import simple.clever.notes.R;
 import simple.clever.notes.data.CardData;
 import simple.clever.notes.observer.Publisher;
-import simple.clever.notes.ui.HeadingFragment;
 
 public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
 
     private static final String SAVE_CARD_DATA = "SaveCardData";
     private CardData cardData;
-    private Publisher publisher;
     private EditText userHeadText;
 
     public static ChangeHeadingDialogBuilderFragment newInstance(CardData cardData) {
@@ -50,19 +45,6 @@ public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
         }
     }
 
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        MainActivity activity = (MainActivity) context;
-        publisher = activity.getPublisher();
-    }
-
-    @Override
-    public void onDetach() {
-        publisher = null;
-        super.onDetach();
-    }
-
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -80,27 +62,12 @@ public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
                 .setPositiveButton(R.string.button_save, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        HeadingFragment detail = HeadingFragment.newInstance();
-                        FragmentManager fM = requireActivity().getSupportFragmentManager();
-                        FragmentTransaction fT = fM.beginTransaction();
-                        fT.setCustomAnimations(R.anim.enter_fragment, R.anim.exit_fragment);
-                        fT.replace(R.id.main, detail).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+                        cardData = collectCardData();
+                        ((MainActivity) ChangeHeadingDialogBuilderFragment.this.requireActivity()).updateHeadingFragment(cardData);
                         dismiss();
                     }
                 });
         return builder.create();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        cardData = collectCardData();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        publisher.notifySingle(cardData);
     }
 
     private CardData collectCardData() {
