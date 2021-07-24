@@ -7,6 +7,4 @@ interface CardSource {
     fun addCardData(cardData: CardData)
     fun deleteCardData(position: Int)
     fun updateCardData(cardData: CardData,position: Int)
-
-
 }
