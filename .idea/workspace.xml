@@ -40,9 +40,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardDataMapping.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardDataMapping.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/CardSource.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,13 +263,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Что-то сломалось в HeadingFragment.lock.unlock();">
-      <created>1626092540308</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1626092540308</updated>
     </task>
     <task id="LOCAL-00070" summary="Попытка сделать без локов.">
       <created>1626093693556</created>
@@ -608,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627158619828</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Класс CardDataMapping - заменил Java на Kotlin">
+      <created>1627160182164</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1627160182165</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -637,7 +636,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="В CardSourceFireBaseImpl при помещении в list, id у заметки есть. Ни одной мысли почему далее id = null" />
     <MESSAGE value="Создал контекстное меню для замены попап" />
     <MESSAGE value="Заменил во фрагменте и адаптере попап на контектное меню, все еще не успевает редактировать." />
     <MESSAGE value="Выделил метод для обработки всех пунктов меню." />
@@ -662,7 +660,8 @@
     <MESSAGE value="Передал данные в метод мейн." />
     <MESSAGE value="1)Подключил в прокту Kotlin&#10;2)CardData - заменил Java на Kotlin" />
     <MESSAGE value="Класс Navigation - заменил Java на Kotlin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Класс Navigation - заменил Java на Kotlin" />
+    <MESSAGE value="Класс CardDataMapping - заменил Java на Kotlin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Класс CardDataMapping - заменил Java на Kotlin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
@@ -741,10 +740,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1627158624511">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1627160184748">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1627158624511" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1627160184748" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
