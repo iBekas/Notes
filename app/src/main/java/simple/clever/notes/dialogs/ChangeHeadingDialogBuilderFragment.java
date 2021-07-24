@@ -75,7 +75,7 @@ public class ChangeHeadingDialogBuilderFragment extends DialogFragment {
         Date date = getCurrentTimeStamp();
         if (cardData != null) {
             CardData answer;
-            answer = new CardData(head, date, cardData.isFavorite());
+            answer = new CardData(head, date, cardData.getFavorite());
             answer.setId(cardData.getId());
             return answer;
         } else return new CardData(head, date, false);

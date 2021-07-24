@@ -93,7 +93,7 @@ public class HeadingAdapter extends RecyclerView.Adapter<HeadingAdapter.ViewHold
 
         public void setData(CardData cardData){
             textHead.setText(cardData.getHead());
-            favorite.setChecked(cardData.isFavorite());
+            favorite.setChecked(cardData.getFavorite());
             textTime.setText(new SimpleDateFormat("dd.MM.yyyy HH:mm").format(cardData.getTimeOpen()));;
         }
     }

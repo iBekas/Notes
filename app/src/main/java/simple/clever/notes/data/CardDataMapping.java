@@ -24,7 +24,7 @@ public class CardDataMapping {
         Map<String, Object> answer = new HashMap<>();
         answer.put(Fields.HEAD, cardData.getHead());
         answer.put(Fields.DATE, cardData.getTimeOpen());
-        answer.put(Fields.FAVORITE, cardData.isFavorite());
+        answer.put(Fields.FAVORITE, cardData.getFavorite());
         return answer;
     }
 }
