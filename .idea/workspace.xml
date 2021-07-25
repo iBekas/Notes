@@ -40,11 +40,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47fbb73-8c10-4297-ac41-ea5137faf15b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/observer/Observer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/observer/Publisher.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/observer/Observer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/observer/Publisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/data/Note.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/UserNoteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/simple/clever/notes/ui/UserNoteFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,13 +265,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625125528618</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Добавил сохранение состояния при повороте экрана.">
-      <created>1626177007650</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1626177007651</updated>
     </task>
     <task id="LOCAL-00073" summary="Добавил сохранение введенной пользователем заметки.">
       <created>1626182210254</created>
@@ -610,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627160891774</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Observer и Publisher - заменил Java на Kotlin">
+      <created>1627161786781</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1627161786782</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -639,7 +638,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Выделил метод для обработки всех пунктов меню." />
     <MESSAGE value="Теперь не работает не только редактирование, но и удаление." />
     <MESSAGE value="Клик регистрируется в заметке, удаление работает. Удалил интерфейс необходимый для попап - попапа больше нет, но мы будем его помнить." />
     <MESSAGE value="Еще немного логов. В onCreate в ChangeHeadingFragment id есть." />
@@ -664,17 +662,18 @@
     <MESSAGE value="Класс CardDataMapping - заменил Java на Kotlin" />
     <MESSAGE value="Итерфейс CardSource - заменил Java на Kotlin" />
     <MESSAGE value="Итерфейсы CardSourceResponse и OnItemClickListener - заменил Java на Kotlin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Итерфейсы CardSourceResponse и OnItemClickListener - заменил Java на Kotlin" />
+    <MESSAGE value="Observer и Publisher - заменил Java на Kotlin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Observer и Publisher - заменил Java на Kotlin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="87" key="#PSD" timestamp="1626639361462">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="158" y="87" key="#PSD/0.0.1280.680@0.0.1280.680" timestamp="1626639361462" />
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1627156370272">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1627210126452">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1627156370272" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1627210126452" />
     <state x="424" y="210" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626723617051">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -743,10 +742,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626640262930" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1627160895765">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1627161789039">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1627160895765" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1627161789039" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1625428154520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

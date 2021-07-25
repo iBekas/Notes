@@ -43,7 +43,7 @@ public class UserNoteFragment extends Fragment {
         EditText noteUserText = view.findViewById(R.id.user_text);
         TextView headText = view.findViewById(R.id.head_text);
 
-        headText.setText(note.getNoteName(getContext()));
+        headText.setText(note.getNoteName());
         noteUserText.setText(note.getNoteBody(getContext()));
 
         noteUserText.addTextChangedListener(new TextWatcher() {
